@@ -1,0 +1,22 @@
+.BigYellowButton {
+    background-color: #FFC85E;
+    color: white;
+    padding: 10px;
+    border-radius: 79px;
+    cursor: pointer;
+    border-width: 0;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: 800;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.BigYellowButton > img {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.BigYellowButton:hover {
+    background-color: #E6AC46;
+}

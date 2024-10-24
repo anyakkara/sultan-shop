@@ -1,0 +1,144 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 0 70px 0 70px;
+}
+
+.subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.subheader * {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.contactInfo {
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+    color: #3F4E65;
+}
+
+.contactInfo .contactLeftPart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contactInfo .contactRightPart {
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contactInfo .contactRightPart img {
+    width: auto;
+    height: 80px;
+    object-fit: contain;
+}
+
+.phoneNum {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.workTime {
+    font-size: 12px;
+}
+
+.orderCall * {
+    font-size: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.orderCall *:hover {
+    text-decoration: none;
+}
+
+.cartContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+}
+
+.cartLogo {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cartCounter {
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FFC85E;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 4px solid #f8f8f8;
+
+}
+
+.cartLogo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.cartDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем текст по вертикали внутри cartDetails */
+    height: 60px;
+}
+
+.cartName {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.cartPrice {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.verticalLine {
+    width: 0;
+    height: 60px;
+    border-left: 2px dotted #e8e8e8;
+    margin: 0 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}

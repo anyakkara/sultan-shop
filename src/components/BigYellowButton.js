@@ -2,17 +2,19 @@
 
 import React from "react";
 import styles from "./BigYellowButton.module.css";
+import Link from "next/link";
 
-const BigYellowButton = ({ children, onClick, width = 200, height = 60 }) => {
-  return (
-      <button
-          className={styles.BigYellowButton}
-          onClick={onClick}
-          style={{ width: `${width}px`, height: `${height}px` }}
-      >
-        {children}
-      </button>
-  );
+const BigYellowButton = ({children, onClick, href = "#"}) => {
+    return (
+        <button
+            className={styles.BigYellowButton}
+            onClick={onClick}
+        >
+            <Link href={href}>
+                {children}
+            </Link>
+        </button>
+    );
 };
 
 export default BigYellowButton;

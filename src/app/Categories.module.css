@@ -47,7 +47,7 @@
     margin: 0;
 }
 
-.categoryImage {
+.categoryPic {
     width: 250px;
     height: 250px;
     border-radius: 20px;
@@ -56,13 +56,13 @@
     overflow: hidden;
 }
 
-.categoryImage img {
+.categoryPic img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.categoryLabel {
+.categoryTitle {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 500;

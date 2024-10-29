@@ -8,6 +8,8 @@ import housegoods from './/images/housegoods.png';
 import childmom from './/images/childmom.png';
 import dishes from './/images/dishes.png';
 import 'typeface-inter';
+// выше всё для категорий
+
 
 
 const CategoriesList = () => {
@@ -31,19 +33,21 @@ const CategoriesList = () => {
       <div className={style.categoriesList}>
       {categories.map((cat, index) => (
         <Link href={cat.link} key={index} className={style.categoryCard}>
-          <div className={style.categoryImage}>
+          <div className={style.categoryPic}>
           <Image
                 src={cat.pic}
                 alt={cat.title}
             />
             </div>
-            <p className={style.categoryLabel}>{cat.title}</p>
+            <p className={style.categoryTitle}>{cat.title}</p>
         </Link>
       ))}
       </div>
     </div>
   );
 };
+
+
 
 export default function Home() {
   return (

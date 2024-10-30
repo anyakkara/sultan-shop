@@ -1,20 +1,58 @@
 .sliderContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .slideImage {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
-  }
-  
-  .link {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slide {
+  display: flex; /* Используем flexbox для основного контейнера слайда */
+  width: 100%;
+  height: 500px;
+  border-radius: 10px; /* Радиус границы для слайда */
+  position: relative; /* Относительное позиционирование для элементов внутри */
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative; /* Для полноэкранного изображения */
+  border-radius: 10px 0 0 10px; /* Закругление углов (если нужно) */
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column; /* Элементы в столбик */
+  justify-content: center; /* Выравниваем по центру по вертикали */
+  padding: 20px; /* Добавляем отступы для текста */
+  color: #fff; /* Цвет текста */
+  position: absolute; /* Чтобы наложиться на изображение */
+  left: 0; /* Для привязки к левому краю */
+  top: 0; /* Для привязки к верхнему краю */
+  height: 100%; /* Занять всю высоту */
+  width: 50%; /* Занять половину ширины */
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для читаемости текста */
+}
+
+.uptodate {
+  font-size: 14px; 
+}
+
+.title {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.description {
+    font-size: 16px; 
+    margin: 10px 0;
+}
+
+.link {
     margin-top: 10px;
     text-decoration: underline;
-    color: blue;
-  }
-  
+    color: blue; /* Цвет текста ссылки */
+}
+
+.slideImage {
+    width: 100%;
+    height: 100%; /* Задаем высоту 100% для заполнения контейнера */
+    object-fit: cover; /* Изображение должно покрывать контейнер */
+}

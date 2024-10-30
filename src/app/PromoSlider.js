@@ -9,20 +9,20 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import promoslide1 from './images/promoslide1.jpg';
-import styles from './PromoSlider.module.css'; // Импортируем стили
+import style from './PromoSlider.module.css'; // Импортируем стили
 
 // Компонент промо-слайдера
 const PromoSlider = () => {
     const slides = [
         {
-            title: 'Название акции',
+            title: 'Название Акции',
             description: 'Условия акции в пару строк, Условия акции в пару строк, Условия акции в пару строк',
             uptodate: '*Акция действует до 04/09/22',
             pic: promoslide1,
             link: '/promo',
         },
         {
-            title: 'Название акции2',
+            title: 'Название Акции2',
             description: 'Условия акции2 в пару строк, Условия акции2 в пару строк, Условия акции2 в пару строк',
             uptodate: '*Акция действует до 05/10/23',
             pic: promoslide1,
@@ -38,16 +38,20 @@ const PromoSlider = () => {
             pagination={{ clickable: true }}
             loop={true}
             modules={[Navigation, Pagination]}
-            style={{ width: '100%', height: '100%' }}
+            className={style.sliderContainer}
         >
             {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
-                    <div className={styles.sliderContainer}>
-                        <Image src={slide.pic} alt={slide.title} className={styles.slideImage} />
-                        <h2>{slide.title}</h2>
-                        <p>{slide.description}</p>
-                        <small>{slide.uptodate}</small>
-                        <a href={slide.link} className={styles.link}>Узнать больше</a>
+                    <div className={style.slide}>
+                        <div className={style.imageContainer}>
+                            <Image src={slide.pic} alt={slide.title} layout="fill" objectFit="cover" className={style.slideImage} />
+                        </div>
+                        <div className={style.textContainer}>
+                            <small className={style.uptodate}>{slide.uptodate}</small>
+                            <h2 className={style.title}>{slide.title}</h2>
+                            <p className={style.description}>{slide.description}</p>
+                            <a href={slide.link} className={style.link}>Узнать больше</a>
+                        </div>
                     </div>
                 </SwiperSlide>
             ))}

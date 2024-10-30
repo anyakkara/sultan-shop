@@ -10,6 +10,7 @@ import CategoriesList from './Categories';
 
 export default function Home() {
   return (
-    <CategoriesList />
+    //<CategoriesList />
+    <PromoSlider />
   );  
 }

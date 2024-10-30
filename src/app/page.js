@@ -1,14 +1,15 @@
-"use client";
-import {productModel} from './data.js';
-import {ProductList} from './ProductList/productList.js';
+import Image from "next/image";
+import styles from "./page.module.css";
 
 export default function Home() {
-
-  const addToCart = (product) => {
-    console.log('Добавлен в корзину:', product);
-  };
-
-  return(
-    <ProductList productList={productModel} addToCart={addToCart}/>
+  return (
+    <div className={styles.page}>
+      <main className={styles.main}>
+        
+      </main>
+      <footer className={styles.footer}>
+       
+      </footer>
+    </div>
   );
 }

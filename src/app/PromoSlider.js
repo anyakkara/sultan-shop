@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -10,6 +9,7 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import promoslide1 from './images/promoslide1.jpg';
 import style from './PromoSlider.module.css'; // Импортируем стили
+import BigYellowButton from './BigYellowButton';
 
 // Компонент промо-слайдера
 const PromoSlider = () => {
@@ -50,7 +50,9 @@ const PromoSlider = () => {
                             <small className={style.uptodate}>{slide.uptodate}</small>
                             <h2 className={style.title}>{slide.title}</h2>
                             <p className={style.description}>{slide.description}</p>
-                            <a href={slide.link} className={style.link}>Узнать больше</a>
+                            <BigYellowButton href={slide.link}>
+                            <span>Принять участие</span>
+                        </BigYellowButton>
                         </div>
                     </div>
                 </SwiperSlide>

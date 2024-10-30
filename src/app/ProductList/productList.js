@@ -42,19 +42,26 @@ export const ProductList =({productList, addToCart})=>
         
 
       return(
-        <div className={salestyle.product_conteiner}>
-          {productList.map((product)=>
-            (<ProductCard
-              key ={product.id}
-              image={product.image}
-              size = {product.size}
-              barcode = {product.barcode}
-              nameRu = {product.nameRu}
-              brand = {product.brand.name}
-              price = {product.price}
-              addToCart={addToCart}/>
-            ))}
-        </div>
+       <div>
+            <h1 className={salestyle.sale}>АКЦИОННЫЕ
+                <span className={salestyle.pr}> ТОВАРЫ</span>
+            </h1>
+            <div className={salestyle.product_conteiner}>
+                {productList.map((product)=>
+                (<ProductCard
+                    key ={product.id}
+                    image={product.image}
+                    size = {product.size}
+                    barcode = {product.barcode}
+                    nameRu = {product.nameRu}
+                    brand = {product.brand.name}
+                    price = {product.price}
+                    addToCart={addToCart}/>
+                ))}
+           </div>
+       </div>
+
+        
       )
     };
 

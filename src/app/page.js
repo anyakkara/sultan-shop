@@ -5,9 +5,6 @@ import PromoSlider from './PromoSlider';
 import CategoriesList from './Categories';
 
 
-
-
-
 export default function Home() {
   return (
     <div>

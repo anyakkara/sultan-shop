@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./EmailForm.module.css";
 import Image from "next/image";
-import EnterIcon from "@/assets/images/enter.svg";
+import EnterIcon from "@/assets/images/emailicon.svg";
 
 const EmailForm = ({ placeholder, onSubmit }) => {
     const [emailValue, setEmailValue] = useState("");

@@ -1,0 +1,110 @@
+.footer {
+    color: white;
+    background-color: #3F4E65;
+    padding: 20px; 
+    display: flex; 
+    flex-direction: row; 
+}
+
+.subfooter1, .subfooter2, .subfooter3, .subfooter4, .subfooter5 {
+    margin-bottom: 20px; 
+    margin-right: 10px;
+}
+.footerContainer {
+    display: flex; /* Используем Flexbox */
+    justify-content: space-between; /* Распределяем пространство между сабфутерами */
+    align-items: flex-start; /* Выравниваем по верхнему краю */
+    padding: 20px; /* Вы можете установить желаемые отступы */
+}
+.logo2 {
+    margin-bottom: 15px; 
+}
+
+.text p {
+    font-size: 14px; 
+}
+
+.subscribeContainer {
+    margin-top: 10px; 
+}
+
+.subscribeForm {
+    display: flex; 
+    align-items: center; 
+}
+
+.emailInput {
+    padding: 10px; 
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px; 
+    flex-grow: 1;
+}
+
+.submitButton {
+    background-color: #ffffff; 
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submitButton img {
+    width: 20px; 
+    height: 20px;
+}
+
+
+.connection {
+    margin-top: 15px; 
+}
+
+.messengerLinks {
+    display: flex; 
+    gap: 10px;
+    
+}
+
+.NavLinks {
+    display: flex;          
+    flex-direction: column;
+}
+
+.ProductsLinks{
+    display: flex;          
+    flex-direction: column;
+}
+
+.messengerIcon {
+    width: 40px; 
+    height: 40px; 
+    transition: transform 0.2s; 
+}
+
+.messengerIcon:hover {
+    transform: scale(1.1); 
+}
+
+
+
+.contactInfo {
+    flex: 1; 
+}
+
+.phoneNum, .workTime, .orderCall {
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+.Email {
+    margin-top: 10px; 
+}
+
+.paymentLogos {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; 
+}
+
+.paymentLogos img {
+    margin-left: 10px; 
+}

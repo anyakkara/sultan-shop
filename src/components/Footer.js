@@ -6,8 +6,8 @@ import Image from 'next/image';
 import FooterStyles from './Footer.module.css';
 import logo2 from '@/assets/images/logo2.png?static';
 import BigYellowButton from "@/components/BigYellowButton";
-import TelegramLogo from '@/assets/images/telegram.svg';
-import WhatsappLogo from '@/assets/images/whatsapp.svg';
+import TelegramLogo from '@/assets/images/telegram.png?static';
+import WhatsappLogo from '@/assets/images/whatsapp.png?static';
 import MastercardLogo from '@/assets/images/mastercard.svg';
 import VisaLogo from '@/assets/images/visa.svg';
 import EmailEnterIcon from '@/assets/images/emailicon.svg';
@@ -68,10 +68,10 @@ const Footer = () => {
                     <h4>Связь в мессенджерах:</h4>
                     <div className={FooterStyles.messengerLinks}>
                         <Link href="https://wa.me/79896138422" target="_blank" rel="noopener noreferrer">
-                            <img src={WhatsappLogo} alt="WhatsApp" className={FooterStyles.messengerIcon} />
+                            <Image src={WhatsappLogo} alt="WhatsApp" className={FooterStyles.messengerIcon} /> 
                         </Link>
                         <Link href="https://t.me/plzkmn" target="_blank" rel="noopener noreferrer">
-                            <img src={TelegramLogo} alt="Telegram" className={FooterStyles.messengerIcon} />
+                            <Image src={TelegramLogo} alt="Telegram" className={FooterStyles.messengerIcon} height={39} />
                         </Link>
                     </div>
                 </div>

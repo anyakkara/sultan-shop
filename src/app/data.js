@@ -5,6 +5,7 @@ import AOS from './images/aos.png';
 
 export const productModel=[
   
+  
 {
   id:0,
   shortNameRu:'Моющее средство AOS',

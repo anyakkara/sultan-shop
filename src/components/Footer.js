@@ -71,7 +71,7 @@ const Footer = () => {
                             <Image src={WhatsappLogo} alt="WhatsApp" className={FooterStyles.messengerIcon} /> 
                         </Link>
                         <Link href="https://t.me/plzkmn" target="_blank" rel="noopener noreferrer">
-                            <Image src={TelegramLogo} alt="Telegram" className={FooterStyles.messengerIcon} height={39} />
+                            <Image src={TelegramLogo} alt="Telegram" className={FooterStyles.messengerIcon} />
                         </Link>
                     </div>
                 </div>

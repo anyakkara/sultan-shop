@@ -11,10 +11,10 @@
     margin-right: 10px;
 }
 .footerContainer {
-    display: flex; /* Используем Flexbox */
-    justify-content: space-between; /* Распределяем пространство между сабфутерами */
-    align-items: flex-start; /* Выравниваем по верхнему краю */
-    padding: 20px; /* Вы можете установить желаемые отступы */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
 }
 .logo2 {
     margin-bottom: 15px; 

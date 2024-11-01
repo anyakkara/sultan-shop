@@ -1,4 +1,5 @@
-import React from 'react';
+
+import Footer from '@/components/Footer.js'
 import styles from "./page.module.css";
 import Header from "@/components/Header";
 
@@ -21,8 +22,9 @@ export default function Home() {
                   <PromoSlider />
             </main>
             <footer className={styles.footer}>
-                <p>Footer</p>
+                <Footer />
             </footer>
         </div>
     );
 }
+

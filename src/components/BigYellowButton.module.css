@@ -27,3 +27,17 @@
     .BigYellowButton:hover {
         background-color: #E6AC46;
     }
+
+.BigYellowButton img {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.BigYellowButton a {
+    color: white;
+    text-decoration: none;
+}
+
+.BigYellowButton:hover {
+    background-color: #E6AC46;
+}

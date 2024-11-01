@@ -1,14 +1,30 @@
-"use client";
-import {productModel} from './data.js';
-import {ProductList} from './ProductList/productList.js';
+
+import Footer from '@/components/Footer.js'
+import styles from "./page.module.css";
+import Header from "@/components/Header";
+
+import 'typeface-inter';
+
+import PromoSlider from './PromoSlider';
+import CategoriesList from './Categories';
 
 export default function Home() {
-
-  const addToCart = (product) => {
-    console.log('Добавлен в корзину:', product);
-  };
-
-  return(
-    <ProductList productList={productModel} addToCart={addToCart}/>
-  );
+    return (
+        <div className={styles.page}>
+            <Header/> {}
+            <main className={styles.main}>
+                <p>Main body</p>
+                {Array.from({ length: 100 }, (_, i) => (
+                    <p key={i}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing elit.
+                    Ipsum dolor sit amet, consectetur adipiscing elit</p>
+                ))}
+                  <CategoriesList />
+                  <PromoSlider />
+            </main>
+            <footer className={styles.footer}>
+                <Footer />
+            </footer>
+        </div>
+    );
 }
+

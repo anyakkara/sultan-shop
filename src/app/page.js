@@ -1,9 +1,9 @@
 "use client";
 
-import Footer from '@/components/Footer.js'
+import Footer from '@/components/Footer/Footer.js'
 import styles from "./page.module.css";
-import Header from "@/components/Header";
-import Banner from "@/components/Banner";
+import Header from "@/components/Header/Header";
+import Banner from "@/components/Banner/Banner";
 
 import 'typeface-inter';
 
@@ -11,7 +11,7 @@ import PromoSlider from './PromoSlider';
 import CategoriesList from './Categories';
 
 import {productModel} from './data.js';
-import {ProductList} from './ProductList/productList.js';
+import {ProductList} from '@/components/ProductList/productList.js';
 
 export default function Home() {
     const addToCart = (product) => {

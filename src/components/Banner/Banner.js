@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./Banner.module.css";
-import BigYellowButton from "@/components/BigYellowButton";
+import BigYellowButton from "@/components/BigYellowButton/BigYellowButton";
 
 const Insight = ({children}) => {
     return (

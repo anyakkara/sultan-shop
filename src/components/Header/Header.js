@@ -5,9 +5,9 @@ import {useState} from 'react';
 import HeadStyles from './Header.module.css';
 import logo from '@/assets/images/logo.png?static';
 import Image from 'next/image';
-import BigYellowButton from "@/components/BigYellowButton";
-import SearchField from "@/components/SearchField";
-import SmallRoundButton from "@/components/SmallRoundButton";
+import BigYellowButton from "@/components/BigYellowButton/BigYellowButton";
+import SearchField from "@/components/SearchField/SearchField";
+import SmallRoundButton from "@/components/SmallRoundButton/SmallRoundButton";
 import CallCentreImg from '@/assets/images/call_centre.png';
 import CatalogueLogo from '@/assets/images/catalogue.svg';
 import DownloadLogo from '@/assets/images/download.svg';
@@ -68,7 +68,7 @@ const Header = () => {
 
                 <div className={HeadStyles.subheader2}>
                     <div className={HeadStyles.logo}>
-                        <Link href={"/"}><Image src={logo} alt="Logo" height={50}/></Link>
+                        <Link href={"/public"}><Image src={logo} alt="Logo" height={50}/></Link>
                     </div>
 
                     <div>
@@ -133,7 +133,7 @@ const Header = () => {
                         </SmallRoundButton>
                     </div>
                     <div className={HeadStyles.mobileHeaderTopLeft}>
-                        <Link href={"/"}><Image src={logo} alt="Logo" height={50}/></Link>
+                        <Link href={"/public"}><Image src={logo} alt="Logo" height={50}/></Link>
                     </div>
                     <Link href="/cart">
                         <div className={HeadStyles.cartContainer}>

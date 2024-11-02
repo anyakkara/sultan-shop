@@ -1,0 +1,174 @@
+.banner {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    background-image: url("/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.bannerContent {
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(4px);
+    background: linear-gradient(90deg, rgba(138, 148, 171, 1), rgba(138, 148, 171, 0));
+}
+
+.bannerText {
+    padding: 90px 90px 90px 200px;
+    position: relative;
+}
+
+.bannerHeading {
+    font-size: 52px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.bannerSubheading {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+
+.buttonParent {
+    margin-top: 50px;
+    width: 250px;
+    height: 70px;
+}
+
+.buttonParent * {
+    letter-spacing: 2px;
+}
+
+.insightsBox, .mobileInsightsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.mobileInsightsBox {
+    display: none;
+}
+
+.Insight {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.insightCircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFC85E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 20px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.insightText {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.insightText p {
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+}
+
+.insightText b {
+    font-size: 14px;
+}
+
+@media (max-width: 1363px) {
+    .insightsBox {
+        flex-direction: column;
+    }
+    .bannerHeading {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .bannerHeading {
+        font-size: 43px;
+    }
+
+    .bannerText {
+        padding: 90px 90px 90px 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bannerHeading {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .bannerSubheading {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .buttonParent {
+        display: none;
+    }
+
+    .bannerText {
+        padding: 10px;
+        position: relative;
+    }
+
+    .insightsBox {
+        display: none;
+    }
+
+    .mobileInsightsBox {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 50px;
+    }
+
+    .insightText p, .insightText b {
+        color: black;
+    }
+
+    .bannerContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 200px;
+        position: relative;
+        z-index: 1;
+        border-radius: 10px;
+        backdrop-filter: blur(4px);
+        background: linear-gradient(90deg, rgba(138, 148, 171, 1), rgba(138, 148, 171, 0));
+    }
+}

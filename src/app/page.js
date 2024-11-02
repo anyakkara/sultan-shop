@@ -1,10 +1,12 @@
 import styles from "./page.module.css";
 import Header from "@/components/Header";
+import Banner from "@/components/Banner";
 
 export default function Home() {
     return (
         <div className={styles.page}>
-            <Header/> {}
+            <Header/>
+            <Banner/>
             <main className={styles.main}>
                 <p>Main body</p>
                 {Array.from({ length: 100 }, (_, i) => (

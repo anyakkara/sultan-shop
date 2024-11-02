@@ -2,11 +2,11 @@ import React from 'react';
 import style from './Categories.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import housechems from './/images/housechems.png';
-import hygiene from './/images/hygiene.png';
-import housegoods from './/images/housegoods.png';
-import childmom from './/images/childmom.png';
-import dishes from './/images/dishes.png';
+import housechems from '../../app/images/housechems.png';
+import hygiene from '../../app/images/hygiene.png';
+import housegoods from '../../app/images/housegoods.png';
+import childmom from '../../app/images/childmom.png';
+import dishes from '../../app/images/dishes.png';
 
 // компонента категорий
 const CategoriesList = () => {

@@ -5,14 +5,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import FooterStyles from './Footer.module.css';
 import logo2 from '@/assets/images/logo2.png?static';
-import BigYellowButton from "@/components/BigYellowButton";
+import BigYellowButton from "@/components/BigYellowButton/BigYellowButton";
 import TelegramLogo from '@/assets/images/telegram.png?static';
 import WhatsappLogo from '@/assets/images/whatsapp.png?static';
 import MastercardLogo from '@/assets/images/mastercard.svg';
 import VisaLogo from '@/assets/images/visa.svg';
 import EmailEnterIcon from '@/assets/images/emailicon.svg';
 import DownloadLogo from '@/assets/images/download.svg';
-import EmailForm from '@/components/EmailForm';
+import EmailForm from '@/components/EmailForm/EmailForm';
 
 const Footer = () => {
 
@@ -21,7 +21,7 @@ const Footer = () => {
 <div className={FooterStyles.footerContainer}>
             <div className={FooterStyles.subfooter1}>
                 <div className={FooterStyles.logo2}>
-                        <Link href={"/"}><Image src={logo2} alt="Logo" height={66}/></Link>
+                        <Link href={"/public"}><Image src={logo2} alt="Logo" height={66}/></Link>
                 </div>
                 <div className={FooterStyles.text}>
                     <p>

@@ -3,6 +3,7 @@
 import Footer from '@/components/Footer.js'
 import styles from "./page.module.css";
 import Header from "@/components/Header";
+import Banner from "@/components/Banner";
 
 import 'typeface-inter';
 
@@ -19,7 +20,8 @@ export default function Home() {
 
     return (
         <div className={styles.page}>
-            <Header/> {}
+            <Header/>
+            <Banner/>
             <main className={styles.main}>
                 <ProductList productList={productModel} addToCart={addToCart}/>
                 <CategoriesList />

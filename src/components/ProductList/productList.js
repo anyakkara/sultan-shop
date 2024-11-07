@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import salestyle from './productList.module.css';
 
+
 function ProductCard(props){
 
     return(
@@ -12,9 +13,9 @@ function ProductCard(props){
   
         <div className={salestyle.info_product}>
           <p className={salestyle.size}>{props.size}</p>
-          <p className={salestyle.description}>
-            <span className={salestyle.nameRu}>{props.nameRu}</span>
-            {props.description}
+          <p className={salestyle.descript}>
+            <span className={salestyle.nameRu}>{props.nameRu} </span>
+            {props.descript}
           </p>
           <p className={salestyle.word_barcode}>Штрихкод: 
              <span className={salestyle.barcode}> {props.barcode}</span>
@@ -52,6 +53,7 @@ export const ProductList =({productList, addToCart})=>
                     key ={product.id}
                     image={product.image}
                     size = {product.size}
+                    descript = {product.descript}
                     barcode = {product.barcode}
                     nameRu = {product.nameRu}
                     brand = {product.brand.name}

@@ -10,7 +10,10 @@ import 'typeface-inter';
 import PromoSlider from '../components/PromoSlider/PromoSlider';
 import CategoriesList from '../components/Categories/Categories';
 
-import {productModel} from './data.js';
+
+//<link rel='productModel' href='data.js'/>
+
+import productModel from './data.js';
 import {ProductList} from '@/components/ProductList/productList.js';
 
 export default function Home() {

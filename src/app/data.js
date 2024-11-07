@@ -3,15 +3,14 @@ import Ariel from './images/ariel.png';
 import Bimax from './images/bimax.png';
 import AOS from './images/aos.png';
 
-export const productModel=[
-  
+export const productModel = [
 {
   id:0,
   shortNameRu:'Моющее средство AOS',
   shortNameEn:'AOS Detergent',
   nameRu:'AOS',
   nameEn:'Concentrated AOS Dishwashing Detergent',
-  description:'Средство для мытья посуды',
+  descript:'Средство для мытья посуды',
   image: AOS,
   sizeType: 'volume', // weight/volume
   size: "500 мл",
@@ -35,7 +34,7 @@ export const productModel=[
   shortNameEn:'',
   nameRu:'SORTI',
   nameEn:'Concentrated AOS Dishwashing Detergent',
-  description: 'Средство для мытья посуды',
+  descript: 'Средство для мытья посуды',
   image: Sorti,
   sizeType: "volume", // weight/volume
   size: "500 мл",
@@ -58,7 +57,7 @@ export const productModel=[
   shortNameEn:'',
   nameRu:'ARIEL',
   nameEn:'Concentrated Ariel Dishwashing Detergent',
-  description: 'Гель для стирки в растворимых капсулах',
+  descript: 'Гель для стирки в растворимых капсулах',
   image: Ariel,
   sizeType: "weight", // weight/volume
   size: "15*28.8 г",
@@ -81,7 +80,7 @@ export const productModel=[
   shortNameEn:'',
   nameRu:'BIMAX',
   nameEn:'Concentrated AOS Dishwashing Detergent',
-  description: 'Порошок стиральных 100 пятен',
+  descript: 'Порошок стиральных 100 пятен',
   image: Bimax,
   sizeType: "weight", // weight/volume
   size: "1000 г",
@@ -104,7 +103,7 @@ export const productModel=[
   shortNameEn:'AOS Detergent',
   nameRu:'AOS',
   nameEn:'Concentrated AOS Dishwashing Detergent',
-  description: 'Средство для мытья посуды',
+  descript: 'Средство для мытья посуды',
   image: AOS,
   sizeType: "volume", // weight/volume
   size: "500 мл",
@@ -128,7 +127,7 @@ export const productModel=[
   shortNameEn:'',
   nameRu:'SORTI',
   nameEn:'Concentrated AOS Dishwashing Detergent',
-  description: 'Средство для мытья посуды',
+  descript: 'Средство для мытья посуды',
   image: Sorti,
   sizeType: "volume", // weight/volume
   size: "500 мл",
@@ -151,7 +150,7 @@ export const productModel=[
   shortNameEn:'',
   nameRu:'ARIEL',
   nameEn:'Concentrated Ariel Dishwashing Detergent',
-  description: 'Гель для стирки в растворимых капсулах',
+  descript: 'Гель для стирки в растворимых капсулах',
   image: Ariel,
   sizeType: "weight", // weight/volume
   size: "15*28.8 г",
@@ -174,7 +173,7 @@ export const productModel=[
   shortNameEn:'',
   nameRu:'BIMAX',
   nameEn:'Concentrated AOS Dishwashing Detergent',
-  description: 'Порошок стиральных 100 пятен',
+  descript: 'Порошок стиральных 100 пятен',
   image: Bimax,
   sizeType: "weight", // weight/volume
   size: "1000 г",
@@ -193,3 +192,4 @@ export const productModel=[
 ] ;
 
 
+export default productModel;

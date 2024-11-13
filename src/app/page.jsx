@@ -20,16 +20,12 @@ export default function Home() {
 
     return (
         <div className={styles.page}>
-            <Header/>
             <Banner/>
             <main className={styles.main}>
                 <ProductList productList={productModel} addToCart={addToCart}/>
                 <CategoriesList />
                 <PromoSlider />
             </main>
-            <footer className={styles.footer}>
-                <Footer />
-            </footer>
         </div>
     );
 }

@@ -1,0 +1,151 @@
+@function fit-content-plus($extra) {
+    @return fit-content + #{$extra};
+}
+
+.container {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card > * {
+    width: 50%;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.info {
+    padding-top: 40px;
+}
+
+.isAvailable {
+    color: #1FD85D;
+    font-weight: 500;
+}
+
+.title, .title * {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0 10px 0;
+    line-height: 1.5;
+}
+
+.title .titleHighlight {
+    font-weight: 800;
+}
+
+.weight {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.weight img {
+    margin-right: 5px;
+}
+
+.weight span {
+    color: #4e4e4e;
+}
+
+.PriceCartContainer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+.quantity > * {
+    margin: 0 10px;
+}
+
+.minusplus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 20px;
+    background: #ffefd1;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.minusplus:hover {
+    background: #ffe494;
+}
+
+.outlines {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.outlines > * {
+    border-radius: 5px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+    margin: 0 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.04);
+    color: #3f4e65;
+}
+
+.PriceList {
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.ShareButton {
+    cursor: pointer;
+}
+
+.PriceList > img {
+    margin-left: 10px;
+}
+
+.ProductDetailedInfo {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.ProductDetailedInfo > li {
+    display: flex;
+    justify-content: start;
+    margin: 4px 0;
+    font-weight: 300;
+    color: #3f4e65;
+}
+
+.ProductDetailedInfo > li > strong {
+    margin-left: 5px;
+    color: #000;
+}

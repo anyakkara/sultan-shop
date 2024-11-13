@@ -1,0 +1,27 @@
+// A stylesheet for defining global variables and mixins
+
+$padding-large: 210px;
+$padding-medium: 50px;
+$padding-small: 20px;
+
+@mixin responsive-padding {
+    padding-left: $padding-large;
+    padding-right: $padding-large;
+
+    @media (max-width: 1272px) {
+        padding-left: $padding-medium;
+        padding-right: $padding-medium;
+    }
+
+    @media (max-width: 768px) {
+        padding-left: $padding-small;
+        padding-right: $padding-small;
+    }
+}
+
+
+@mixin responsive-display($display, $breakpoint) {
+    @media (max-width: $breakpoint) {
+        display: $display;
+    }
+}

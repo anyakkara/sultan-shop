@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import {useState} from 'react';
-import HeadStyles from './Header.module.css';
+import HeadStyles from './Header.module.scss';
 import logo from '@/assets/images/logo.png?static';
 import Image from 'next/image';
 import BigYellowButton from "@/components/BigYellowButton/BigYellowButton";

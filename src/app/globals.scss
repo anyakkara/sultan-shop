@@ -28,7 +28,7 @@ body {
     justify-content: space-between;
 }
 
-.main, .footer {
+.Main, .footer {
     @include responsive-padding;
 }
 

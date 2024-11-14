@@ -1,13 +1,15 @@
+@import 'src/app/variables.scss';
+
 .BreadCrumbs {
     display: flex;
     align-items: center;
     font-size: 14px;
-    color: #3f4e65;
+    color: $secondary-color;
     margin-bottom: 20px;
 }
 
 .BreadCrumbs > a {
-    color: #3f4e65;
+    color: $secondary-color;
 }
 
 .BreadCrumbs > a:after {

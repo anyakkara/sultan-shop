@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import styles from "./Banner.module.css";
-import BigYellowButton from "@/components/BigYellowButton/BigYellowButton";
+import styles from "./Banner.module.scss";
+import BigYellowButton from "@/components/BigButton/BigButton";
 
 const Insight = ({children}) => {
     return (
-        <div className={styles.Insight}>
+        <div className={styles.insight}>
             <div className={styles.insightCircle}>
                 +
             </div>
@@ -50,7 +50,7 @@ const Banner = () => {
                 <div className={styles.bannerContent}>
                     <div className={styles.bannerText}>
                         <h1 className={styles.bannerHeading}>Бытовая химия, косметика и хозтовары</h1>
-                        <div className={styles.bannerSubheading}>Оптом по Кокчетаву и области</div>
+                        <p className={styles.bannerSubheading}>Оптом по Кокчетаву и области</p>
                         <div className={styles.buttonParent}>
                             <BigYellowButton href="/catalogue">В КАТАЛОГ</BigYellowButton>
                         </div>

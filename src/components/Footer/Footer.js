@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import FooterStyles from './Footer.module.scss';
 import logo2 from '@/assets/images/logo2.png?static';
-import BigYellowButton from "@/components/BigYellowButton/BigYellowButton";
+import BigYellowButton from "@/components/BigButton/BigButton";
 import TelegramLogo from '@/assets/images/telegram.png?static';
 import WhatsappLogo from '@/assets/images/whatsapp.png?static';
 import MastercardLogo from '@/assets/images/mastercard.svg';

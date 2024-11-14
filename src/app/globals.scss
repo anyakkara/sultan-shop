@@ -39,11 +39,11 @@ body {
 }
 
 a {
-    color: #3F4E65;
+    color: $secondary-color;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 a:hover {
-    color: #596f8e;
+    color: $secondary-color-hover;
 }

@@ -7,7 +7,7 @@ import styles from "@/app/product/Product.module.scss"
 import Image from "next/image";
 import SampleProduct from '@/assets/images/sample_product.png';
 import WeightLogo from '@/assets/images/weight.svg';
-import BigYellowButton from "@/components/BigYellowButton/BigYellowButton";
+import BigYellowButton from "@/components/BigButton/BigButton";
 import CartLogo from '@/assets/images/small_cart.svg';
 import ShareLogo from '@/assets/images/share.svg';
 import DownloadLogoDark from '@/assets/images/download_dark.svg';

@@ -5,7 +5,7 @@ import {useState} from 'react';
 import HeadStyles from './Header.module.scss';
 import logo from '@/assets/images/logo.png?static';
 import Image from 'next/image';
-import BigYellowButton from "@/components/BigYellowButton/BigYellowButton";
+import BigYellowButton from "@/components/BigButton/BigButton";
 import SearchField from "@/components/SearchField/SearchField";
 import SmallRoundButton from "@/components/SmallRoundButton/SmallRoundButton";
 import CallCentreImg from '@/assets/images/call_centre.png';

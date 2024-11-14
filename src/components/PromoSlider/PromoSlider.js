@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import promoslide1 from '../../app/images/promoslide1.jpg';
 import style from './PromoSlider.module.css'; // Импортируем стили
-import BigYellowButton from "@/components/BigYellowButton/BigYellowButton";
+import BigYellowButton from "@/components/BigButton/BigButton";
 
 // Компонент промо-слайдера
 const PromoSlider = () => {

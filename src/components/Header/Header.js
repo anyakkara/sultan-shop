@@ -68,7 +68,7 @@ const Header = () => {
 
                 <div className={HeadStyles.subheader2}>
                     <div className={HeadStyles.logo}>
-                        <Link href={"/public"}><Image src={logo} alt="Logo" height={50}/></Link>
+                        <Link href={"/"}><Image src={logo} alt="Logo" height={50}/></Link>
                     </div>
 
                     <div>

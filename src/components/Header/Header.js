@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import {useState} from 'react';
-import HeadStyles from './Header.module.css';
+import HeadStyles from './Header.module.scss';
 import logo from '@/assets/images/logo.png?static';
 import Image from 'next/image';
 import BigYellowButton from "@/components/BigYellowButton/BigYellowButton";
@@ -68,7 +68,7 @@ const Header = () => {
 
                 <div className={HeadStyles.subheader2}>
                     <div className={HeadStyles.logo}>
-                        <Link href={"/public"}><Image src={logo} alt="Logo" height={50}/></Link>
+                        <Link href={"/"}><Image src={logo} alt="Logo" height={50}/></Link>
                     </div>
 
                     <div>

@@ -1,7 +1,7 @@
 .BigYellowButton {
     background-color: #FFC85E;
     color: white;
-    padding: 10px;
+    padding: 10px 30px 10px 30px;
     border-radius: 79px;
     cursor: pointer;
     border-width: 0;
@@ -10,8 +10,9 @@
     font-weight: 600;
     display: inline-block;
     vertical-align: middle;
-    width: 150px;
-    height: 50px;
+    width: 100%;
+    height: 56px;
+    white-space: nowrap;
 }
 
     .BigYellowButton img {

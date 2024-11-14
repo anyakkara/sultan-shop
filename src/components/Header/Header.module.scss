@@ -1,3 +1,5 @@
+@import 'src/app/variables.scss';
+
 .mobileHeader {
     display: flex;
     flex-direction: column;
@@ -94,13 +96,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*background-color: #f8f8f8;*/
     background: white;
     padding: 15px 210px;
+    @include responsive-padding;
+    @include responsive-display(none, 950px);
 }
 
 .mobileHeader {
     display: none;
+    @include responsive-display(flex, 950px);
 }
 
 .headerSeparator {
@@ -160,12 +164,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @include responsive-display(none, 1363px);
 }
 
 .contactInfo .contactRightPart img {
     width: auto;
     height: 80px;
     object-fit: contain;
+    @include responsive-display(none, 1363px);
 }
 
 .phoneNum {
@@ -298,41 +304,16 @@
 
 .menu-toggle {
     display: none;
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-}
-
-@media (max-width: 1363px) {
-    .contactRightPart, .contactRightPart img {
-        display: none;
-    }
+    @include responsive-display(block, 768px);
 }
 
 @media (max-width: 1272px) {
-    .desktopHeader {
-        padding: 15px 50px;
-    }
     .headerSeparator {
         width: calc(100% + 100px);
-    }
-    .main, .footer {
-        padding: 0 50px;
     }
 }
 
 @media (max-width: 950px) {
-    .desktopHeader {
-        display: none;
-    }
-
-    .mobileHeader {
-        display: flex;
-    }
-
     .verticalLine {
         height: calc(100% - 15px);
     }

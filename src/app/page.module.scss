@@ -1,11 +1,7 @@
-.main, .footer {
-    padding: 0 210px;
-}
+@import './variables.scss';
 
-@media (max-width: 1272px) {
-    .main, .footer {
-        padding: 0 50px;
-    }
+.main {
+    @include responsive-padding;
 }
 
 .conteinerCard{

@@ -1,5 +1,7 @@
 "use client";
 
+
+
 import Footer from '@/components/Footer/Footer.js'
 import styles from "./page.module.css";
 import Header from "@/components/Header/Header";
@@ -11,16 +13,11 @@ import PromoSlider from '../components/PromoSlider/PromoSlider';
 import CategoriesList from '../components/Categories/Categories';
 
 
-//<link rel='productModel' href='data.js'/>
 
 import productModel from './data.js';
-import {ProductList} from '@/components/ProductList/productList.js';
+import {ProductList} from '@/components/ProductList/productList';
 
 export default function Home() {
-    const addToCart = (product) => {
-        console.log('Добавлен в корзину:', product);
-    };
-
     return (
         <div className={styles.page}>
             <Header/>
@@ -35,5 +32,6 @@ export default function Home() {
             </footer>
         </div>
     );
-}
+};
+
 

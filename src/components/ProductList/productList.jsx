@@ -1,10 +1,9 @@
 "use client";
 import Image from 'next/image';
-import salestyle from './productList.module.css';
+import salestyle from './productList.module.scss';
 
 
 function ProductCard(props){
-
     return(
       <div className={salestyle.conteinerCard}>
         <div className={salestyle.img_product}>
@@ -26,7 +25,7 @@ function ProductCard(props){
 
           <div className={salestyle.floor_product}>
             <p className={salestyle.price}>{props.price}</p>
-            <button className={salestyle.button} onClick={() => props.addToCart(props)}>в корзину</button>
+            <button className={salestyle.button}>в корзину</button>
           </div>
         </div>
   
@@ -39,14 +38,12 @@ function ProductCard(props){
 
 export const ProductList =({productList, addToCart})=>
     {
-
-        
-
       return(
        <div>
             <h1 className={salestyle.sale}>АКЦИОННЫЕ
                 <span className={salestyle.pr}> ТОВАРЫ</span>
             </h1>
+
             <div className={salestyle.product_conteiner}>
                 {productList.map((product)=>
                 (<ProductCard
@@ -61,9 +58,8 @@ export const ProductList =({productList, addToCart})=>
                     addToCart={addToCart}/>
                 ))}
            </div>
-       </div>
 
-        
+       </div>
       )
     };
 

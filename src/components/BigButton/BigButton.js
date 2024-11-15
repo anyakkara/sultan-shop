@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import styles from "./BigYellowButton.module.css";
+import styles from "./BigButton.module.scss";
 import Link from "next/link";
 
-const BigYellowButton = ({children, onClick, href = "#"}) => {
+const BigButton = ({children, onClick, href = "#"}) => {
     return (
         <button
             className={styles.BigYellowButton}
@@ -17,4 +17,4 @@ const BigYellowButton = ({children, onClick, href = "#"}) => {
     );
 };
 
-export default BigYellowButton;
+export default BigButton;

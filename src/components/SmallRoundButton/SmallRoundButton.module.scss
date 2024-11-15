@@ -1,21 +1,23 @@
+@import 'src/app/variables.scss';
+
 .SmallRoundButton {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFC85E;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    border-width: 0;
-    transition: background-color 0.3s ease;
-    font-size: 20px;
-    font-weight: 600;
-    vertical-align: middle;
     width: 40px;
     height: 40px;
+    padding: 10px;
+    background-color: $main-color;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-width: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    vertical-align: middle;
 }
 
 .SmallRoundButton:hover {
-    background-color: #E6AC46;
+    background-color: $main-color-hover;
 }

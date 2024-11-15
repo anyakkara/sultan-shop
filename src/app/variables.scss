@@ -1,0 +1,43 @@
+// A stylesheet for defining global variables and mixins
+
+// Padding variables and mixins
+$padding-large: 210px;
+$padding-medium: 50px;
+$padding-small: 20px;
+
+@mixin responsive-padding {
+    padding-left: $padding-large;
+    padding-right: $padding-large;
+
+    @media (max-width: $bp-m) {
+        padding-left: $padding-medium;
+        padding-right: $padding-medium;
+    }
+
+    @media (max-width: $bp-xs) {
+        padding-left: $padding-small;
+        padding-right: $padding-small;
+    }
+}
+
+// Display mixin
+@mixin responsive-display($display, $breakpoint) {
+    @media (max-width: $breakpoint) {
+        display: $display;
+    }
+}
+
+// Color variables
+$main-color: #ffc85e;
+$main-color-hover: #e6ac46;
+$secondary-color: #3f4e65;
+$secondary-color-hover: #596f8e;
+$fields-color: #ededed;
+$fields-color-hover: #ffffff;
+$background-color: #ffffff;
+
+// Breakpoints
+$bp-xs: 768px;
+$bp-s: 950px;
+$bp-m: 1272px;
+$bp-l: 1363px;

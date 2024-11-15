@@ -1,0 +1,23 @@
+@import 'src/app/variables.scss';
+
+.BreadCrumbs {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: $secondary-color;
+    margin-bottom: 20px;
+}
+
+.BreadCrumbs > a {
+    color: $secondary-color;
+}
+
+.BreadCrumbs > a:after {
+    content: '/';
+    margin: 0 10px;
+}
+
+.BreadCrumbs > a:last-child:after {
+    content: '';
+    margin: 0;
+}

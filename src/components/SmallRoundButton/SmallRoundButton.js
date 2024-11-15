@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import styles from "./SmallRoundButton.module.css";
+import styles from "./SmallRoundButton.module.scss";
 
 const SmallRoundButton = ({ children, onClick }) => {
     return (

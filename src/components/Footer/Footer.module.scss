@@ -1,7 +1,9 @@
+@import 'src/app/variables.scss';
+
 .footer {
     color: white;
     background-color: #3F4E65;
-    padding: 20px; 
+    @include responsive-padding;
     display: flex; 
     flex-direction: row; 
 }

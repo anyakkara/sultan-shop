@@ -1,31 +1,33 @@
+@import 'src/app/variables.scss';
+
 .mobileHeader {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    position: relative;
     z-index: 10;
     transition: height 0.3s ease;
 }
 
 .menuContent {
-    border-top: 1px solid #e8e8e8;;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
     height: max-content;
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    border-top: 1px solid #e8e8e8;
     background-color: white;
-    z-index: 100;
     box-shadow:
-                0 1px 1px hsl(0deg 0% 0% / 0.075),
-                0 2px 2px hsl(0deg 0% 0% / 0.075),
-                0 4px 4px hsl(0deg 0% 0% / 0.075),
-                0 8px 8px hsl(0deg 0% 0% / 0.075),
-                0 16px 16px hsl(0deg 0% 0% / 0.075);
+            0 1px 1px hsl(0deg 0% 0% / 0.075),
+            0 2px 2px hsl(0deg 0% 0% / 0.075),
+            0 4px 4px hsl(0deg 0% 0% / 0.075),
+            0 8px 8px hsl(0deg 0% 0% / 0.075),
+            0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
 .menuContent > * {
@@ -33,9 +35,9 @@
 }
 
 .mobileHeaderHeading {
-    color: #3F4E65;
     font-size: 140%;
     font-weight: 600;
+    color: $secondary-color;
 }
 
 .mobileMenuLinks {
@@ -58,11 +60,12 @@
     display: flex;
 }
 
-.mobileSubheader1, .mobileSubheader2 {
+.mobileSubheader1,
+.mobileSubheader2 {
     display: flex;
     align-items: center;
-    flex-grow: 1;
     width: 100%;
+    flex-grow: 1;
 }
 
 .mobileSubheader1 {
@@ -86,7 +89,7 @@
     align-items: center;
 }
 
-.mobileHeaderBottomMenu img{
+.mobileHeaderBottomMenu img {
     margin-right: 5px;
 }
 
@@ -94,26 +97,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*background-color: #f8f8f8;*/
-    background: white;
+    background: $background-color;
     padding: 15px 210px;
+    @include responsive-padding;
+    @include responsive-display(none, $bp-s);
 }
 
 .mobileHeader {
     display: none;
+    @include responsive-display(flex, $bp-s);
 }
 
 .headerSeparator {
     align-items: center;
     margin-top: 10px;
-    border-bottom: 1px solid #e8e8e8;
     width: calc(100% + 420px);
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .emailAndAddress {
     display: flex;
-    width: max-content;
     align-items: center;
+    width: max-content;
 }
 
 .subheader1 {
@@ -132,8 +137,8 @@
     width: 100%;
 }
 
-
-.subheader1 *, .subheader2 * {
+.subheader1 *,
+.subheader2 * {
     margin: 0;
     flex-grow: 1;
 }
@@ -145,8 +150,9 @@
 .contactInfo {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     height: 60px;
-    color: #3F4E65;
+    color: $secondary-color;
 }
 
 .contactInfo .contactLeftPart {
@@ -156,16 +162,18 @@
 }
 
 .contactInfo .contactRightPart {
-    margin-left: 10px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-left: 10px;
+    @include responsive-display(none, $bp-l);
 }
 
 .contactInfo .contactRightPart img {
     width: auto;
     height: 80px;
     object-fit: contain;
+    @include responsive-display(none, $bp-l);
 }
 
 .phoneNum {
@@ -191,12 +199,12 @@
 
 .headerCardContainer {
     display: flex;
-    margin-right: 40px;
+    align-items: center;
     flex-direction: row;
     justify-content: left;
-    align-items: center;
     height: 34px;
     max-width: max-content;
+    margin-right: 40px;
 }
 
 .headerCardLogo img {
@@ -206,12 +214,11 @@
 }
 
 .headerCardInfo {
-    margin-left: 10px;
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     height: 34px;
+    margin-left: 10px;
 }
 
 .headerCardInfo *:first-child {
@@ -237,22 +244,21 @@
 }
 
 .cartCounter {
-    box-sizing: content-box;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #FFC85E;
-    color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 20px;
+    height: 20px;
     font-size: 12px;
     font-weight: bold;
+    color: white;
+    background-color: $main-color;
+    border-radius: 50%;
     border: 4px solid #fff;
-
+    box-sizing: content-box;
 }
 
 .cartLogo img {
@@ -298,41 +304,16 @@
 
 .menu-toggle {
     display: none;
+    @include responsive-display(block, $bp-xs);
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-}
-
-@media (max-width: 1363px) {
-    .contactRightPart, .contactRightPart img {
-        display: none;
-    }
-}
-
-@media (max-width: 1272px) {
-    .desktopHeader {
-        padding: 15px 50px;
-    }
+@media (max-width: $bp-m) {
     .headerSeparator {
         width: calc(100% + 100px);
     }
-    .main, .footer {
-        padding: 0 50px;
-    }
 }
 
-@media (max-width: 950px) {
-    .desktopHeader {
-        display: none;
-    }
-
-    .mobileHeader {
-        display: flex;
-    }
-
+@media (max-width: $bp-s) {
     .verticalLine {
         height: calc(100% - 15px);
     }

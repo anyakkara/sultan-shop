@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styles from "./SearchField.module.css";
+import styles from "./SearchField.module.scss";
 import Image from "next/image";
 import SearchIcon from "@/assets/images/search.svg";
 

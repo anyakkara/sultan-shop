@@ -1,0 +1,35 @@
+@import 'src/app/variables.scss';
+
+.BigYellowButton {
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 100%;
+    height: 56px;
+    padding: 10px 30px;
+    border-radius: 79px;
+    border-width: 0;
+    white-space: nowrap;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+
+    background-color: $main-color;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.BigYellowButton img {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.BigYellowButton a {
+    color: white;
+    text-decoration: none;
+}
+
+.BigYellowButton:hover {
+    background-color: $main-color-hover;
+}

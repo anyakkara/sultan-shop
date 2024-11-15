@@ -3,7 +3,9 @@ import Ariel from './images/ariel.png';
 import Bimax from './images/bimax.png';
 import AOS from './images/aos.png';
 
-export const productModel = [{
+export const productModel=[
+  
+{
   id:0,
   shortNameRu:'Моющее средство AOS',
   shortNameEn:'AOS Detergent',

@@ -23,7 +23,7 @@ export default function Home() {
             <Header/>
             <Banner/>
             <main className={styles.main}>
-                <ProductList productList={productModel} addToCart={addToCart}/>
+                <ProductList productList={productModel}/>
                 <CategoriesList />
                 <PromoSlider />
             </main>

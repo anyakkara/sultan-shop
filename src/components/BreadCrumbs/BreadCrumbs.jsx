@@ -1,5 +1,5 @@
 import styles from '@/components/BreadCrumbs/BreadCrumbs.module.scss';
-import Link from "next/link";
+import { Link } from "@/lib/i18n"
 import * as m from "@/paraglide/messages.js";
 
 export default function BreadCrumbs() {

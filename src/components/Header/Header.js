@@ -1,6 +1,6 @@
 "use client";
 
-import Link from 'next/link';
+import { Link } from "@/lib/i18n"
 import {useState} from 'react';
 import HeadStyles from './Header.module.scss';
 import logo from '@/assets/images/logo.png?static';

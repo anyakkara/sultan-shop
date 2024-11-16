@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Categories.module.css';
-import Link from 'next/link';
+import { Link } from "@/lib/i18n"
 import Image from 'next/image';
 import housechems from '../../app/images/housechems.png';
 import hygiene from '../../app/images/hygiene.png';

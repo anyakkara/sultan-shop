@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./BigButton.module.scss";
-import Link from "next/link";
+import { Link } from "@/lib/i18n"
 
 const BigButton = ({children, onClick, href = "#"}) => {
     return (

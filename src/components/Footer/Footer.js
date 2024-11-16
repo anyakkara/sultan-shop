@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from "@/lib/i18n"
 import Image from 'next/image';
 import FooterStyles from './Footer.module.scss';
 import logo2 from '@/assets/images/logo2.png?static';

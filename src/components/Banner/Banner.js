@@ -3,6 +3,7 @@
 import React from "react";
 import styles from "./Banner.module.scss";
 import BigYellowButton from "@/components/BigButton/BigButton";
+import * as m from "@/paraglide/messages.js";
 
 const Insight = ({children}) => {
     return (
@@ -21,9 +22,7 @@ const Insight1 = () => {
     return (
         <Insight>
             <p>
-                Только самые
-                <br/>
-                выгодные предложения
+                {m.banner_insight1_1()}<br/>{m.banner_insight1_2()}
             </p>
         </Insight>
     );
@@ -34,9 +33,7 @@ const Insight2 = () => {
         <Insight>
             <p>
                 <p>
-                    Бесплатная доставка
-                    <br/>
-                    по <b>Кокчетаву от 10 тыс ₸</b>
+                    {m.banner_insight2_1()}<br/><b>{m.banner_insight2_2()}</b>
                 </p>
             </p>
         </Insight>
@@ -49,10 +46,10 @@ const Banner = () => {
             <div className={styles.banner}>
                 <div className={styles.bannerContent}>
                     <div className={styles.bannerText}>
-                        <h1 className={styles.bannerHeading}>Бытовая химия, косметика и хозтовары</h1>
-                        <p className={styles.bannerSubheading}>Оптом по Кокчетаву и области</p>
+                        <h1 className={styles.bannerHeading}>{m.banner_heading()}</h1>
+                        <p className={styles.bannerSubheading}>{m.banner_subheading()}</p>
                         <div className={styles.buttonParent}>
-                            <BigYellowButton href="/catalogue">В КАТАЛОГ</BigYellowButton>
+                            <BigYellowButton href="/catalogue">{m.banner_button()}</BigYellowButton>
                         </div>
                         <div className={styles.insightsBox}>
                             <Insight1/>

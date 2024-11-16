@@ -1,0 +1,11 @@
+{
+    "$schema": "https://inlang.com/schema/inlang-message-format",
+    "hello_world": "Hello World!",
+    "banner_insight1_1": "Only the best offers",
+    "banner_insight1_2": "for you",
+    "banner_insight2_1": "Free delivery in",
+    "banner_insight2_2": "Kokshetau from 10,000 ₸",
+    "banner_heading": "Household chemicals, cosmetics and household goods",
+    "banner_subheading": "Wholesale in Kokshetau and region",
+    "banner_button": "GO TO THE CATALOGUE"
+}

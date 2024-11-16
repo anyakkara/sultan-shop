@@ -12,7 +12,7 @@ import CartLogo from '@/assets/images/small_cart.svg';
 import ShareLogo from '@/assets/images/share.svg';
 import DownloadLogoDark from '@/assets/images/download_dark.svg';
 import Triangle from '@/assets/images/triangle.svg';
-
+import * as m from "@/paraglide/messages.js";
 
 const downloadPriceList = () => {
     const link = document.createElement('a');
@@ -23,13 +23,13 @@ const downloadPriceList = () => {
 
 const ProductDetailedInfo = () => {
     const productInfo = {
-        'Производитель': 'BioMio',
-        'Бренд': 'BioMio',
-        'Артикул': '460404',
-        'Кол-во в коробке': 2,
-        'Штрихкод': '4604049097548',
-        'Размеры коробки (Д*Ш*В)': '10х10х10',
-        'Вес коробки': '1020 г'
+        [m.manufacturer()]: 'BioMio',
+        [m.brand()]: 'BioMio',
+        [m.article()]: '460404',
+        [m.quantity()]: 2,
+        [m.barcode()]: '4604049097548',
+        [m.box_dimensions()]: '10х10х10',
+        [m.weight()]: '1020 г'
     };
 
     return (
@@ -72,7 +72,7 @@ export default function ProductCard() {
                     <Image src={SampleProduct} alt={"Product"}/>
                 </div>
                 <div className={styles.info}>
-                    <span className={styles.isAvailable}>В наличии</span>
+                    <span className={styles.isAvailable}>{m.in_stock()}</span>
 
                     <h1 className={styles.title}><span
                         className={styles.titleHighlight}>BioMio BIO-SOAP</span> Экологичное туалетное мыло. Литсея и
@@ -80,7 +80,7 @@ export default function ProductCard() {
 
                     <span className={styles.weight}>
                         <Image src={WeightLogo} alt={"Weight"}/>
-                        <span>90 г</span>
+                        <span>90 {m.gram()}</span>
                     </span>
 
                     <div className={styles.PriceCartContainer}>
@@ -94,7 +94,7 @@ export default function ProductCard() {
                         </div>
                         <div className={styles.buttonContainer}>
                             <BigYellowButton href={'#'}>
-                                <span>В корзину</span>
+                                <span>{m.add_to_cart()}</span>
                                 <Image src={CartLogo} alt={"Cart Logo"}/>
                             </BigYellowButton>
                         </div>
@@ -102,9 +102,9 @@ export default function ProductCard() {
 
                     <div className={styles.outlines}>
                         <div className={styles.ShareButton}><Image src={ShareLogo} alt={'Share logo'}/></div>
-                        <div>При покупке от 10 000 ₸ бесплатная доставка по Кокчетаву и области</div>
+                        <div>{m.product_page_advert()}</div>
                         <div className={styles.PriceList} onClick={() => downloadPriceList()}>
-                            <span>Прайс-лист</span>
+                            <span>{m.price_list()}</span>
                             <Image src={DownloadLogoDark} alt={'Download logo'}/>
                         </div>
                     </div>
@@ -113,7 +113,7 @@ export default function ProductCard() {
                         <ProductDetailedInfo/>
                     </div>
 
-                    <FoldingBlock title="Описание">
+                    <FoldingBlock title={m.description()}>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum
                             sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus
                             consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc
@@ -122,7 +122,7 @@ export default function ProductCard() {
 
                     <div className={styles.Separator}></div>
 
-                    <FoldingBlock title="Характеристики">
+                    <FoldingBlock title={m.specifications()}>
                         <ProductDetailedInfo/>
                     </FoldingBlock>
                 </div>

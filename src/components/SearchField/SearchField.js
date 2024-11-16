@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import styles from "./SearchField.module.scss";
 import Image from "next/image";
 import SearchIcon from "@/assets/images/search.svg";
+import * as m from "@/paraglide/messages.js";
 
 const SearchField = ({ placeholder, onClick }) => {
     const [inputValue, setInputValue] = useState("");
@@ -45,7 +46,7 @@ SearchField.propTypes = {
 };
 
 SearchField.defaultProps = {
-    placeholder: "Поиск...",
+    placeholder: m.search(),
 };
 
 export default SearchField;

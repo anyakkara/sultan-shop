@@ -5,7 +5,7 @@ import styles from "./Banner.module.scss";
 import BigYellowButton from "@/components/BigButton/BigButton";
 import * as m from "@/paraglide/messages.js";
 
-const Insight = ({children}) => {
+const Insight = ({ children }) => {
     return (
         <div className={styles.insight}>
             <div className={styles.insightCircle}>
@@ -32,9 +32,7 @@ const Insight2 = () => {
     return (
         <Insight>
             <p>
-                <p>
-                    {m.banner_insight2_1()}<br/><b>{m.banner_insight2_2()}</b>
-                </p>
+                {m.banner_insight2_1()}<br/><b>{m.banner_insight2_2()}</b>
             </p>
         </Insight>
     );

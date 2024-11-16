@@ -19,8 +19,7 @@ import CatalogueLogoBlack from '@/assets/images/catalogue_black.svg';
 import MenuIcon from '@/assets/images/menu_white.svg';
 import PhoneLogo from '@/assets/images/phone.svg';
 import PhoneFilledWhiteLogo from '@/assets/images/phone_white_filled.svg';
-
-
+import * as m from "@/paraglide/messages";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,8 +39,8 @@ const Header = () => {
                                 <Image src={LocationLogo} alt={"Location logo"}></Image>
                             </div>
                             <div className={HeadStyles.headerCardInfo}>
-                                <span>г. Кокчетав, ул. Ж. Ташенова 129Б</span>
-                                <span>(Рынок Восточный)</span>
+                                <span>{m.address_p1()}</span>
+                                <span>{m.address_p2()}</span>
                             </div>
                         </div>
 
@@ -51,16 +50,16 @@ const Header = () => {
                             </div>
                             <div className={HeadStyles.headerCardInfo}>
                                 <Link href={"mailto:opt.sultan@mail.ru"}>opt.sultan@mail.ru</Link>
-                                <span>На связи в любое время</span>
+                                <span>{m.email_comment()}</span>
                             </div>
                         </div>
                     </div>
 
                     <div className={HeadStyles.NavLinks}>
-                        <Link href="/about">О компании</Link>
-                        <Link href="/delivery">Доставка и оплата</Link>
-                        <Link href="/refund">Возврат</Link>
-                        <Link href="/contacts">Контакты</Link>
+                        <Link href="/about">{m.about()}</Link>
+                        <Link href="/delivery">{m.delivery()}</Link>
+                        <Link href="/refund">{m.refunds()}</Link>
+                        <Link href="/contacts">{m.contacts()}</Link>
                     </div>
                 </div>
 
@@ -73,7 +72,7 @@ const Header = () => {
 
                     <div>
                         <BigYellowButton href={"/catalogue"}>
-                            <span>Каталог</span>
+                            <span>{m.catalogue()}</span>
                             <Image src={CatalogueLogo} alt={"Catalogue Logo"}></Image>
                         </BigYellowButton>
                     </div>
@@ -88,10 +87,10 @@ const Header = () => {
                             +7 (777) 490-00-91
                         </span>
                             <span className={HeadStyles.workTime}>
-                            время работы: 9:00-20:00
+                            {m.working_hours()}: 9:00-20:00
                         </span>
                             <span className={HeadStyles.orderCall}>
-                            <Link href={"tel:+77774900091"}>Заказать звонок</Link>
+                            <Link href={"tel:+77774900091"}>{m.order_call()}</Link>
                         </span>
                         </div>
                         <div className={HeadStyles.contactRightPart}>
@@ -103,7 +102,7 @@ const Header = () => {
 
                     <div>
                         <BigYellowButton onClick={() => downloadPriceList()}>
-                            <span>Прайс-лист</span>
+                            <span>{m.price_list()}</span>
                             <Image src={DownloadLogo} alt={"Download Logo"}></Image>
                         </BigYellowButton>
                     </div>
@@ -117,7 +116,7 @@ const Header = () => {
                                 <div className={HeadStyles.cartCounter}>0</div>
                             </div>
                             <div className={HeadStyles.cartDetails}>
-                                <span className={HeadStyles.cartName}>Корзина</span>
+                                <span className={HeadStyles.cartName}>{m.cart()}</span>
                                 <span className={HeadStyles.cartPrice}>0 $</span>
                             </div>
                         </div>
@@ -149,12 +148,12 @@ const Header = () => {
                 <div className={HeadStyles.mobileSubheader2}>
                     <Link href="/catalogue" className={HeadStyles.mobileHeaderBottomMenu}>
                         <Image src={CatalogueLogoBlack} alt={"Catalogue logo"}></Image>
-                        <span>Каталог</span>
+                        <span>{m.catalogue()}</span>
                     </Link>
                     <div className={HeadStyles.verticalLine}></div>
                     <Link href="/search" className={HeadStyles.mobileHeaderBottomMenu}>
                         <Image src={SearchLogoBlack} alt={"Search logo"}></Image>
-                        <span>Поиск</span>
+                        <span>{m.search()}</span>
                     </Link>
                 </div>
 
@@ -167,8 +166,8 @@ const Header = () => {
                                     <Image src={LocationLogo} alt={"Location logo"}></Image>
                                 </div>
                                 <div className={HeadStyles.headerCardInfo}>
-                                    <span>г. Кокчетав, ул. Ж. Ташенова 129Б</span>
-                                    <span>(Рынок Восточный)</span>
+                                    <span>{m.address_p1()}</span>
+                                    <span>{m.address_p2()}</span>
                                 </div>
                             </div>
 
@@ -178,7 +177,7 @@ const Header = () => {
                                 </div>
                                 <div className={HeadStyles.headerCardInfo}>
                                     <Link href={"mailto:opt.sultan@mail.ru"}>opt.sultan@mail.ru</Link>
-                                    <span>На связи в любое время</span>
+                                    <span>{m.email_comment()}</span>
                                 </div>
                             </div>
 
@@ -187,12 +186,12 @@ const Header = () => {
                                     <Image src={PhoneLogo} alt={"Phone logo"}></Image>
                                 </div>
                                 <div className={HeadStyles.headerCardInfo}>
-                                    <span>Отдел продаж</span>
+                                    <span>{m.sales_team()}</span>
                                     <Link href={"tel:+77774900091"}>+7 (777) 490-00-91</Link>
                                 </div>
                             </div>
 
-                            <span className={HeadStyles.headerCardContainer}>Время работы: 9:00-20:00</span>
+                            <span className={HeadStyles.headerCardContainer}>{m.working_hours()}: 9:00-20:00</span>
 
                             <Link href={"tel:+77774900091"} className={HeadStyles.headerCardContainer}>
                                 <div className={HeadStyles.headerCardLogo}>
@@ -201,23 +200,23 @@ const Header = () => {
                                     </SmallRoundButton>
                                 </div>
                                 <div className={HeadStyles.headerCardInfo}>
-                                    <span>Заказать звонок</span>
+                                    <span>{m.order_call()}</span>
                                 </div>
                             </Link>
 
                             <div className={HeadStyles.horizontalLine}></div>
 
-                            <span className={HeadStyles.mobileHeaderHeading}>Меню сайта:</span>
+                            <span className={HeadStyles.mobileHeaderHeading}>{m.site_menu()}:</span>
 
                             <div className={HeadStyles.mobileMenuLinks}>
-                                <Link href="/about">О компании</Link>
-                                <Link href="/delivery">Доставка и оплата</Link>
-                                <Link href="/refund">Возврат</Link>
-                                <Link href="/contacts">Контакты</Link>
+                                <Link href="/about">{m.about()}</Link>
+                                <Link href="/delivery">{m.delivery()}</Link>
+                                <Link href="/refund">{m.refunds()}</Link>
+                                <Link href="/contacts">{m.contacts()}</Link>
                             </div>
 
                             <BigYellowButton onClick={() => downloadPriceList()}>
-                                <span>Прайс-лист</span>
+                                <span>{m.price_list()}</span>
                                 <Image src={DownloadLogo} alt={"Download Logo"}></Image>
                             </BigYellowButton>
                         </div>

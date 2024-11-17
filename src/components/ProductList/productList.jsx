@@ -3,9 +3,6 @@ import salestyle from './productList.module.scss';
 import productModel from '../../data/data';
 import ProductCard from './productCard';
 
-
-
-
 const ProductList =()=>
   {
       return(

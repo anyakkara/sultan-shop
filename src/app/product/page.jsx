@@ -63,7 +63,7 @@ const FoldingBlock = ({title, children}) => {
     );
 };
 
-export default function ProductCard() {
+export default function ProductPage() {
     return (
         <div className={styles.container}>
             <BreadCrumbs/>

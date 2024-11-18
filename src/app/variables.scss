@@ -27,6 +27,12 @@ $padding-small: 20px;
     }
 }
 
+@mixin responsive-display_min($display, $breakpoint) {
+    @media (min-width: $breakpoint) {
+        display: $display;
+    }
+}
+
 // Color variables
 $main-color: #ffc85e;
 $main-color-hover: #e6ac46;

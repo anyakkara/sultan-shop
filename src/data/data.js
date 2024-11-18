@@ -6,7 +6,7 @@ import AOS from '@/app/images/aos.png';
 export const productModel=[
 {
   id:0,
-  status:["sale","popular"],
+  status:['sale','popular'],
   shortNameRu:'Моющее средство AOS',
   shortNameEn:'AOS Detergent',
   nameRu:'AOS',

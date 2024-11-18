@@ -1,20 +1,22 @@
 "use client";
 import salestyle from './productList.module.scss';
-import productModel from '../../data/data';
+import products from '../../data/data.json';
 import ProductCard from './productCard';
+
 
 const ProductList =()=>
   {
       return(
+        
+
        <div>
             <h1 className={salestyle.sale}>АКЦИОННЫЕ
                 <span className={salestyle.pr}> ТОВАРЫ</span>
             </h1>
 
             <div className={salestyle.product_conteiner}>
-                {productModel
-                
-                
+                {products
+                .slice(0,8)
                 .map((product)=>
                 (<ProductCard  
                   key ={product.id}
@@ -27,7 +29,8 @@ const ProductList =()=>
                   brand = {product.brand.name}
                   price = {product.price}
                   />
-                ))}
+                ))
+                }
            </div>
 
        </div>

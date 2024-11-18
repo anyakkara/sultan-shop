@@ -1,18 +1,22 @@
 "use client";
 import Image from 'next/image';
-import salestyle from "./productList.module.scss"
+import salestyle from "./productCard.module.scss"
 import { Link } from "@/lib/i18n";
 
 function ProductCard(props) {
     return(
-      <div className={salestyle.conteinerCard}>
+      <div className={salestyle.conteiner}>
         
         <Link className={salestyle.img_product} href={`/product/`} passHref>
-          <Image  className={salestyle.image} src={props.image} alt = {props.nameRu} />
+          <Image  className={salestyle.image} 
+          src={props.image} 
+          alt = {props.nameRu} 
+          width={300} 
+          height={300}/>
         </Link>
         
   
-        <div className={salestyle.info_product}>
+        <div className={salestyle.information}>
           <p className={salestyle.size}>{props.size}</p>
           <p className={salestyle.descript}>
             <span className={salestyle.nameRu}>{props.nameRu} </span>

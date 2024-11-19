@@ -11,88 +11,91 @@
     z-index: 10;
     transition: height 0.3s ease;
     margin: 0 auto;
-    @include responsive-padding; 
-        
+    @include responsive-padding;
 }
 
 .subfooter1, .subfooter2, .subfooter3, .subfooter4, .subfooter5 {
     margin-top: 72px;
-    margin-bottom: 116px; 
+    margin-bottom: 116px;
     margin-right: 95px;
     flex: 1;
 }
+
 .footerContainer {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: flex-start; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
 
 }
+
 .h2Style {
     margin-bottom: 24px;
-        font-size: 16px;
+    font-size: 16px;
 }
 
 .logo2 {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .text p {
-    font-size: 14px; 
-    margin-bottom: 20px; 
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .subscribeContainer {
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .subscribeForm {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 .emailInput {
-    padding: 10px; 
+    padding: 10px;
     border: none;
     border-radius: 4px;
-    margin-right: 5px; 
+    margin-right: 5px;
     flex-grow: 1;
 }
 
 .submitButton {
-    background-color: #ffffff; 
-    border: none; 
+    background-color: #ffffff;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .submitButton img {
-    width: 20px; 
+    width: 20px;
     height: 20px;
 }
 
 
 .connection {
-    margin-top: 15px; 
+    margin-top: 15px;
 }
 
 .messengerLinksF {
-    display: flex; 
+    display: flex;
     gap: 10px;
-    
+
 }
 
 .NavLinksF {
-    display: flex;          
+    display: flex;
     flex-direction: column;
-    
+
 }
+
 .NavLinksF a {
     color: #ffffff;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
+
 .ProductsLinksF {
-    display: flex;          
+    display: flex;
     flex-direction: column;
 }
 
@@ -102,101 +105,117 @@
 }
 
 .messengerIcon {
-    width: 40px; 
-    height: 40px; 
-    transition: transform 0.2s; 
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
 }
 
 .messengerIcon:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .cardIcon {
-    width: 61px; 
-    height: 39px; 
-    transition: transform 0.2s;  
+    width: 61px;
+    height: 39px;
+    transition: transform 0.2s;
 }
+
 .cardIcon:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
+
 .contactInfo {
-    flex: 1; 
+    flex: 1;
 }
 
 .phoneNum, .workTime, .orderCall {
-    display: block; 
-    margin-bottom: 5px; 
+    display: block;
+    margin-bottom: 5px;
 }
+
 .orderCall a {
     color: #ffffff;
     text-decoration: underline;
 }
+
 .Email {
-    margin-top: 10px; 
+    margin-top: 10px;
     color: #ffffff;
 }
 
 .Email a {
     color: #ffffff;
-    
+
 }
 
 .paymentLogos {
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .paymentLogos img {
-    margin-left: 10px; 
+    margin-left: 10px;
 }
-.mobileFooter{
-    @include responsive-padding; 
-    display: block; 
+
+.mobileFooter {
+    @include responsive-padding;
+    display: block;
+
     .mobileSubfooter1 {
         display: flex;
         flex-direction: column;
+
         .up {
-        display: flex; 
-        align-items: center; 
-        justify-content: space-between; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
             .buttonContainer {
-                margin-left: 44px; 
+                margin-left: 44px;
             }
-        } 
+        }
+
         .text {
             margin-top: 10px;
-            text-align: center; 
+            text-align: center;
         }
     }
+
     .mobileSubfooter4 {
         width: 100%;
-        justify-content: space-between; 
+        justify-content: space-between;
         display: flex;
+
         .Menu, .Categories {
-            margin-bottom: 20px; 
+            margin-bottom: 20px;
         }
+
         .h2Style {
-            margin-top: 30px; 
+            margin-top: 30px;
         }
+
         .NavLinksSF a, .ProductsLinksSF a {
-            font-size: 14px; 
-            margin-bottom: 24px; 
+            font-size: 14px;
+            margin-bottom: 24px;
             display: block;
-            color: inherit; 
+            color: inherit;
         }
+
         .NavLinksSF a:last-child, .ProductsLinksSF a:last-child {
             margin-bottom: 0;
         }
     }
+
     .mobileSubfooter5 {
-        
         .mobileContactInfo {
-            justify-content: space-between; 
+            justify-content: space-between;
             display: flex;
+
             .contactsAndCart {
                 display: grid;
             }
+
             .mobileConnection {
                 .h4Style {
                     margin-bottom: 24px;
@@ -206,18 +225,31 @@
         }
     }
 }
+
 @media (max-width: $bp-xs) {
     .footerContainer {
         display: none;
     }
 }
+
 @media (max-width: $bp-m) {
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
+    .footerContainer {
+        display: none;
     }
+
     .mobileFooter {
-        display: none; 
+        display: block;
     }
 }
+
+@media (min-width: $bp-m + 1) {
+    .footerContainer {
+        display: flex;
+    }
+
+    .mobileFooter {
+        display: none;
+    }
+}
+
 

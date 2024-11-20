@@ -1,3 +1,4 @@
+
 @import 'src/app/variables.scss';
 $size_1: 532px;
 $size_2: 848px;
@@ -12,8 +13,6 @@ $size_5: 1424px;
     align-items: stretch;
     gap: 20px;
     padding-top: 10px;
-}
-
 
 .product_conteiner{
     @media (width <= $size_1){
@@ -30,7 +29,7 @@ $size_5: 1424px;
     }
 }
 
-.product_conteiner{
+  .product_conteiner{
     @media ($size_1 < width <= $size_2){
         &_mobile{
             display:none;
@@ -90,7 +89,6 @@ $size_5: 1424px;
     }
 }
 
-
 .product_conteiner{
     @media ($size_5 < width){
         &_mobile{
@@ -105,6 +103,3 @@ $size_5: 1424px;
         }
     }
 }     
-    
-
-

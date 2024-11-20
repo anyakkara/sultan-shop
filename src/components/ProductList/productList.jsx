@@ -1,4 +1,5 @@
 "use client";
+
 import salestyle from './productList.module.scss';
 import products from '../../data/data.json';
 import ProductCard from './productCard';
@@ -85,14 +86,6 @@ const ProductList =()=>
           }
           </Slider>
         </div>
-
-
-
-
-
-      
-            
-
     </div>
  )
 };

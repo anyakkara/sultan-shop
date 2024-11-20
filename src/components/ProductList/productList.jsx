@@ -1,67 +1,94 @@
-'use client';
-import Image from 'next/image';
+"use client";
+
 import salestyle from './productList.module.scss';
+import products from '../../data/data.json';
+import ProductCard from './productCard';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 
-function ProductCard(props) {
-  return (
-    <div className={salestyle.containerCard}>
-      <div className={salestyle.img_product}>
-        <Image
-          className={salestyle.image}
-          src={props.image}
-          alt={props.image}
-        />
-      </div>
+const ProductList =()=>
+{
+  const sliderSettings = {
+    dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  slide: "div",
+  cssEase: "linear"
+  };
 
-      <div className={salestyle.info_product}>
-        <p className={salestyle.size}>{props.size}</p>
-        <p className={salestyle.descript}>
-          <span className={salestyle.nameRu}>{props.nameRu} </span>
-          {props.descript}
-        </p>
-        <p className={salestyle.word_barcode}>
-          Штрихкод:
-          <span className={salestyle.barcode}> {props.barcode}</span>
-        </p>
-        <p className={salestyle.word_brand}>
-          Бренд:
-          <span className={salestyle.brand}> {props.brand}</span>
-        </p>
-
-        <div className={salestyle.floor_product}>
-          <p className={salestyle.price}>{props.price}</p>
-          <button className={salestyle.button}>в корзину</button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export const ProductList = ({ productList, addToCart }) => {
-  return (
+  return(
     <div>
-      <h1 className={salestyle.sale}>
-        АКЦИОННЫЕ
-        <span className={salestyle.pr}> ТОВАРЫ</span>
-      </h1>
+      
+        <h1 className={salestyle.sale}>АКЦИОННЫЕ
+          <span className={salestyle.pr}> ТОВАРЫ</span>
+        </h1>
 
-      <div className={salestyle.product_container}>
-        {productList.map((product) => (
-          <ProductCard
-            key={product.id}
+        <div className={salestyle.product_conteiner_l}>
+          {products
+            .slice(0,8)
+           .filter((product)=>product.status.includes("popular"))
+            .map((product)=>
+            (<ProductCard  
+            key ={product.id}
+            status = {product.status}
             image={product.image}
-            size={product.size}
-            descript={product.descript}
-            barcode={product.barcode}
-            nameRu={product.nameRu}
-            brand={product.brand.name}
-            price={product.price}
-            addToCart={addToCart}
-          />
-        ))}
-      </div>
+            size = {product.size}
+            descript = {product.descript}
+            barcode = {product.barcode}
+            nameRu = {product.nameRu}
+            brand = {product.brand.name}
+            price = {product.price}
+            />
+            ))
+          }
+        </div>
+
+        <div className={salestyle.product_conteiner_m}>
+          {products
+           .slice(0,6)
+           .filter((product)=>product.status.includes("popular"))
+           .map((product)=>
+           (<ProductCard  
+            key ={product.id}
+            status = {product.status}
+            image={product.image}
+            size = {product.size}
+            descript = {product.descript}
+            barcode = {product.barcode}
+            nameRu = {product.nameRu}
+            brand = {product.brand.name}
+            price = {product.price}
+            />
+           ))
+          }
+        </div>
+
+        <div className={salestyle.product_conteiner_mobile}>
+          <Slider {...sliderSettings}>
+          {products
+           .slice(0,8)
+           .filter((product)=>product.status.includes("popular"))
+           .map((product)=>
+           (<ProductCard  className = {salestyle.product_card}
+            key ={product.id}
+            status = {product.status}
+            image={product.image}
+            size = {product.size}
+            descript = {product.descript}
+            barcode = {product.barcode}
+            nameRu = {product.nameRu}
+            brand = {product.brand.name}
+            price = {product.price}
+            />
+           ))
+          }
+          </Slider>
+        </div>
     </div>
-  );
+ )
 };
 
 export default ProductList;
+    

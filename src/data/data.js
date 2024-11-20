@@ -1,12 +1,12 @@
-import Sorti from './images/sorti.png';
-import Ariel from './images/ariel.png';
-import Bimax from './images/bimax.png';
-import AOS from './images/aos.png';
+import Sorti from '@/app/images/sorti.png';
+import Ariel from '@/app/images/ariel.png';
+import Bimax from '@/app/images/bimax.png';
+import AOS from '@/app/images/aos.png';
 
 export const productModel=[
-  
 {
   id:0,
+  status:['sale','popular'],
   shortNameRu:'Моющее средство AOS',
   shortNameEn:'AOS Detergent',
   nameRu:'AOS',
@@ -17,20 +17,15 @@ export const productModel=[
   size: "500 мл",
   category:['hygiene', 'dishwashing'], // hygiene/hands/body/face/hair
   barcode: 123123123,
-  brand:{
-    name:'AOS',
-    number: 101,
-  },
-  article: 0,
-  /*descriptionRu:'Концентрированное моющее средство AOS быстро и эффективно удаляет жир и загрязнения. Безопасно для использования в домашних условиях.',
-  descriptionEn:'AOS concentrated dishwashing detergent quickly and effectively removes grease and dirt. Safe for home use.',*/
-  price: "400 T",
+  brand:'AOS',
+  price: "400 ₸",
   amount: 100,
 }, 
 
 
 {
   id:1,
+  status:["sale","popular"],
   shortNameRu:'',
   shortNameEn:'',
   nameRu:'SORTI',
@@ -41,19 +36,14 @@ export const productModel=[
   size: "500 мл",
   category:['hygiene', 'dishwashing'], // hygiene/hands/body/face/hair
   barcode: 576576576,
-  brand:{
-    name:'Sorti',
-    number: 101,
-  },
-  article: 0,
-  /*descriptionRu:'',
-  descriptionEn:'',*/
-  price: "350 T",
+  brand:'Sorti',
+  price: "350 ₸",
   amount: 100,
 }, 
 
 {
   id:2,
+  status:["sale","popular"],
   shortNameRu:'',
   shortNameEn:'',
   nameRu:'ARIEL',
@@ -64,19 +54,14 @@ export const productModel=[
   size: "15*28.8 г",
   category:['hygiene', ''], // hygiene/hands/body/face/hair
   barcode: 298298298,
-  brand:{
-    name:'Ariel',
-    number: 101,
-  },
-  article: 0,
-  /*descriptionRu:'',
-  descriptionEn:'',*/
-  price: "2500 T",
+  brand:'Ariel',
+  price: "2500 ₸",
   amount: 100,
 }, 
 
 {
   id:3,
+  status:["sale","popular"],
   shortNameRu:'',
   shortNameEn:'',
   nameRu:'BIMAX',
@@ -87,19 +72,14 @@ export const productModel=[
   size: "1000 г",
   category:['hygiene', ''], // hygiene/hands/body/face/hair
   barcode: 123123123,
-  brand:{
-    name:'Bimax',
-    number: 101,
-  },
-  article: 0,
-  descriptionRu:'',
-  descriptionEn:'',
-  price: "2000 T",
+  brand:'Bimax',
+  price: "2000 ₸",
   amount: 100,
 },
 
 {
   id:4,
+  status:["sale","popular"],
   shortNameRu:'Моющее средство AOS',
   shortNameEn:'AOS Detergent',
   nameRu:'AOS',
@@ -110,20 +90,15 @@ export const productModel=[
   size: "500 мл",
   category:['hygiene', 'dishwashing'], // hygiene/hands/body/face/hair
   barcode: 123123123,
-  brand:{
-    name:'AOS',
-    number: 101,
-  },
-  article: 0,
-  /*descriptionRu:'',
-  descriptionEn:'',*/
-  price: "400 T",
+  brand:'AOS',
+  price: "400 ₸",
   amount: 100,
 }, 
 
 
 {
   id:5,
+  status:["sale","popular"],
   shortNameRu:'',
   shortNameEn:'',
   nameRu:'SORTI',
@@ -134,19 +109,14 @@ export const productModel=[
   size: "500 мл",
   category:['hygiene', 'dishwashing'], // hygiene/hands/body/face/hair
   barcode: 576576576,
-  brand:{
-    name:'Sorti',
-    number: 101,
-  },
-  article: 0,
-  /*descriptionRu:'',
-  descriptionEn:'',*/
-  price: "350 T",
+  brand:'Sorti',
+  price: "350 ₸",
   amount: 100,
 }, 
 
 {
   id:6,
+  status:["sale","popular"],
   shortNameRu:'',
   shortNameEn:'',
   nameRu:'ARIEL',
@@ -157,19 +127,14 @@ export const productModel=[
   size: "15*28.8 г",
   category:['hygiene', ''], // hygiene/hands/body/face/hair
   barcode: 298298298,
-  brand:{
-    name:'Ariel',
-    number: 101,
-  },
-  article: 0,
-  /*descriptionRu:'',
-  descriptionEn:'',*/
-  price: "2500 T",
+  brand:'Ariel',
+  price: "2500 ₸",
   amount: 100,
 }, 
 
 {
   id:7,
+  status:["sale","popular"],
   shortNameRu:'',
   shortNameEn:'',
   nameRu:'BIMAX',
@@ -180,17 +145,10 @@ export const productModel=[
   size: "1000 г",
   category:['hygiene', ''], // hygiene/hands/body/face/hair
   barcode: 123123123,
-  brand:{
-    name:'Bimax',
-    number: 101,
-  },
-  article: 0,
-  /*descriptionRu:'',
-  descriptionEn:'',*/
-  price: "2000 T",
+  brand:'Bimax',
+  price: "2000 ₸",
   amount: 100,
 }
-] ;
-
+];
 
 export default productModel;

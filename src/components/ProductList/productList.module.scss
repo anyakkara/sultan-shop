@@ -1,6 +1,9 @@
 @import 'src/app/variables.scss';
-
-
+$size_1: 532px;
+$size_2: 848px;
+$size_3: 1104px;
+$size_4: 1272px;
+$size_5: 1424px;
 
 @mixin conteiner{
     flex-direction: row;
@@ -11,8 +14,27 @@
     padding-top: 10px;
 }
 
+
 .product_conteiner{
-    @media (width <= 848px){
+    @media (width <= $size_1){
+        &_mobile{
+            display: block;
+        }
+
+        &_m{
+            display:none;
+        }
+        &_l{
+            display:none;
+        }
+    }
+}
+
+.product_conteiner{
+    @media ($size_1 < width <= $size_2){
+        &_mobile{
+            display:none;
+        }
         &_m{
             display:flex;
             @include conteiner;
@@ -24,7 +46,10 @@
 }
 
 .product_conteiner{
-    @media (848px < width <= 1104px){
+    @media ($size_2 < width <= $size_3){
+        &_mobile{
+            display:none;
+        }
         &_m{
             display:flex;
             @include conteiner;
@@ -36,7 +61,10 @@
 }
 
 .product_conteiner{
-    @media (1104px < width <= 1272px){
+    @media ($size_3 < width <= $size_4){
+        &_mobile{
+            display:none;
+        }
         &_m{
             display:none;
         }
@@ -48,7 +76,10 @@
 }
 
 .product_conteiner{
-    @media (1272px < width <= 1424px){
+    @media ($size_4 < width <= $size_5){
+        &_mobile{
+            display:none;
+        }
         &_m{
             display:flex;
             @include conteiner;
@@ -59,8 +90,12 @@
     }
 }
 
+
 .product_conteiner{
-    @media (1424px < width){
+    @media ($size_5 < width){
+        &_mobile{
+            display:none;
+        }
         &_m{
             display:none;
         }
@@ -71,9 +106,5 @@
     }
 }     
     
-    
 
 
-
-
-        

@@ -1,12 +1,12 @@
-
 @import 'src/app/variables.scss';
+
 $size_1: 532px;
 $size_2: 848px;
 $size_3: 1104px;
 $size_4: 1272px;
 $size_5: 1424px;
 
-@mixin conteiner{
+@mixin conteiner {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -14,92 +14,93 @@ $size_5: 1424px;
     gap: 20px;
     padding-top: 10px;
 }
-.product_conteiner{
-    @media (width <= $size_1){
-        &_mobile{
+
+.product_conteiner {
+    @media (width <= $size_1) {
+        &_mobile {
             display: block;
         }
 
-        &_m{
-            display:none;
+        &_m {
+            display: none;
         }
-        &_l{
-            display:none;
-        }
-    }
-}
-
-  .product_conteiner{
-    @media ($size_1 < width <= $size_2){
-        &_mobile{
-            display:none;
-        }
-        &_m{
-            display:flex;
-            @include conteiner;
-        }
-        &_l{
-            display:none;
+        &_l {
+            display: none;
         }
     }
 }
 
-.product_conteiner{
-    @media ($size_2 < width <= $size_3){
-        &_mobile{
-            display:none;
+.product_conteiner {
+    @media ($size_1 < width <= $size_2) {
+        &_mobile {
+            display: none;
         }
-        &_m{
-            display:flex;
+        &_m {
+            display: flex;
             @include conteiner;
         }
-        &_l{
-            display:none;
+        &_l {
+            display: none;
         }
     }
 }
 
-.product_conteiner{
-    @media ($size_3 < width <= $size_4){
-        &_mobile{
-            display:none;
+.product_conteiner {
+    @media ($size_2 < width <= $size_3) {
+        &_mobile {
+            display: none;
         }
-        &_m{
-            display:none;
+        &_m {
+            display: flex;
+            @include conteiner;
         }
-        &_l{
-            display:flex;
+        &_l {
+            display: none;
+        }
+    }
+}
+
+.product_conteiner {
+    @media ($size_3 < width <= $size_4) {
+        &_mobile {
+            display: none;
+        }
+        &_m {
+            display: none;
+        }
+        &_l {
+            display: flex;
             @include conteiner;
         }
     }
 }
 
-.product_conteiner{
-    @media ($size_4 < width <= $size_5){
-        &_mobile{
-            display:none;
+.product_conteiner {
+    @media ($size_4 < width <= $size_5) {
+        &_mobile {
+            display: none;
         }
-        &_m{
-            display:flex;
+        &_m {
+            display: flex;
             @include conteiner;
         }
-        &_l{
-            display:none;
+        &_l {
+            display: none;
         }
     }
 }
 
-.product_conteiner{
-    @media ($size_5 < width){
-        &_mobile{
-            display:none;
+.product_conteiner {
+    @media ($size_5 < width) {
+        &_mobile {
+            display: none;
         }
-        &_m{
-            display:none;
+        &_m {
+            display: none;
         }
-        &_l{
-            display:flex;
+        &_l {
+            display: flex;
             @include conteiner;
         }
     }
-}     
+}

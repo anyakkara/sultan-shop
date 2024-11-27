@@ -1,6 +1,6 @@
 @import 'src/app/variables.scss';
 
-.BigYellowButton {
+.BigButton {
     display: inline-block;
     vertical-align: middle;
 
@@ -20,16 +20,16 @@
     transition: background-color 0.3s ease;
 }
 
-.BigYellowButton img {
+.BigButton img {
     margin-left: 10px;
     vertical-align: middle;
 }
 
-.BigYellowButton a {
+.BigButton a {
     color: white;
     text-decoration: none;
 }
 
-.BigYellowButton:hover {
+.BigButton:hover {
     background-color: $main-color-hover;
 }

@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import '../../variables';
 
 .container {
     min-height: 50vh;
@@ -14,14 +14,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @media (max-width: 950px) {
+    @media (max-width: $bp-s) {
         flex-direction: column;
     }
 }
 
 .card > * {
     width: 50%;
-    @media (max-width: 950px) {
+    @media (max-width: $bp-s) {
         width: 100%;
     }
 }
@@ -37,7 +37,7 @@
 }
 
 .isAvailable {
-    color: #1FD85D;
+    color: $is_available;
     font-weight: 500;
 }
 
@@ -63,30 +63,30 @@
 }
 
 .weight span {
-    color: #4e4e4e;
+    color: $gray;
 }
 
-.PriceCartContainer {
+.priceCartContainer {
     display: flex;
     justify-content: start;
     align-items: center;
     margin-top: 20px;
-    @media (max-width: 950px) {
+    @media (max-width: $bp-s) {
         flex-wrap: wrap;
     }
 }
 
 .buttonContainer {
-    @media (max-width: 950px) {
+    @media (max-width: $bp-s) {
         min-width: fit-content;
         width: 50%;
     }
-    @media (max-width: 711px) {
+    @media (max-width: $bp-xxs) {
         margin-top: 16px;
     }
 }
 
-.PriceQuantity {
+.priceQuantity {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,14 +116,14 @@
     justify-content: center;
     width: 30px;
     height: 20px;
-    background: #ffefd1;
+    background: $light-main-color;
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
 .minusplus:hover {
-    background: #ffe494;
+    background: $light-main-color-hover;
 }
 
 .outlines {
@@ -131,7 +131,7 @@
     justify-content: space-between;
     margin: 40px 0;
 
-    @media (max-width: 711px) {
+    @media (max-width: $bp-xxs) {
         flex-direction: column;
     }
 }
@@ -145,92 +145,48 @@
     padding: 28px;
     margin: 0 5px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.04);
-    color: #3f4e65;
+    color: $secondary-color;
 
-    @media (max-width: 711px) {
+    @media (max-width: $bp-xxs) {
         margin: 5px 0;
     }
 }
 
-.PriceList {
+.priceList {
     white-space: nowrap;
     cursor: pointer;
 }
 
-.ShareButton {
+.shareButton {
     cursor: pointer;
 }
 
-.PriceList > img {
+.priceList > img {
     margin-left: 10px;
 }
 
-.ProductDetailedInfo {
+.productDetailedInfo {
     display: flex;
     flex-direction: column;
     list-style-type: none;
 }
 
-.ProductDetailedInfo > li {
+.productDetailedInfo > li {
     display: flex;
     justify-content: start;
     margin: 4px 0;
     font-weight: 300;
-    color: #3f4e65;
+    color: $secondary-color;
 }
 
-.ProductDetailedInfo > li > strong {
+.productDetailedInfo > li > strong {
     margin-left: 5px;
     color: #000;
 }
 
-.Separator {
+.separator {
     align-items: center;
     margin-top: 10px;
     border-bottom: 1px dotted #c1c1c1;
     width: 50%;
-}
-
-.FoldingBlock {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    margin: 20px 0;
-}
-
-.FoldingHeading {
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    cursor: pointer;
-}
-
-.FoldingHeading h4 {
-    font-size: 16px;
-    font-weight: 500;
-    margin-right: 4px;
-}
-
-.FoldingBlock p {
-    color: #3f4e65;
-    line-height: 1.8;
-}
-
-.RotatedTriangle {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
-}
-
-.FoldingContent {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-
-    &.open {
-        max-height: 500px;
-        opacity: 1;
-    }
 }

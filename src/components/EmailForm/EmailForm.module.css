@@ -37,12 +37,12 @@
     right: 10px;
     top: 50%;
     border: none;
-    border-radius: 5px; 
+    border-radius: 5px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px; 
+    font-size: 16px;
     background-color: #FFC85E;
     color: white;
     transition: background-color 0.3s ease;

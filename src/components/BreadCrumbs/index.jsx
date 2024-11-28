@@ -1,13 +1,14 @@
-import styles from '@/components/BreadCrumbs/BreadCrumbs.module.scss';
-import { Link } from '@/lib/i18n';
-import * as m from '@/paraglide/messages.js';
+'use client';
 
-export default function BreadCrumbs() {
+import { Link } from "@/lib/i18n"
+import styles from './BreadCrumbs.module.scss';
+
+export default function BreadCrumbs({ paths }) {
   return (
     <div className={styles.BreadCrumbs}>
-      <Link href={'/'}>{m.home()}</Link>
-      <Link href={'/catalogue'}>{m.catalogue()}</Link>
-      <Link href={'/product'}>НАЗВАНИЕ ТОВАРА</Link>
+      {Object.entries(paths).map(([name, url], index, array) => (
+          <Link key={url} href={url}>{name}</Link>
+      ))}
     </div>
   );
 }

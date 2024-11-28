@@ -31,6 +31,7 @@ const ProductList = () => {
           .map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               status={product.status}
               image={product.image}
               size={product.size}
@@ -50,6 +51,7 @@ const ProductList = () => {
           .map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               status={product.status}
               image={product.image}
               size={product.size}
@@ -71,6 +73,7 @@ const ProductList = () => {
               <ProductCard
                 className={salestyle.product_card}
                 key={product.id}
+                id={product.id}
                 status={product.status}
                 image={product.image}
                 size={product.size}

@@ -36,5 +36,6 @@
     "description": "Description",
     "specifications": "Specifications",
     "add_to_cart": "Add to cart",
-    "gram": "g"
+    "gram": "g",
+    "not_found": "Not found"
 }

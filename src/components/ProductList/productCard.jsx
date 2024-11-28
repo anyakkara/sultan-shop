@@ -15,7 +15,11 @@ function ProductCard(props) {
         height={20}
       />
 
-      <Link className={salecard.img_product} href={`/catalogue/product/`} passHref>
+      <Link
+        className={salecard.img_product}
+        href={`/catalogue/${props.id}`}
+        passHref
+      >
         <Image
           className={salecard.image}
           src={props.image}

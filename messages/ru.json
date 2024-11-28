@@ -36,5 +36,6 @@
     "description": "Описание",
     "specifications": "Характеристики",
     "add_to_cart": "В корзину",
-    "gram": "г"
+    "gram": "г",
+    "not_found": "Не найдено"
 }

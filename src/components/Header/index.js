@@ -20,6 +20,8 @@ import MenuIcon from '@/assets/images/menu_white.svg';
 import PhoneLogo from '@/assets/images/phone.svg';
 import PhoneFilledWhiteLogo from '@/assets/images/phone_white_filled.svg';
 import * as m from '@/paraglide/messages';
+import { languageTag } from "@/paraglide/runtime";
+import { getNewLanguageUrl } from '@/utils/language_switcher';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,6 +63,7 @@ const Header = () => {
             <Link href="/delivery">{m.delivery()}</Link>
             <Link href="/refund">{m.refunds()}</Link>
             <Link href="/contacts">{m.contacts()}</Link>
+            <a href={getNewLanguageUrl(languageTag() === 'en' ? 'ru' : 'en')}>{languageTag() === 'en' ? 'Русский' : 'English'}</a>
           </div>
         </div>
 

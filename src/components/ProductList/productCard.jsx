@@ -3,6 +3,9 @@ import Image from 'next/image';
 import salecard from './productCard.module.scss';
 import { Link } from '@/lib/i18n';
 import popular_img from '../../app/images/popular.png';
+import * as m from '@/paraglide/messages.js';
+import { languageTag } from "@/paraglide/runtime";
+import WeightLogo from '@/assets/images/weight.svg';
 
 function ProductCard(props) {
   return (
@@ -30,22 +33,25 @@ function ProductCard(props) {
       </Link>
 
       <div className={salecard.information}>
-        <p className={salecard.size}>{props.size}</p>
-        <p className={salecard.descript}>
-          <span className={salecard.nameRu}>{props.nameRu} </span>
+        <span className={salecard.weight}>
+          <Image src={WeightLogo} alt={'Weight'}/>
+          <span> {props.size}</span>
+        </span>
+        <p className={salecard.description}>
+          <span className={salecard.name}>{props.brand} </span>
           {props.descript}
         </p>
         <p className={salecard.word_barcode}>
-          Штрихкод:
+          {m.barcode_card()}
           <span className={salecard.barcode}> {props.barcode}</span>
         </p>
         <p className={salecard.word_brand}>
-          Бренд:
+          {m.brand_card()}
           <span className={salecard.brand}> {props.brand}</span>
         </p>
 
         <div className={salecard.floor_product}>
-          <p className={salecard.price}>{props.price}</p>
+          <p className={salecard.price}>{props.price +' '+ '₸'}</p>
           <button className={salecard.button}>в корзину</button>
         </div>
       </div>

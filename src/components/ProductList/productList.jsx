@@ -8,13 +8,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
+import * as m from '@/paraglide/messages.js';
+import { languageTag } from "@/paraglide/runtime";
 
 const ProductList = () => {
   return (
     <div>
       <h1 className={salestyle.sale}>
-        АКЦИОННЫЕ
-        <span className={salestyle.pr}> ТОВАРЫ</span>
+        {m.sale()}
+        <span className={salestyle.pr}>{m.product()}</span>
       </h1>
 
       <div className={salestyle.product_conteiner_l}>
@@ -27,11 +29,11 @@ const ProductList = () => {
               id={product.id}
               status={product.status}
               image={product.image}
-              size={product.size}
-              descript={product.descript}
+              size={product.size + ' ' + [languageTag() === 'en' ? product.unitEn : product.unitRu]}
+              descript={languageTag() === 'en' ? product.nameEn : product.nameRu}
               barcode={product.barcode}
               nameRu={product.nameRu}
-              brand={product.brand.name}
+              brand={product.brand}
               price={product.price}
             />
           ))}
@@ -47,11 +49,11 @@ const ProductList = () => {
               id={product.id}
               status={product.status}
               image={product.image}
-              size={product.size}
-              descript={product.descript}
+              size={product.size + ' ' + [languageTag() === 'en' ? product.unitEn : product.unitRu]}
+              descript={languageTag() === 'en' ? product.nameEn : product.nameRu}
               barcode={product.barcode}
               nameRu={product.nameRu}
-              brand={product.brand.name}
+              brand={product.brand}
               price={product.price}
             />
           ))}
@@ -78,11 +80,11 @@ const ProductList = () => {
                 id={product.id}
                 status={product.status}
                 image={product.image}
-                size={product.size}
-                descript={product.descript}
+                size={product.size + ' ' + [languageTag() === 'en' ? product.unitEn : product.unitRu]}
+                descript={languageTag() === 'en' ? product.nameEn : product.nameRu}
                 barcode={product.barcode}
                 nameRu={product.nameRu}
-                brand={product.brand.name}
+                brand={product.brand}
                 price={product.price}
               />
             </SwiperSlide>

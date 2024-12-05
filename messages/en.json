@@ -37,5 +37,10 @@
     "specifications": "Specifications",
     "add_to_cart": "Add to cart",
     "gram": "g",
-    "not_found": "Not found"
+    "not_found": "Not found",
+
+    "sale":"PROMOTIONAL",
+    "product":" PRODUCTS",
+    "barcode_card":"Barcode: ",
+    "brand_card":"Brand: "
 }

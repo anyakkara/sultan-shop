@@ -37,5 +37,10 @@
     "specifications": "Характеристики",
     "add_to_cart": "В корзину",
     "gram": "г",
-    "not_found": "Не найдено"
+    "not_found": "Не найдено",
+
+    "sale":"АКЦИОННЫЕ",
+    "product":" ТОВАРЫ",
+    "barcode_card":"Штрихкод: ",
+    "brand_card":"Бренд: "
 }

@@ -6,6 +6,24 @@ $size_3: 1272px;
 $size_4: 1436px;
 $size_5: 1500px;
 
+.sale{
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: left;
+    color: $main-color;
+    padding-top: 100px;
+}
+
+.pr{
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    color: $color-slider;
+}
+
 @mixin conteiner {
     flex-direction: row;
     flex-wrap: wrap;

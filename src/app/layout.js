@@ -8,13 +8,13 @@ export default function RootLayout({ children }) {
     return (
         <LanguageProvider>
             <html lang={languageTag()}>
-            <body>
-                <Header />
+                <body>
+                    <Header/>
                     <main className={styles.Main}>
                         {children}
-                    </main>
-                <Footer />
-            </body>
+                   </main>
+                   <Footer />
+                </body>
             </html>
         </LanguageProvider>
     );

@@ -1,10 +1,28 @@
 @import 'src/app/variables.scss';
 
-$size_1: 532px;
-$size_2: 848px;
-$size_3: 1104px;
-$size_4: 1272px;
-$size_5: 1424px;
+$size_1: 712px;
+$size_2: 1118px;
+$size_3: 1272px;
+$size_4: 1436px;
+$size_5: 1500px;
+
+.sale{
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: left;
+    color: $main-color;
+    padding-top: 100px;
+}
+
+.pr{
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    color: $color-slider;
+}
 
 @mixin conteiner {
     flex-direction: row;
@@ -13,12 +31,15 @@ $size_5: 1424px;
     align-items: stretch;
     gap: 20px;
     padding-top: 10px;
+    padding-bottom: 100px;
 }
 
 .product_conteiner {
     @media (width <= $size_1) {
         &_mobile {
             display: block;
+            max-width: 326px;
+            padding-bottom: 100px;
         }
 
         &_m {
@@ -38,8 +59,10 @@ $size_5: 1424px;
         &_m {
             display: flex;
             @include conteiner;
+            
         }
         &_l {
+            
             display: none;
         }
     }
@@ -104,3 +127,4 @@ $size_5: 1424px;
         }
     }
 }
+

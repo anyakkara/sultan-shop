@@ -37,5 +37,17 @@
     "specifications": "Specifications",
     "add_to_cart": "Add to cart",
     "gram": "g",
-    "not_found": "Not found"
+    "not_found": "Not found",
+    "chemicals": "Chemicals",
+    "cosmetics": "Cosmetics",
+    "productsForHome": "Home Products",
+    "productsForKids": "Kids Products",
+    "dishes": "Dishes",
+    "download_pricelist": "Download price list: ",
+    "messages_connect": "Contact us via messengers:",
+    "title_contacts": "Contacts:",
+    "title_categories": "Categories:",
+    "title_menu": "Navigation menu:",
+    "subscribe_text": "Subscribe for discounts and promotions",
+    "sultan_description": "The 'Sultan' company supplies retail stores with 'turnkey' products in Kokshetau and Akmolinsk region."
 }

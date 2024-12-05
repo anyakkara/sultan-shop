@@ -12,25 +12,25 @@ import WhatsappLogo from '@/assets/images/whatsapp.png?static';
 import MastercardLogo from '@/assets/images/mastercard.png?static';
 import VisaLogo from '@/assets/images/visa.png?static';
 import DownloadLogo from '@/assets/images/download.svg';
+import * as m from '@/paraglide/messages';
 
 const Footer = () => {
   return (
     <footer className={FooterStyles.footer}>
       <div className={FooterStyles.footerContainer}>
         <div className={FooterStyles.subfooter1}>
-          <div className={FooterStyles.logo2}>
+          <div className={FooterStyles.logo_footer}>
             <Link href={'/public'}>
               <Image src={logo2} alt="Logo" height={66} />
             </Link>
           </div>
           <div className={FooterStyles.text}>
-            <p>
-              Компания «Султан» — снабжаем розничные магазины товарами "под
-              ключ" в Кокчетаве и Акмолинской области
-            </p>
+            {m.sultan_description()}
+          </div>
+          <div className={FooterStyles.follow_text}>
+           {m.subscribe_text()}
           </div>
           <div className={FooterStyles.subscribeContainer}>
-            <p>Подпишись на скидки и акции</p>
             <div>
               <EmailField onClick={handleEmailSubmit}></EmailField>
             </div>
@@ -38,36 +38,36 @@ const Footer = () => {
         </div>
 
         <div className={FooterStyles.subfooter2}>
-          <h2 className={FooterStyles.h2Style}>Меню сайта:</h2>
-          <div className={FooterStyles.NavLinksF}>
-            <Link href="/about">О компании</Link>
-            <Link href="/delivery">Доставка и оплата</Link>
-            <Link href="/refund">Возврат</Link>
-            <Link href="/contacts">Контакты</Link>
+          <h2 className={FooterStyles.h2Style}>{m.title_menu()}</h2>
+          <div className={FooterStyles.navLinksF}>
+            <Link href="/about">{m.about()}</Link>
+                <Link href="/delivery">{m.delivery()}</Link>
+                <Link href="/refund">{m.refunds()}</Link>
+                <Link href="/contacts">{m.contacts()}</Link>
           </div>
         </div>
 
         <div className={FooterStyles.subfooter3}>
-          <h2 className={FooterStyles.h2Style}>Категории:</h2>
-          <div className={FooterStyles.ProductsLinksF}>
-            <Link href="/chemicals">Бытовая химия</Link>
-            <Link href="/cosmetics">Косметика и гигиена</Link>
-            <Link href="/productsforhome">Товары для дома</Link>
-            <Link href="/productsforkids">Товары для детей и мам</Link>
-            <Link href="/dishess">Посуда</Link>
+          <h2 className={FooterStyles.h2Style}>{m.title_categories()}</h2>
+          <div className={FooterStyles.productsLinksF}>
+            <Link href="/chemicals">{m.chemicals()}</Link>
+            <Link href="/cosmetics">{m.cosmetics()}</Link>
+            <Link href="/productsforhome">{m.productsForHome()}</Link>
+            <Link href="/productsforkids">{m.productsForKids()}</Link>
+            <Link href="/dishes">{m.dishes()}</Link>
           </div>
         </div>
 
         <div className={FooterStyles.subfooter4}>
-          <h2 className={FooterStyles.h2Style}>Скачать прайс-лист:</h2>
+          <h2 className={FooterStyles.h2Style}>{m.download_pricelist()}</h2>
           <div>
-            <BigYellowButton onClick={() => downloadPriceList()}>
-              <span>Прайс-лист</span>
-              <Image src={DownloadLogo} alt={'Download Logo'}></Image>
-            </BigYellowButton>
+          <BigYellowButton onClick={() => downloadPriceList()}>
+                <span>{m.price_list()}</span>
+                <Image src={DownloadLogo} alt={'Download Logo'}></Image>
+              </BigYellowButton>
           </div>
           <div className={FooterStyles.connection}>
-            <h4>Связь в мессенджерах:</h4>
+            <h4>{m.messages_connect()}</h4>
             <div className={FooterStyles.messengerLinksF}>
               <Link
                 href="https://wa.me/79896138422"
@@ -97,18 +97,18 @@ const Footer = () => {
         <div className={FooterStyles.subfooter5}>
           <div className={FooterStyles.contactInfo}>
             <div className={FooterStyles.contactLeftPart}>
-              <h2 className={FooterStyles.h2Style}>Контакты:</h2>
+              <h2 className={FooterStyles.h2Style}>{m.title_contacts()}</h2>
               <span className={FooterStyles.phoneNum}>+7 (777) 490-00-91 </span>
               <span className={FooterStyles.workTime}>
-                время работы: 9:00-20:00{' '}
+                {m.working_hours()}: 9:00-20:00
               </span>
               <span className={FooterStyles.orderCall}>
-                <Link href={'tel:+77774900091'}>Заказать звонок</Link>{' '}
+                <Link href={'tel:+77774900091'}>{m.order_call()}</Link>{' '}
               </span>
             </div>
             <div className={FooterStyles.Email}>
               <Link href={'mailto:opt.sultan@mail.ru'}>opt.sultan@mail.ru</Link>
-              <p>На связи в любое время</p>
+              <p>{m.email_comment()}</p>
             </div>
           </div>
           <div className={FooterStyles.paymentLogos}>
@@ -135,11 +135,8 @@ const Footer = () => {
               </Link>
             </div>
             <div className={FooterStyles.buttonContainer}>
-              <BigYellowButton
-                onClick={() => downloadPriceList()}
-                className={FooterStyles.customButton}
-              >
-                <span>Прайс-лист</span>
+            <BigYellowButton onClick={() => downloadPriceList()}>
+                <span>{m.price_list()}</span>
                 <Image src={DownloadLogo} alt={'Download Logo'}></Image>
               </BigYellowButton>
             </div>
@@ -147,15 +144,14 @@ const Footer = () => {
         </div>
         <div className={FooterStyles.mobileSubfooter2}>
           <div className={FooterStyles.text}>
-            <p>
-              Компания «Султан» — снабжаем розничные магазины товарами "под
-              ключ" в Кокчетаве и Акмолинской области
-            </p>
+            {m.sultan_description()}
           </div>
         </div>
         <div className={FooterStyles.mobileSubfooter3}>
           <div className={FooterStyles.mobilesubscribeContainer}>
-            <p>Подпишись на скидки и акции</p>
+          <div className={FooterStyles.follow_text}>
+           {m.subscribe_text()}
+          </div>
             <div>
               <EmailField onClick={handleEmailSubmit}></EmailField>
             </div>
@@ -163,29 +159,29 @@ const Footer = () => {
         </div>
         <div className={FooterStyles.mobileSubfooter4}>
           <div className={FooterStyles.Menu}>
-            <h2 className={FooterStyles.h2Style}>Меню сайта:</h2>
-            <div className={FooterStyles.NavLinksSF}>
-              <Link href="/about">О компании</Link>
-              <Link href="/delivery">Доставка и оплата</Link>
-              <Link href="/refund">Возврат</Link>
-              <Link href="/contacts">Контакты</Link>
+          <h2 className={FooterStyles.h2Style}>{m.title_menu()}</h2>
+            <div className={FooterStyles.navLinksSF}>
+                <Link href="/about">{m.about()}</Link>
+                <Link href="/delivery">{m.delivery()}</Link>
+                <Link href="/refund">{m.refunds()}</Link>
+                <Link href="/contacts">{m.contacts()}</Link>
             </div>
           </div>
 
           <div className={FooterStyles.Categories}>
-            <h2 className={FooterStyles.h2Style}>Категории:</h2>
-            <div className={FooterStyles.ProductsLinksSF}>
-              <Link href="/chemicals">Бытовая химия</Link>
-              <Link href="/cosmetics">Косметика и гигиена</Link>
-              <Link href="/productsforhome">Товары для дома</Link>
-              <Link href="/productsforkids">Товары для детей и мам</Link>
-              <Link href="/dishess">Посуда</Link>
+            <h2 className={FooterStyles.h2Style}>{m.title_categories()}</h2>
+            <div className={FooterStyles.productsLinksSF}>
+              <Link href="/chemicals">{m.chemicals()}</Link>
+              <Link href="/cosmetics">{m.cosmetics()}</Link>
+              <Link href="/productsforhome">{m.productsForHome()}</Link>
+              <Link href="/productsforkids">{m.productsForKids()}</Link>
+              <Link href="/dishes">{m.dishes()}</Link>
             </div>
           </div>
         </div>
         <div className={FooterStyles.mobileSubfooter5}>
           <div className={FooterStyles.contactInfo}>
-            <h2 className={FooterStyles.h2Style}>Контакты:</h2>
+            <h2 className={FooterStyles.h2Style}>{m.title_contacts()}</h2>
             <div className={FooterStyles.mobileContactInfo}>
               <div className={FooterStyles.contactsAndCart}>
                 <div className={FooterStyles.contactLeftPart}>
@@ -193,17 +189,18 @@ const Footer = () => {
                     +7 (777) 490-00-91{' '}
                   </span>
                   <span className={FooterStyles.workTime}>
-                    время работы: 9:00-20:00{' '}
+                    {m.working_hours()}: 9:00-20:00
                   </span>
                   <span className={FooterStyles.orderCall}>
-                    <Link href={'tel:+77774900091'}>Заказать звонок</Link>{' '}
+                    <Link href={'tel:+77774900091'}>{m.order_call()}</Link>{' '}
                   </span>
                 </div>
                 <div className={FooterStyles.Email}>
                   <Link href={'mailto:opt.sultan@mail.ru'}>
                     opt.sultan@mail.ru
                   </Link>
-                  <p>На связи в любое время</p>
+                  <br /> 
+                  <span>{m.email_comment()}</span>
                 </div>
 
                 <div className={FooterStyles.paymentLogos}>
@@ -220,7 +217,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className={FooterStyles.mobileConnection}>
-                <h4 className={FooterStyles.h4Style}>Связь в мессенджерах:</h4>
+                <h4 className={FooterStyles.h4Style}>{m.messages_connect()}</h4>             
                 <div className={FooterStyles.messengerLinksSF}>
                   <Link
                     href="https://wa.me/79896138422"

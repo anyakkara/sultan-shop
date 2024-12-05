@@ -37,5 +37,17 @@
     "specifications": "Характеристики",
     "add_to_cart": "В корзину",
     "gram": "г",
-    "not_found": "Не найдено"
+    "not_found": "Не найдено",
+    "chemicals": "Химические вещества",
+    "cosmetics": "Косметика",
+    "productsForHome": "Товары для дома",
+    "productsForKids": "Товары для детей",
+    "dishes": "Посуда",
+    "download_pricelist": "Скачать прайс-лист:",
+    "messages_connect": "Связь в мессенджерах:",
+    "title_contacts": "Контакты:",
+    "title_categories": "Категории:",
+    "title_menu": "Меню сайта:",
+    "subscribe_text": "Подпишись на скидки и акции",
+    "sultan_description": "Компания «Султан» — снабжаем розничные магазины товарами \"под ключ\" в Кокчетаве и Акмолинской области"
 }

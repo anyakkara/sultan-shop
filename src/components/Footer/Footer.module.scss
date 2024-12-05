@@ -34,13 +34,17 @@
     font-size: 16px;
 }
 
-.logo2 {
+.logo_footer {
     margin-bottom: 20px;
 }
 
 .text p {
     font-size: 14px;
     margin-bottom: 20px;
+}
+
+.follow_text{
+    margin-top: 20px;
 }
 
 .subscribeContainer {
@@ -83,23 +87,23 @@
 
 }
 
-.NavLinksF {
+.navLinksF {
     display: flex;
     flex-direction: column;
 
 }
 
-.NavLinksF a {
+.navLinksF a {
     color: #ffffff;
     margin-bottom: 20px;
 }
 
-.ProductsLinksF {
+.productsLinksF {
     display: flex;
     flex-direction: column;
 }
 
-.ProductsLinksF a {
+.productsLinksF a {
     color: #ffffff;
     margin-bottom: 20px;
 }
@@ -195,14 +199,14 @@
             margin-top: 30px;
         }
 
-        .NavLinksSF a, .ProductsLinksSF a {
+        .navLinksSF a, .productsLinksSF a {
             font-size: 14px;
             margin-bottom: 24px;
             display: block;
             color: inherit;
         }
 
-        .NavLinksSF a:last-child, .ProductsLinksSF a:last-child {
+        .navLinksSF a:last-child, .productsLinksSF a:last-child {
             margin-bottom: 0;
         }
     }

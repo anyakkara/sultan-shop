@@ -3,20 +3,13 @@
 import salestyle from './productList.module.scss';
 import products from '../../data/data.json';
 import ProductCard from './productCard';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
 
 const ProductList = () => {
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    slide: 'div',
-    cssEase: 'linear',
-  };
-
   return (
     <div>
       <h1 className={salestyle.sale}>
@@ -64,12 +57,21 @@ const ProductList = () => {
           ))}
       </div>
 
-      <div className={salestyle.product_conteiner_mobile}>
-        <Slider {...sliderSettings}>
+      <Swiper
+      slidesPerView={1}
+      spaceBetween={30}
+      navigation={true}
+      pagination={{ clickable: true }}
+      loop={true}
+      modules={[Navigation, Pagination]}
+      className={salestyle.product_conteiner_mobile}
+      >
+        <div>
           {products
-            .slice(0, 8)
-            .filter((product) => product.status.includes('popular'))
-            .map((product) => (
+          .slice(0, 8)
+          .filter((product) => product.status.includes('popular'))
+          .map((product, id) => (
+            <SwiperSlide key={id}>
               <ProductCard
                 className={salestyle.product_card}
                 key={product.id}
@@ -83,9 +85,10 @@ const ProductList = () => {
                 brand={product.brand.name}
                 price={product.price}
               />
-            ))}
-        </Slider>
-      </div>
+            </SwiperSlide>
+          ))}
+        </div>
+      </Swiper> 
     </div>
   );
 };

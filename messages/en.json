@@ -42,5 +42,18 @@
     "sale":"PROMOTIONAL",
     "product":" PRODUCTS",
     "barcode_card":"Barcode: ",
-    "brand_card":"Brand: "
+    "brand_card":"Brand: ",
+
+    "chemicals": "Chemicals",
+    "cosmetics": "Cosmetics",
+    "productsForHome": "Home Products",
+    "productsForKids": "Kids Products",
+    "dishes": "Dishes",
+    "download_pricelist": "Download price list: ",
+    "messages_connect": "Contact us via messengers:",
+    "title_contacts": "Contacts:",
+    "title_categories": "Categories:",
+    "title_menu": "Navigation menu:",
+    "subscribe_text": "Subscribe for discounts and promotions",
+    "sultan_description": "The 'Sultan' company supplies retail stores with 'turnkey' products in Kokshetau and Akmolinsk region."
 }

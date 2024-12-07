@@ -37,3 +37,6 @@ next-env.d.ts
 
 # other
 .idea
+project.inlang/cache
+project.inlang/project_id
+project.inlang/.gitignore

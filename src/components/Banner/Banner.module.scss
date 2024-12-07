@@ -1,0 +1,179 @@
+@import 'src/app/variables.scss';
+
+.banner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    background-image: url("/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.bannerContent {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 50%;
+    backdrop-filter: blur(4px);
+    background: linear-gradient(90deg, rgba(138, 148, 171, 1), rgba(138, 148, 171, 0));
+}
+
+.bannerText {
+    position: relative;
+    padding: 90px 90px 90px 200px;
+}
+
+.bannerHeading {
+    font-size: 52px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.bannerSubheading {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+
+.buttonParent {
+    width: 250px;
+    height: 70px;
+    margin-top: 50px;
+}
+
+.buttonParent * {
+    letter-spacing: 2px;
+}
+
+.insightsBox,
+.mobileInsightsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.mobileInsightsBox {
+    display: none;
+}
+
+.insight {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.insightCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    background-color: $main-color;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.insightText {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 8px;
+}
+
+.insightText p {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.insightText b {
+    font-size: 14px;
+}
+
+@media (max-width: $bp-l) {
+    .insightsBox {
+        flex-direction: column;
+    }
+
+    .bannerHeading {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .bannerHeading {
+        font-size: 43px;
+    }
+
+    .bannerText {
+        padding: 90px 90px 90px 100px;
+    }
+}
+
+@media (max-width: $bp-xs) {
+    .banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+    }
+
+    .bannerHeading {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .bannerSubheading {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .buttonParent {
+        display: none;
+    }
+
+    .bannerText {
+        position: relative;
+        padding: 10px;
+    }
+
+    .insightsBox {
+        display: none;
+    }
+
+    .mobileInsightsBox {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 50px;
+    }
+
+    .insightText p,
+    .insightText b {
+        color: black;
+    }
+
+    .bannerContent {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 200px;
+        z-index: 1;
+        border-radius: 10px;
+        backdrop-filter: blur(4px);
+        background: linear-gradient(90deg, rgba(138, 148, 171, 1), rgba(138, 148, 171, 0));
+    }
+}

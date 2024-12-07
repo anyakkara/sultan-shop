@@ -1,0 +1,45 @@
+@import '../../app/variables.scss';
+
+.foldingBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin: 20px 0;
+}
+
+.foldingHeading {
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+}
+
+.foldingHeading h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+.foldingBlock p {
+    color: $secondary-color;
+    line-height: 1.8;
+}
+
+.rotatedTriangle {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.foldingContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+
+    &.open {
+        max-height: 500px;
+        opacity: 1;
+    }
+}

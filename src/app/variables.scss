@@ -1,0 +1,27 @@
+// A stylesheet for defining global variables and mixins
+
+// Padding variables
+$padding-large: 210px;
+$padding-medium: 50px;
+$padding-small: 20px;
+
+// Color variables
+$main-color: #ffc85e;
+$main-color-hover: #e6ac46;
+$light-main-color: #ffefd1;
+$light-main-color-hover: #ffe494;
+$secondary-color: #3f4e65;
+$secondary-color-hover: #596f8e;
+$fields-color: #ededed;
+$fields-color-hover: #dadada;
+$background-color: #ffffff;
+$color-slider: #111111;
+$is_available: #1FD85D;
+$gray: #4e4e4e;
+
+// Breakpoints
+$bp-xxs: 711px;
+$bp-xs: 768px;
+$bp-s: 950px;
+$bp-m: 1272px;
+$bp-l: 1363px;

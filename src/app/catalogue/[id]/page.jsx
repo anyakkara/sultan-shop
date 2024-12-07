@@ -1,21 +1,22 @@
 'use client';
 
-import React from 'react';
-import { useEffect, useState } from 'react';
-import BreadCrumbs from '@/components/BreadCrumbs';
-import styles from '@/app/catalogue/[id]/Product.module.scss';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import SampleProduct from '@/assets/images/sample_product.png';
-import WeightLogo from '@/assets/images/weight.svg';
+
 import BigButton from '@/components/BigButton';
-import CartLogo from '@/assets/images/small_cart.svg';
-import ShareLogo from '@/assets/images/share.svg';
-import DownloadLogoDark from '@/assets/images/download_dark.svg';
-import * as m from '@/paraglide/messages.js';
-import { downloadFile } from '@/utils/download';
+import BreadCrumbs from '@/components/BreadCrumbs';
 import FoldingBlock from '@/components/FoldingBlock';
+
+import { downloadFile } from '@/utils/download';
+import * as m from '@/paraglide/messages.js';
+import { languageTag } from "@/paraglide/runtime";
+
+import CartLogo from '@/assets/images/small_cart.svg';
+import DownloadLogoDark from '@/assets/images/download_dark.svg';
+import ShareLogo from '@/assets/images/share.svg';
+import WeightLogo from '@/assets/images/weight.svg';
+import styles from '@/app/catalogue/[id]/Product.module.scss';
 import products from '@/data/data.json';
-import { languageTag } from "@/paraglide/runtime"
 
 const handleDownload = () => {
   downloadFile('Прайс-лист.pdf');
@@ -24,7 +25,11 @@ const handleDownload = () => {
 export default function ProductPage({ params }) {
   const { id } = React.use(params);
   
-  const product = products.find((product) => product.id === parseInt(id));
+  const [product, setProduct] = useState(null);
+  
+  useEffect(() => {
+    setProduct(products.find((product) => product.id === parseInt(id)));
+  }, [id]);
   
   const ProductDetailedInfo = () => {
     const productInfo = {

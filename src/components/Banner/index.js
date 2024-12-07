@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import styles from './Banner.module.scss';
 import BigYellowButton from '@/components/BigButton';
 import * as m from '@/paraglide/messages.js';
+import styles from './Banner.module.scss';
 
 const Insight = ({ text1, text2, isBold = false }) => {
   return (

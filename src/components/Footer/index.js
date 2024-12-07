@@ -1,18 +1,21 @@
 'use client';
 
-import EmailField from "@/components/EmailField";
 import React from 'react';
-import { Link } from '@/lib/i18n';
 import Image from 'next/image';
-import FooterStyles from './Footer.module.scss';
-import logo2 from '@/assets/images/logo2.png?static';
+
 import BigYellowButton from '@/components/BigButton';
-import TelegramLogo from '@/assets/images/telegram.png?static';
-import WhatsappLogo from '@/assets/images/whatsapp.png?static';
-import MastercardLogo from '@/assets/images/mastercard.png?static';
-import VisaLogo from '@/assets/images/visa.png?static';
-import DownloadLogo from '@/assets/images/download.svg';
+import EmailField from '@/components/EmailField';
+import { Link } from '@/lib/i18n';
+
 import * as m from '@/paraglide/messages';
+
+import DownloadLogo from '@/assets/images/download.svg';
+import logo2 from '@/assets/images/logo2.png?static';
+import MastercardLogo from '@/assets/images/mastercard.png?static';
+import TelegramLogo from '@/assets/images/telegram.png?static';
+import VisaLogo from '@/assets/images/visa.png?static';
+import WhatsappLogo from '@/assets/images/whatsapp.png?static';
+import FooterStyles from './Footer.module.scss';
 
 const Footer = () => {
   return (
@@ -24,16 +27,10 @@ const Footer = () => {
               <Image src={logo2} alt="Logo" height={66} />
             </Link>
           </div>
-          <div className={FooterStyles.text}>
-            {m.sultan_description()}
-          </div>
-          <div className={FooterStyles.follow_text}>
-           {m.subscribe_text()}
-          </div>
+          <div className={FooterStyles.text}>{m.sultan_description()}</div>
+          <div className={FooterStyles.follow_text}>{m.subscribe_text()}</div>
           <div className={FooterStyles.subscribeContainer}>
-            <div>
-              <EmailField onClick={handleEmailSubmit}></EmailField>
-            </div>
+            <EmailField onClick={handleEmailSubmit}></EmailField>
           </div>
         </div>
 
@@ -41,9 +38,9 @@ const Footer = () => {
           <h2 className={FooterStyles.h2Style}>{m.title_menu()}</h2>
           <div className={FooterStyles.navLinksF}>
             <Link href="/about">{m.about()}</Link>
-                <Link href="/delivery">{m.delivery()}</Link>
-                <Link href="/refund">{m.refunds()}</Link>
-                <Link href="/contacts">{m.contacts()}</Link>
+            <Link href="/delivery">{m.delivery()}</Link>
+            <Link href="/refund">{m.refunds()}</Link>
+            <Link href="/contacts">{m.contacts()}</Link>
           </div>
         </div>
 
@@ -61,10 +58,10 @@ const Footer = () => {
         <div className={FooterStyles.subfooter4}>
           <h2 className={FooterStyles.h2Style}>{m.download_pricelist()}</h2>
           <div>
-          <BigYellowButton onClick={() => downloadPriceList()}>
-                <span>{m.price_list()}</span>
-                <Image src={DownloadLogo} alt={'Download Logo'}></Image>
-              </BigYellowButton>
+            <BigYellowButton onClick={() => downloadPriceList()}>
+              <span>{m.price_list()}</span>
+              <Image src={DownloadLogo} alt={'Download Logo'}></Image>
+            </BigYellowButton>
           </div>
           <div className={FooterStyles.connection}>
             <h4>{m.messages_connect()}</h4>
@@ -135,7 +132,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className={FooterStyles.buttonContainer}>
-            <BigYellowButton onClick={() => downloadPriceList()}>
+              <BigYellowButton onClick={() => downloadPriceList()}>
                 <span>{m.price_list()}</span>
                 <Image src={DownloadLogo} alt={'Download Logo'}></Image>
               </BigYellowButton>
@@ -143,15 +140,11 @@ const Footer = () => {
           </div>
         </div>
         <div className={FooterStyles.mobileSubfooter2}>
-          <div className={FooterStyles.text}>
-            {m.sultan_description()}
-          </div>
+          <div className={FooterStyles.text}>{m.sultan_description()}</div>
         </div>
         <div className={FooterStyles.mobileSubfooter3}>
           <div className={FooterStyles.mobilesubscribeContainer}>
-          <div className={FooterStyles.follow_text}>
-           {m.subscribe_text()}
-          </div>
+            <div className={FooterStyles.follow_text}>{m.subscribe_text()}</div>
             <div>
               <EmailField onClick={handleEmailSubmit}></EmailField>
             </div>
@@ -159,12 +152,12 @@ const Footer = () => {
         </div>
         <div className={FooterStyles.mobileSubfooter4}>
           <div className={FooterStyles.Menu}>
-          <h2 className={FooterStyles.h2Style}>{m.title_menu()}</h2>
+            <h2 className={FooterStyles.h2Style}>{m.title_menu()}</h2>
             <div className={FooterStyles.navLinksSF}>
-                <Link href="/about">{m.about()}</Link>
-                <Link href="/delivery">{m.delivery()}</Link>
-                <Link href="/refund">{m.refunds()}</Link>
-                <Link href="/contacts">{m.contacts()}</Link>
+              <Link href="/about">{m.about()}</Link>
+              <Link href="/delivery">{m.delivery()}</Link>
+              <Link href="/refund">{m.refunds()}</Link>
+              <Link href="/contacts">{m.contacts()}</Link>
             </div>
           </div>
 
@@ -199,7 +192,7 @@ const Footer = () => {
                   <Link href={'mailto:opt.sultan@mail.ru'}>
                     opt.sultan@mail.ru
                   </Link>
-                  <br /> 
+                  <br />
                   <span>{m.email_comment()}</span>
                 </div>
 
@@ -217,7 +210,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className={FooterStyles.mobileConnection}>
-                <h4 className={FooterStyles.h4Style}>{m.messages_connect()}</h4>             
+                <h4 className={FooterStyles.h4Style}>{m.messages_connect()}</h4>
                 <div className={FooterStyles.messengerLinksSF}>
                   <Link
                     href="https://wa.me/79896138422"

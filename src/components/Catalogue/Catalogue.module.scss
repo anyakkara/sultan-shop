@@ -1,0 +1,177 @@
+@import 'src/app/variables.scss';
+
+.categoriesPage {
+    background-color: $background-color;
+    @include responsive-padding;
+    .headlineCategories {
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between; 
+        padding: 10px;
+        .leftPart {
+            color: $color-slider;
+            text-transform: uppercase;
+            font-size: 48px;
+        }
+        .rightPart { 
+            .sortdropdown {
+                display: inline-block;
+            }
+            
+            .sortdropdown label {
+                margin-right: 8px;
+                font-weight: bold;
+                color: $color-slider;
+            }
+            
+            .sortdropdown select {
+                font-size: 14px;
+                padding: 4px;
+                border: none;
+            }
+        }
+    }
+    .filtercategories {
+        display: flex;
+        gap: 11px;
+        margin-bottom: 50px;
+        .categoryitem {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 0 0 auto; 
+            text-align: center;
+            font-size: 16px;
+            height: 70px;
+            max-width: 140px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color-slider;
+        }
+    }
+
+    .filtercontainer {
+        width: 238px;
+        background-color: #ffffff;
+
+        
+        .pricerange {
+            font-family: Arial, sans-serif;
+            width: 238px;
+            .selection {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: $color-slider;
+            }
+            .priceint {
+                font-size: 14px;
+                margin: 5px 0;
+                margin-top: 30px;
+                color: $color-slider;
+                display: flex;
+                align-items: center;
+            }
+            .priceinputs {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: $background-color;
+            }
+            .priceinputs input {
+                width: 100px;
+                padding: 5px;
+                text-align: center;
+                background-color: #f8e6ce;
+                border: none;
+                border-radius: 20px;
+                color: $secondary-color;
+                font-weight: bold;
+            }
+        }
+
+        .filterManufacturer {
+            .manufacturer{
+                margin-top: 30px; 
+                color: $color-slider;
+                font-size: 16px;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 16px 0;
+            }
+            li {
+                margin-bottom: 8px;
+                color: $secondary-color;
+            }
+            label {
+                margin-left: 8px;
+                
+            }
+            .count {
+                font-size: 10px;
+            }
+            .showAll {
+                margin-top: 16px;
+                cursor: pointer;
+                color: $secondary-color;
+                border-bottom: 1px dotted #ccc; 
+            }
+        }
+        .filterBrand {
+            .brand{
+                margin-top: 30px; 
+                color: $color-slider;
+                font-size: 16px;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 16px 0;
+            }
+            li {
+                margin-bottom: 8px;
+                color: $secondary-color;
+            }
+            label {
+                margin-left: 8px;
+                
+            }
+            .count {
+                font-size: 10px;
+            }
+            .showAll {
+                margin-top: 16px;
+                cursor: pointer;
+                color: $secondary-color;
+            }
+        }
+
+
+    .submitbuttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .showbutton {
+        background: #f9b233;
+        border: none;
+        padding: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    
+    .clearbutton {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    }
+}

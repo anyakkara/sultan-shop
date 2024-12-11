@@ -14,7 +14,9 @@ import VisaLogo from '@/assets/images/visa.png?static';
 import DownloadLogo from '@/assets/images/download.svg';
 import * as m from '@/paraglide/messages';
 
+
 const Footer = () => {
+
   return (
     <footer className={FooterStyles.footer}>
       <div className={FooterStyles.footerContainer}>
@@ -250,6 +252,8 @@ const Footer = () => {
     </footer>
   );
 };
+
+
 
 const downloadPriceList = () => {
   const link = document.createElement('a');

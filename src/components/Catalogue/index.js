@@ -120,7 +120,7 @@ return(
         </div>
         <div className={CatalogueStyles.careListsContainer}>
           <div className={CatalogueStyles.careLists}>
-            <CareSection title={m.body_care()} items={bodyItems}/>
+            <CareSection title={m.body_care()} />
           </div>
         </div>
       </div>

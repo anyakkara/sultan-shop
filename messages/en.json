@@ -61,6 +61,7 @@
     "name_descending": "Name (Descending)",
     "price_ascending": "Price (Ascending)",
     "price_descending": "Price (Descending)",
+    "sort_default": "Default",
 
 
     "body_care": "Body Care",

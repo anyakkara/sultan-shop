@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 
-const ProductList = () => {
+const ProductList = ({ brands = [], sortType = 'nameasc' }) => {
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -16,75 +16,82 @@ const ProductList = () => {
     slide: 'div',
     cssEase: 'linear',
   };
-
+  
+  const filteredProducts = products.filter((product) => {
+    const matchesBrand = brands.length === 0 || brands.includes(product.brand);
+    const isPopular = product.status.includes('popular');
+    return isPopular && matchesBrand;
+  });
+  
+  const sortedProducts = [...filteredProducts].sort((a, b) => {
+    switch (sortType) {
+      case 'nameasc':
+        return a.nameRu.localeCompare(b.nameRu);
+      case 'namedesc':
+        return b.nameRu.localeCompare(a.nameRu);
+      case 'priceasc':
+        return a.price - b.price;
+      case 'pricedesc':
+        return b.price - a.price;
+      default:
+        return 0;
+    }
+  });
+  
+  const renderProductCards = (productList, isSlider = false) => {
+    if (isSlider) {
+      return (
+        <Slider {...sliderSettings}>
+          {productList.map((product) => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              status={product.status}
+              image={product.image}
+              size={product.size}
+              descript={product.descript}
+              barcode={product.barcode}
+              nameRu={product.nameRu}
+              brand={product.brand}
+              price={product.price}
+            />
+          ))}
+        </Slider>
+      );
+    }
+    
+    return (
+      <>
+        {productList.map((product) => (
+          <ProductCard
+            key={product.id}
+            id={product.id}
+            status={product.status}
+            image={product.image}
+            size={product.size}
+            descript={product.descript}
+            barcode={product.barcode}
+            nameRu={product.nameRu}
+            brand={product.brand}
+            price={product.price}
+          />
+        ))}
+      </>
+    );
+  };
+  
   return (
     <div>
-      <h1 className={salestyle.sale}>
-        АКЦИОННЫЕ
-        <span className={salestyle.pr}> ТОВАРЫ</span>
-      </h1>
-
-      <div className={salestyle.product_conteiner_l}>
-        {products
-          .slice(0, 8)
-          .filter((product) => product.status.includes('popular'))
-          .map((product) => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              status={product.status}
-              image={product.image}
-              size={product.size}
-              descript={product.descript}
-              barcode={product.barcode}
-              nameRu={product.nameRu}
-              brand={product.brand.name}
-              price={product.price}
-            />
-          ))}
+      <div className={salestyle.product_container_l}>
+        {renderProductCards(sortedProducts, false)}
       </div>
-
-      <div className={salestyle.product_conteiner_m}>
-        {products
-          .slice(0, 6)
-          .filter((product) => product.status.includes('popular'))
-          .map((product) => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              status={product.status}
-              image={product.image}
-              size={product.size}
-              descript={product.descript}
-              barcode={product.barcode}
-              nameRu={product.nameRu}
-              brand={product.brand.name}
-              price={product.price}
-            />
-          ))}
+      
+      <div className={salestyle.product_container_m}>
+        {renderProductCards(sortedProducts, false)}
       </div>
-
-      <div className={salestyle.product_conteiner_mobile}>
-        <Slider {...sliderSettings}>
-          {products
-            .slice(0, 8)
-            .filter((product) => product.status.includes('popular'))
-            .map((product) => (
-              <ProductCard
-                className={salestyle.product_card}
-                key={product.id}
-                id={product.id}
-                status={product.status}
-                image={product.image}
-                size={product.size}
-                descript={product.descript}
-                barcode={product.barcode}
-                nameRu={product.nameRu}
-                brand={product.brand.name}
-                price={product.price}
-              />
-            ))}
-        </Slider>
+      
+      <div className={salestyle.product_container_mobile}>
+        {renderProductCards(sortedProducts, true)}
       </div>
     </div>
   );

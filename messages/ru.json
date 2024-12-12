@@ -60,6 +60,7 @@
     "name_descending": "Название (убывание)",
     "price_ascending": "Цена (возрастание)",
     "price_descending": "Цена (убывание)",
+    "sort_default": "По умолчанию",
 
     "show_filters":"Показать",
     

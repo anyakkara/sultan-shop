@@ -1,5 +1,5 @@
 import React from 'react';
-import './CareLists.css';
+import './LeftCategories.module.scss';
 import * as m from '@/paraglide/messages';
 
 const CareLists = () => {

@@ -6,7 +6,7 @@ import popular_img from '../../app/images/popular.png';
 
 function ProductCard(props) {
   return (
-    <div className={salecard.conteiner}>
+    <div className={salecard.container}>
       <Image
         className={salecard.popular}
         src={popular_img}

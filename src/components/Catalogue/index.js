@@ -1,137 +1,156 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from '@/lib/i18n';
 import BigYellowButton from '@/components/BigButton';
 import * as m from '@/paraglide/messages';
 import BreadCrumbs from '@/components/BreadCrumbs';
 import FoldingBlock from '@/components/FoldingBlock';
-import SearchField from "@/components/SearchField";
-import CareSection from "@/components/CareLists/CareSection";
-import CareLists from "@/components/CareLists/CareLists";
-import CatalogueStyles from './Catalogue.module.scss';
+import SearchField from '@/components/SearchField';
+import LeftCategories from '@/components/LeftCategories';
+import styles from './Catalogue.module.scss';
+import ProductList from '@/components/ProductList';
+import products from '@/data/data.json';
 
 const Catalogue = () => {
-return(
-    <div className={CatalogueStyles.categoriesPage}>
+  const uniqueBrands = [...new Set(products.map((product) => product.brand))];
+  const [selectedBrands, setSelectedBrands] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredBrands, setFilteredBrands] = useState(uniqueBrands);
+  const [sortType, setSortType] = useState('default');
 
-        <BreadCrumbs
-          paths={{
-            [m.home()]: '/',
-            [m.cosmetics_and_hygiene()]: '/cosmetics_and_hygiene',
-          }}
-        />
-        <div className={CatalogueStyles.headlineCategories}>
-          <div className={CatalogueStyles.leftPart}>
-            {m.cosmetics_and_hygiene()}
-          </div>
-          <div className={CatalogueStyles.rightPart}>
-            
-            <div className={CatalogueStyles.sortdropdown}>
-              <label className={CatalogueStyles.sorting}>{m.sorting()}</label> 
-              <select id="sort">
-                <option value="nameasc">{m.name_ascending()}</option>
-                <option value="namedesc">{m.name_descending()}</option>
-                <option value="priceasc">{m.price_ascending()}</option>
-                <option value="pricedesc">{m.price_descending()}</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      <div className={CatalogueStyles.filtercategories}>
-        {[m.body_care(), m.hand_care(), m.foot_care(), m.face_care(), m.hair_care(), m.suncare(), m.shaving(), m.gift_sets(), m.hygiene_products(), m.oral_hygiene(), m.paper_products()]
-          .map((category, index) => (
-            <div key={index} className={CatalogueStyles.categoryitem}>
-              {category}
-            </div>
-          ))}
-      </div>
-      <div className={CatalogueStyles.filtercontainer}>
-
-
-        <div className={CatalogueStyles.pricerange}>
-          <h2 className={CatalogueStyles.selection}>{m.selection_by_parameters()}</h2>
-            <h3 className={CatalogueStyles.priceint}>{m.price_t()}</h3>
-              <div className={CatalogueStyles.priceinputs}>
-                <input type="text" value="0" readOnly /> - <input type="text" value="10 000" readOnly />
-              </div>
-        </div>
-
-        <div className={CatalogueStyles.filterManufacturer}>
-          <h3 className={CatalogueStyles.manufacturer}>{m.manufacturer()}</h3>
-          <div>
-            <SearchField onClick={handleSearch}></SearchField>
-          </div>
-          <ul>
-            <li>
-              <input type="checkbox" id="grifon" />
-              <label htmlFor="grifon">Grifon <span className={CatalogueStyles.count}>(56)</span></label>
-            </li>
-            <li>
-              <input type="checkbox" id="boyscout" />
-              <label htmlFor="boyscout">Boyscout <span className={CatalogueStyles.count}>(66)</span></label>
-            </li>
-            <li>
-              <input type="checkbox" id="paclan" />
-              <label htmlFor="paclan">Paclan <span className={CatalogueStyles.count}>(166)</span></label>
-            </li>
-            <li>
-              <input type="checkbox" id="bulgari-grin" />
-              <label htmlFor="bulgari-grin">Булгари Грин <span className={CatalogueStyles.count}>(21)</span></label>
-            </li>
-          </ul>
-          <div className={CatalogueStyles.showAll}>
-            <FoldingBlock title={m.show_all()}> </FoldingBlock>
-          </div>
-        </div>
-
-        <div className={CatalogueStyles.filterBrand}>
-          <h3 className={CatalogueStyles.brand}>{m.brand()}</h3>
-          <div>
-            <SearchField onClick={handleSearch}></SearchField>
-          </div>
-          <ul>
-            <li>
-              <input type="checkbox" id="grifon" />
-              <label htmlFor="nivea">Nivea <span className={CatalogueStyles.count}>(56)</span></label>
-            </li>
-            <li>
-              <input type="checkbox" id="boyscout" />
-              <label htmlFor="grifon">GRIFON <span className={CatalogueStyles.count}>(66)</span></label>
-            </li>
-            <li>
-              <input type="checkbox" id="paclan" />
-              <label htmlFor="home-chest">Домашний сундук <span className={CatalogueStyles.count}>(166)</span></label>
-            </li>
-            <li>
-              <input type="checkbox" id="bulgari-grin" />
-              <label htmlFor="help">HELP <span className={CatalogueStyles.count}>(21)</span></label>
-            </li>
-          </ul>
-          <div className={CatalogueStyles.showAll}>
-            <FoldingBlock title={m.show_all()}> </FoldingBlock>
-          </div>
-        </div>
-        
-        <div className={CatalogueStyles.buttons}>
-          <BigYellowButton>
-            <span>{m.show_filters()}</span>
-          </BigYellowButton>
-        </div>
-        <div className={CatalogueStyles.careListsContainer}>
-          <div className={CatalogueStyles.careLists}>
-            <CareSection title={m.body_care()} />
-          </div>
-        </div>
-      </div>
-</div>
-
-)
-}
-
-const handleSearch = (query) => {
-    alert('Search query: ' + query);
+  const handleBrandChange = (brand) => {
+    setSelectedBrands((prev) => {
+      if (prev.includes(brand)) {
+        return prev.filter((b) => b !== brand);
+      } else {
+        return [...prev, brand];
+      }
+    });
   };
-  
-  
-  export default Catalogue;
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    const filtered = uniqueBrands.filter((brand) =>
+      brand.toLowerCase().includes(query.toLowerCase()),
+    );
+    setFilteredBrands(filtered);
+  };
+
+  const renderBrandCheckboxes = (brands) => {
+    return brands.map((brand) => (
+      <li key={brand}>
+        <label>
+          <input
+            type="checkbox"
+            value={brand}
+            checked={selectedBrands.includes(brand)}
+            onChange={() => handleBrandChange(brand)}
+          />{' '}
+          {brand}
+        </label>
+      </li>
+    ));
+  };
+
+  return (
+    <div className={styles.categoriesPage}>
+      <BreadCrumbs
+        paths={{
+          [m.home()]: '/',
+          [m.catalogue()]: '/catalogue',
+          [m.cosmetics_and_hygiene()]:
+            '/catalogue?category=cosmetics_and_hygiene',
+        }}
+      />
+      <div className={styles.headlineCategories}>
+        <div className={styles.leftPart}>{m.cosmetics_and_hygiene()}</div>
+        <div className={styles.rightPart}>
+          <div className={styles.sortdropdown}>
+            <label className={styles.sorting}>{m.sorting()}</label>
+            <select
+              id="sort"
+              value={sortType}
+              onChange={(e) => setSortType(e.target.value)}
+            >
+              <option value="default">{m.sort_default()}</option>
+              <option value="nameasc">{m.name_ascending()}</option>
+              <option value="namedesc">{m.name_descending()}</option>
+              <option value="priceasc">{m.price_ascending()}</option>
+              <option value="pricedesc">{m.price_descending()}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.topCategories}>
+        {[
+          m.body_care(),
+          m.hand_care(),
+          m.foot_care(),
+          m.face_care(),
+          m.hair_care(),
+          m.suncare(),
+          m.shaving(),
+          m.gift_sets(),
+          m.hygiene_products(),
+          m.oral_hygiene(),
+          m.paper_products(),
+        ].map((category, index) => (
+          <div key={index} className={styles.topCategoryItem}>
+            {category}
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.catalogueInnerContainer}>
+        <div className={styles.filtercontainer}>
+          <div className={styles.pricerange}>
+            <h2 className={styles.selection}>{m.selection_by_parameters()}</h2>
+            <h3 className={styles.priceint}>{m.price_t()}</h3>
+            <div className={styles.priceinputs}>
+              <input type="text" value="0" readOnly /> -{' '}
+              <input type="text" value="10 000" readOnly />
+            </div>
+          </div>
+
+          <div className={styles.filterBlock}>
+            <h3 className={styles.filterHeading}>{m.brand()}</h3>
+            <div className={styles.searchContainer}>
+              <SearchField
+                value={searchQuery}
+                onChange={(e) => handleSearch(e.target.value)}
+                onClick={handleSearch}
+              >
+                {m.search()}
+              </SearchField>
+            </div>
+            <ul>{renderBrandCheckboxes(filteredBrands.slice(0, 3))}</ul>
+
+            <div className={styles.showAll}>
+              <FoldingBlock title={m.show_all()}>
+                <ul>{renderBrandCheckboxes(filteredBrands.slice(3))}</ul>
+              </FoldingBlock>
+            </div>
+          </div>
+
+          <div className={styles.showButton}>
+            <BigYellowButton>
+              <span>{m.show_filters()}</span>
+            </BigYellowButton>
+          </div>
+          <div className={styles.leftCategories}>
+            {/* eslint-disable-next-line react/jsx-key */}
+            <LeftCategories title={m.body_care()} items={[<p>Hello</p>]} />
+          </div>
+        </div>
+
+        <div className={styles.productsContainer}>
+          <ProductList brands={selectedBrands} sortType={sortType} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Catalogue;

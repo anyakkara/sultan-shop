@@ -2,21 +2,13 @@ import React from 'react';
 import style from './Categories.module.css';
 import { Link } from '@/lib/i18n';
 import Image from 'next/image';
-import housechems from '../../app/images/housechems.png';
-import hygiene from '../../app/images/hygiene.png';
-import housegoods from '../../app/images/housegoods.png';
-import childmom from '../../app/images/childmom.png';
-import dishes from '../../app/images/dishes.png';
+import categories_raw from '@/data/categories.json';
 
-// компонента категорий
 const CategoriesList = () => {
-  const categories = [
-    { title: 'Бытовая химия', pic: housechems, link: '/catalogue' },
-    { title: 'Косметика и гигиена', pic: hygiene, link: '/catalogue' },
-    { title: 'Товары для дома', pic: housegoods, link: '/catalogue' },
-    { title: 'Товары для детей и мам', pic: childmom, link: '/catalogue' },
-    { title: 'Посуда', pic: dishes, link: '/catalogue' },
-  ];
+  const categories = Object.keys(categories_raw).map(key => {
+    const { subcategories, ...category } = categories_raw[key];
+    return category;
+  });
 
   return (
     <div className={style.main}>
@@ -28,11 +20,11 @@ const CategoriesList = () => {
       </p>
       <div className={style.categoriesList}>
         {categories.map((cat, index) => (
-          <Link href={cat.link} key={index} className={style.categoryCard}>
+          <Link href={`/catalogue?category=${cat.id}`} key={index} className={style.categoryCard}>
             <div className={style.categoryPic}>
-              <Image src={cat.pic} alt={cat.title} />
+              <Image src={cat.image} alt={cat.name_ru} width={300} height={200} />
             </div>
-            <p className={style.categoryTitle}>{cat.title}</p>
+            <p className={style.categoryTitle}>{cat.name_ru}</p>
           </Link>
         ))}
       </div>

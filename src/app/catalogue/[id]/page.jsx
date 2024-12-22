@@ -15,7 +15,8 @@ import * as m from '@/paraglide/messages.js';
 import { downloadFile } from '@/utils/download';
 import FoldingBlock from '@/components/FoldingBlock';
 import products from '@/data/data.json';
-import { languageTag } from "@/paraglide/runtime"
+import { languageTag } from "@/paraglide/runtime";
+import categories from '@/data/categories.json';
 
 const handleDownload = () => {
   downloadFile('Прайс-лист.pdf');
@@ -23,9 +24,9 @@ const handleDownload = () => {
 
 export default function ProductPage({ params }) {
   const { id } = React.use(params);
-  
+
   const product = products.find((product) => product.id === parseInt(id));
-  
+
   const ProductDetailedInfo = () => {
     const productInfo = {
       [m.brand()]: product.brand,
@@ -34,7 +35,7 @@ export default function ProductPage({ params }) {
       [m.barcode()]: product.barcode,
       [m.weight()]: product.size + ' ' + [languageTag() === 'en' ? product.unitEn : product.unitRu],
     };
-    
+
     return (
       <ul className={styles.productDetailedInfo}>
         {Object.entries(productInfo).map(([key, value]) => (
@@ -45,7 +46,7 @@ export default function ProductPage({ params }) {
       </ul>
     );
   };
-  
+
   if (!product) {
     return (
       <div className={styles.container}>
@@ -63,16 +64,27 @@ export default function ProductPage({ params }) {
     );
   }
 
+  const getCategoryNameById = (categoryId) => {
+    const language = languageTag();
+    for (const categoryKey in categories) {
+      const category = categories[categoryKey];
+      if (category.id == categoryId) {
+        return language === 'en' ? category.name_en : category.name_ru;
+      }
+    }
+  };
+
   return (
     <div className={styles.container}>
       <BreadCrumbs
         paths={{
           [m.home()]: '/',
           [m.catalogue()]: '/catalogue',
+          [getCategoryNameById(product?.cat_id)]: `/catalogue?category=${product?.cat_id}`,
           [languageTag() === 'en' ? product.shortNameEn : product.shortNameRu]: `/catalogue/${parseInt(id)}`,
         }}
       />
-      
+
       <div className={styles.card}>
         <div className={styles.image}>
           <Image src={product.image} alt={'Product image'} width={500} height={500} />

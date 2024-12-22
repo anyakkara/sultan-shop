@@ -38,6 +38,17 @@
                 padding: 4px;
                 border: none;
             }
+
+            .itemsPerPage {
+                display: inline-block;
+                margin-left: 16px;
+            }
+
+            .itemsPerPage label {
+                margin-right: 8px;
+                font-weight: bold;
+                color: $color-slider;
+            }
         }
     }
 
@@ -61,10 +72,6 @@
             justify-content: center;
             color: $color-slider;
         }
-    }
-
-    .leftCategories {
-
     }
 
     .filtercontainer {
@@ -166,6 +173,12 @@
             cursor: pointer;
         }
 
+    }
+
+    .productsAndPagination {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     .productsContainer {

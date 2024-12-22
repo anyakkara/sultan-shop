@@ -123,5 +123,11 @@
     "oral_hygiene": "Гигиена полости рта",
     "paper_products": "Бумажная продукция",
     
-    "brands": "Бренды"
+    "brands": "Бренды",
+
+    "items_per_page": "Товаров на странице",
+    "min_price": "Мин.",
+    "max_price": "Макс.",
+
+    "category_not_found": "Категория не найдена"
 }

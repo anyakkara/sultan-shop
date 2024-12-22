@@ -1,0 +1,53 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 0;
+  
+    .pageButton {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      font-size: 14px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      background: none;
+  
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+  
+      &.active {
+        background-color: #FDB849;
+        color: white;
+  
+        &:hover {
+          background-color: #FDB849;
+        }
+      }
+    }
+  
+    .arrowButton {
+      @extend .pageButton;
+      color: #666;
+  
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+  
+        &:hover {
+          background: none;
+        }
+      }
+  
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }

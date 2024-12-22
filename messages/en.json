@@ -121,5 +121,11 @@
     "hygiene_products": "Hygiene Products",
     "oral_hygiene": "Oral Hygiene",
     "paper_products": "Paper Products",
-    "brands": "Brands"
+    "brands": "Brands",
+    
+    "items_per_page": "Items per page",
+    "min_price": "Min",
+    "max_price": "Max",
+
+    "category_not_found": "Category not found"
 }

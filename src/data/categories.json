@@ -1,0 +1,425 @@
+{
+    "household_chemicals": {
+        "id": "1",
+        "name_ru": "Бытовая химия",
+        "name_en": "Household chemicals",
+        "image": "/img/housechems.png",
+        "subcategories": {
+            "detergents": {
+                "id": "1.1",
+                "name_ru": "Моющие средства",
+                "name_en": "Detergents",
+                "subcategories": {
+                    "laundry_detergents": {
+                        "id": "1.1.1",
+                        "name_ru": "Средства для стирки",
+                        "name_en": "Laundry detergents"
+                    },
+                    "dishwashing_detergents": {
+                        "id": "1.1.2",
+                        "name_ru": "Средства для мытья посуды",
+                        "name_en": "Dishwashing detergents"
+                    },
+                    "cleaning_agents": {
+                        "id": "1.1.3",
+                        "name_ru": "Чистящие средства",
+                        "name_en": "Cleaning agents"
+                    },
+                    "detergents_other": {
+                        "id": "1.1.0",
+                        "name_ru": "Другие моющие средства",
+                        "name_en": "Other detergents"
+                    }
+                }
+            },
+            "cleaning_agents": {
+                "id": "1.2",
+                "name_ru": "Чистящие средства",
+                "name_en": "Cleaning agents",
+                "subcategories": {
+                    "bathroom_cleaners": {
+                        "id": "1.2.1",
+                        "name_ru": "Средства для ванной",
+                        "name_en": "Bathroom cleaners"
+                    },
+                    "kitchen_cleaners": {
+                        "id": "1.2.2",
+                        "name_ru": "Средства для кухни",
+                        "name_en": "Kitchen cleaners"
+                    },
+                    "floor_cleaners": {
+                        "id": "1.2.3",
+                        "name_ru": "Средства для пола",
+                        "name_en": "Floor cleaners"
+                    },
+                    "cleaning_agents_other": {
+                        "id": "1.2.0",
+                        "name_ru": "Другие чистящие средства",
+                        "name_en": "Other cleaning agents"
+                    }
+                }
+            },
+            "air_fresheners": {
+                "id": "1.3",
+                "name_ru": "Освежители воздуха",
+                "name_en": "Air fresheners",
+                "subcategories": {
+                    "aerosol_air_fresheners": {
+                        "id": "1.3.1",
+                        "name_ru": "Аэрозольные освежители",
+                        "name_en": "Aerosol air fresheners"
+                    },
+                    "gel_air_fresheners": {
+                        "id": "1.3.2",
+                        "name_ru": "Гелевые освежители",
+                        "name_en": "Gel air fresheners"
+                    },
+                    "air_fresheners_other": {
+                        "id": "1.3.0",
+                        "name_ru": "Другие освежители воздуха",
+                        "name_en": "Other air fresheners"
+                    }
+                }
+            },
+            "dishwashing": {
+                "id": "1.4",
+                "name_ru": "Моющие средства для посуды",
+                "name_en": "Dishwashing",
+                "subcategories": {
+                    "dishwashing_liquids": {
+                        "id": "1.4.1",
+                        "name_ru": "Жидкости для мытья посуды",
+                        "name_en": "Dishwashing liquids"
+                    },
+                    "dishwashing_powders": {
+                        "id": "1.4.2",
+                        "name_ru": "Порошки для мытья посуды",
+                        "name_en": "Dishwashing powders"
+                    },
+                    "dishwashing_other": {
+                        "id": "1.4.0",
+                        "name_ru": "Другие моющие средства для посуды",
+                        "name_en": "Other dishwashing"
+                    }
+                }
+            },
+            "household_chemicals_other": {
+                "id": "1.0",
+                "name_ru": "Другие бытовые химикаты",
+                "name_en": "Other household chemicals",
+                "subcategories": {
+                    "household_chemicals_other": {
+                        "id": "1.0.0",
+                        "name_ru": "Другие бытовые химикаты",
+                        "name_en": "Other household chemicals"
+                    }
+                }
+            }
+        }
+    },
+    "cosmetics_and_hygiene": {
+        "id": "2",
+        "name_ru": "Косметика и гигиена",
+        "name_en": "Cosmetics and hygiene",
+        "image": "/img/hygiene.png",
+        "subcategories": {
+            "hair_care": {
+                "id": "2.1",
+                "name_ru": "Уход за волосами",
+                "name_en": "Hair care",
+                "subcategories": {
+                    "shampoos": {
+                        "id": "2.1.1",
+                        "name_ru": "Шампуни",
+                        "name_en": "Shampoos"
+                    },
+                    "conditioners": {
+                        "id": "2.1.2",
+                        "name_ru": "Кондиционеры",
+                        "name_en": "Conditioners"
+                    },
+                    "hair_masks": {
+                        "id": "2.1.3",
+                        "name_ru": "Маски для волос",
+                        "name_en": "Hair masks"
+                    },
+                    "hair_care_other": {
+                        "id": "2.1.0",
+                        "name_ru": "Другие средства для ухода за волосами",
+                        "name_en": "Other hair care"
+                    }
+                }
+            },
+            "face_care": {
+                "id": "2.2",
+                "name_ru": "Уход за лицом",
+                "name_en": "Face care",
+                "subcategories": {
+                    "face_creams": {
+                        "id": "2.2.1",
+                        "name_ru": "Кремы для лица",
+                        "name_en": "Face creams"
+                    },
+                    "face_serums": {
+                        "id": "2.2.2",
+                        "name_ru": "Сыворотки для лица",
+                        "name_en": "Face serums"
+                    },
+                    "face_care_other": {
+                        "id": "2.2.0",
+                        "name_ru": "Другие средства для ухода за лицом",
+                        "name_en": "Other face care"
+                    }
+                }
+            },
+            "body_care": {
+                "id": "2.3",
+                "name_ru": "Уход за телом",
+                "name_en": "Body care",
+                "subcategories": {
+                    "body_creams": {
+                        "id": "2.3.1",
+                        "name_ru": "Кремы для тела",
+                        "name_en": "Body creams"
+                    },
+                    "body_scrubs": {
+                        "id": "2.3.2",
+                        "name_ru": "Скрабы для тела",
+                        "name_en": "Body scrubs"
+                    },
+                    "body_care_other": {
+                        "id": "2.3.0",
+                        "name_ru": "Другие средства для ухода за телом",
+                        "name_en": "Other body care"
+                    }
+                }
+            },
+            "oral_care": {
+                "id": "2.4",
+                "name_ru": "Уход за полостью рта",
+                "name_en": "Oral care",
+                "subcategories": {
+                    "toothpastes": {
+                        "id": "2.4.1",
+                        "name_ru": "Зубные пасты",
+                        "name_en": "Toothpastes"
+                    },
+                    "toothbrushes": {
+                        "id": "2.4.2",
+                        "name_ru": "Зубные щетки",
+                        "name_en": "Toothbrushes"
+                    },
+                    "oral_care_other": {
+                        "id": "2.4.0",
+                        "name_ru": "Другие средства для ухода за полостью рта",
+                        "name_en": "Other oral care"
+                    }
+                }
+            },
+            "cosmetics_and_hygiene_other": {
+                "id": "2.0",
+                "name_ru": "Другая косметика и гигиена",
+                "name_en": "Other cosmetics and hygiene",
+                "subcategories": {
+                    "cosmetics_and_hygiene_other": {
+                        "id": "2.0.0",
+                        "name_ru": "Другая косметика и гигиена",
+                        "name_en": "Other cosmetics and hygiene"
+                    }
+                }
+            }
+        }
+    },
+    "goods_for_home": {
+        "id": "3",
+        "name_ru": "Товары для дома",
+        "name_en": "Goods for home",
+        "image": "/img/housegoods.png",
+        "subcategories": {
+            "textile": {
+                "id": "3.1",
+                "name_ru": "Текстиль",
+                "name_en": "Textile",
+                "subcategories": {
+                    "bed_linen": {
+                        "id": "3.1.1",
+                        "name_ru": "Постельное белье",
+                        "name_en": "Bed linen"
+                    },
+                    "towels": {
+                        "id": "3.1.2",
+                        "name_ru": "Полотенца",
+                        "name_en": "Towels"
+                    },
+                    "textile_other": {
+                        "id": "3.1.0",
+                        "name_ru": "Другой текстиль",
+                        "name_en": "Other textile"
+                    }
+                }
+            },
+            "kitchen_accessories": {
+                "id": "3.2",
+                "name_ru": "Кухонные принадлежности",
+                "name_en": "Kitchen accessories",
+                "subcategories": {
+                    "knives": {
+                        "id": "3.2.1",
+                        "name_ru": "Ножи",
+                        "name_en": "Knives"
+                    },
+                    "cutting_boards": {
+                        "id": "3.2.2",
+                        "name_ru": "Доски для резки",
+                        "name_en": "Cutting boards"
+                    },
+                    "kitchen_accessories_other": {
+                        "id": "3.2.0",
+                        "name_ru": "Другие кухонные принадлежности",
+                        "name_en": "Other kitchen accessories"
+                    }
+                }
+            },
+            "goods_for_home_other": {
+                "id": "3.0",
+                "name_ru": "Другие товары для дома",
+                "name_en": "Other goods for home",
+                "subcategories": {
+                    "goods_for_home_other": {
+                        "id": "3.0.0",
+                        "name_ru": "Другие товары для дома",
+                        "name_en": "Other goods for home"
+                    }
+                }
+            }
+        }
+    },
+    "goods_for_moms_and_kids": {
+        "id": "4",
+        "name_ru": "Товары для мам и детей",
+        "name_en": "Goods for moms and kids",
+        "image": "/img/childmom.png",
+        "subcategories": {
+            "goods_for_newborns": {
+                "id": "4.1",
+                "name_ru": "Товары для новорожденных",
+                "name_en": "Goods for newborns",
+                "subcategories": {
+                    "diapers": {
+                        "id": "4.1.1",
+                        "name_ru": "Подгузники",
+                        "name_en": "Diapers"
+                    },
+                    "baby_clothes": {
+                        "id": "4.1.2",
+                        "name_ru": "Детская одежда",
+                        "name_en": "Baby clothes"
+                    },
+                    "goods_for_newborns_other": {
+                        "id": "4.1.0",
+                        "name_ru": "Другие товары для новорожденных",
+                        "name_en": "Other goods for newborns"
+                    }
+                }
+            },
+            "goods_for_kids": {
+                "id": "4.2",
+                "name_ru": "Товары для детей",
+                "name_en": "Goods for kids",
+                "subcategories": {
+                    "toys": {
+                        "id": "4.2.1",
+                        "name_ru": "Игрушки",
+                        "name_en": "Toys"
+                    },
+                    "childrens_books": {
+                        "id": "4.2.2",
+                        "name_ru": "Детские книги",
+                        "name_en": "Children's books"
+                    },
+                    "goods_for_kids_other": {
+                        "id": "4.2.0",
+                        "name_ru": "Другие товары для детей",
+                        "name_en": "Other goods for kids"
+                    }
+                }
+            },
+            "goods_for_moms_and_kids_other": {
+                "id": "4.0",
+                "name_ru": "Другие товары для мам и детей",
+                "name_en": "Other goods for moms and kids",
+                "subcategories": {
+                    "goods_for_moms_and_kids_other": {
+                        "id": "4.0.0",
+                        "name_ru": "Другие товары для мам и детей",
+                        "name_en": "Other goods for moms and kids"
+                    }
+                }
+            }
+        }
+    },
+    "tableware": {
+        "id": "5",
+        "name_ru": "Посуда",
+        "name_en": "Tableware",
+        "image": "/img/dishes.png",
+        "subcategories": {
+            "plates": {
+                "id": "5.1",
+                "name_ru": "Тарелки",
+                "name_en": "Plates",
+                "subcategories": {
+                    "soup_plates": {
+                        "id": "5.1.1",
+                        "name_ru": "Супницы",
+                        "name_en": "Soup plates"
+                    },
+                    "dessert_plates": {
+                        "id": "5.1.2",
+                        "name_ru": "Десертные тарелки",
+                        "name_en": "Dessert plates"
+                    },
+                    "plates_other": {
+                        "id": "5.1.0",
+                        "name_ru": "Другие тарелки",
+                        "name_en": "Other plates"
+                    }
+                }
+            },
+            "cups": {
+                "id": "5.2",
+                "name_ru": "Чашки",
+                "name_en": "Cups",
+                "subcategories": {
+                    "coffee_cups": {
+                        "id": "5.2.1",
+                        "name_ru": "Кофейные чашки",
+                        "name_en": "Coffee cups"
+                    },
+                    "tea_cups": {
+                        "id": "5.2.2",
+                        "name_ru": "Чайные чашки",
+                        "name_en": "Tea cups"
+                    },
+                    "cups_other": {
+                        "id": "5.2.0",
+                        "name_ru": "Другие чашки",
+                        "name_en": "Other cups"
+                    }
+                }
+            },
+            "tableware_other": {
+                "id": "5.0",
+                "name_ru": "Другая посуда",
+                "name_en": "Other tableware",
+                "subcategories": {
+                    "tableware_other": {
+                        "id": "5.0.0",
+                        "name_ru": "Другая посуда",
+                        "name_en": "Other tableware"
+                    }
+                }
+            }
+        }
+    }
+}

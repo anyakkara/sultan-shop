@@ -1,20 +1,19 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Link } from '@/lib/i18n';
-import { useSearchParams } from 'next/navigation'
-import BigYellowButton from '@/components/BigButton';
-import * as m from '@/paraglide/messages';
 import BreadCrumbs from '@/components/BreadCrumbs';
 import FoldingBlock from '@/components/FoldingBlock';
-import SearchField from '@/components/SearchField';
-import styles from './Catalogue.module.scss';
-import ProductList from '@/components/ProductList';
-import products from '@/data/data.json';
-import categories from '@/data/categories.json';
-import Pagination from '@/components/Pagination';
-import { languageTag } from "@/paraglide/runtime";
 import LeftCategories from '@/components/LeftCategories';
+import Pagination from '@/components/Pagination';
+import ProductList from '@/components/ProductList';
+import SearchField from '@/components/SearchField';
+import categories from '@/data/categories.json';
+import products from '@/data/data.json';
+import { Link } from '@/lib/i18n';
+import * as m from '@/paraglide/messages';
+import { languageTag } from "@/paraglide/runtime";
+import { useSearchParams } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
+import styles from './Catalogue.module.scss';
 
 const Catalogue = () => {
   const searchParams = useSearchParams();

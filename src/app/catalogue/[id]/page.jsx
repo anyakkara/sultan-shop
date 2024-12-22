@@ -1,22 +1,20 @@
 'use client';
 
-import React from 'react';
-import { useEffect, useState } from 'react';
-import BreadCrumbs from '@/components/BreadCrumbs';
 import styles from '@/app/catalogue/[id]/Product.module.scss';
-import Image from 'next/image';
-import SampleProduct from '@/assets/images/sample_product.png';
+import DownloadLogoDark from '@/assets/images/download_dark.svg';
+import ShareLogo from '@/assets/images/share.svg';
+import CartLogo from '@/assets/images/small_cart.svg';
 import WeightLogo from '@/assets/images/weight.svg';
 import BigButton from '@/components/BigButton';
-import CartLogo from '@/assets/images/small_cart.svg';
-import ShareLogo from '@/assets/images/share.svg';
-import DownloadLogoDark from '@/assets/images/download_dark.svg';
-import * as m from '@/paraglide/messages.js';
-import { downloadFile } from '@/utils/download';
+import BreadCrumbs from '@/components/BreadCrumbs';
 import FoldingBlock from '@/components/FoldingBlock';
-import products from '@/data/data.json';
-import { languageTag } from "@/paraglide/runtime";
 import categories from '@/data/categories.json';
+import products from '@/data/data.json';
+import * as m from '@/paraglide/messages.js';
+import { languageTag } from "@/paraglide/runtime";
+import { downloadFile } from '@/utils/download';
+import Image from 'next/image';
+import React from 'react';
 
 const handleDownload = () => {
   downloadFile('Прайс-лист.pdf');

@@ -1,8 +1,8 @@
-import React from 'react';
-import style from './Categories.module.css';
+import categories_raw from '@/data/categories.json';
 import { Link } from '@/lib/i18n';
 import Image from 'next/image';
-import categories_raw from '@/data/categories.json';
+import React from 'react';
+import style from './Categories.module.css';
 
 const CategoriesList = () => {
   const categories = Object.keys(categories_raw).map(key => {

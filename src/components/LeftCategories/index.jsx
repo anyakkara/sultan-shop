@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from '@/lib/i18n';
 import categories from '@/data/categories.json';
-import styles from './LeftCategories.module.scss';
+import { Link } from '@/lib/i18n';
 import * as m from '@/paraglide/messages';
 import { languageTag } from '@/paraglide/runtime';
+import React from 'react';
+import styles from './LeftCategories.module.scss';
 
 const renderSubcategories = (subcategories) => {
   return (

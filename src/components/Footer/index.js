@@ -15,11 +15,7 @@ import MastercardLogo from '@/assets/images/mastercard.png?static';
 import TelegramLogo from '@/assets/images/telegram.png?static';
 import VisaLogo from '@/assets/images/visa.png?static';
 import WhatsappLogo from '@/assets/images/whatsapp.png?static';
-import MastercardLogo from '@/assets/images/mastercard.png?static';
-import VisaLogo from '@/assets/images/visa.png?static';
-import DownloadLogo from '@/assets/images/download.svg';
-import * as m from '@/paraglide/messages';
-
+import FooterStyles from './Footer.module.scss'
 
 const Footer = () => {
 

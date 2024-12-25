@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import ProductCard from './productCard';
 import salestyle from './productList.module.scss';
+import { languageTag } from "@/paraglide/runtime";
 
 const ProductList = ({ products = [], isSlider = false }) => {
   const sliderSettings = {

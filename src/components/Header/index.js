@@ -101,7 +101,7 @@ const Header = () => {
           </div>
 
           <div>
-            <SearchField onClick={handleSearch}></SearchField>
+            <SearchField onClick={handleSearch}>{m.search()}</SearchField>
           </div>
 
           <div className={HeadStyles.contactInfo}>

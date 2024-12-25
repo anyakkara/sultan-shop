@@ -1,96 +1,77 @@
 'use client';
 
-import salestyle from './productList.module.scss';
-import products from '../../data/data.json';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 import ProductCard from './productCard';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
-import * as m from '@/paraglide/messages.js';
-import { languageTag } from "@/paraglide/runtime";
+import salestyle from './productList.module.scss';
 
-const ProductList = () => {
+const ProductList = ({ products = [], isSlider = false }) => {
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    slide: 'div',
+    cssEase: 'linear',
+  };
+
+  const renderProductCards = (productList, isSlider = false) => {
+    if (isSlider) {
+      return (
+        <Slider {...sliderSettings}>
+          {productList.map((product) => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              status={product.status}
+              image={product.image}
+              size={product.size + ' ' + [languageTag() === 'en' ? product.unitEn : product.unitRu]}
+              descript={languageTag() === 'en' ? product.nameEn : product.nameRu}
+              barcode={product.barcode}
+              nameRu={product.nameRu}
+              brand={product.brand}
+              brand={product.brand}
+              price={product.price}
+            />
+          ))}
+        </Slider>
+      );
+    }
+    
+    return (
+      <>
+        {productList.map((product) => (
+          <ProductCard
+            key={product.id}
+            id={product.id}
+            status={product.status}
+            image={product.image}
+            size={product.size}
+            descript={product.descript}
+            barcode={product.barcode}
+            nameRu={product.nameRu}
+            brand={product.brand}
+            price={product.price}
+          />
+        ))}
+      </>
+    );
+  };
+
   return (
     <div>
-      <h1 className={salestyle.sale}>
-        {m.sale()}
-        <span className={salestyle.pr}>{m.product()}</span>
-      </h1>
-
-      <div className={salestyle.product_conteiner_l}>
-        {products
-          .slice(0, 8)
-          .filter((product) => product.status.includes('popular'))
-          .map((product) => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              status={product.status}
-              image={product.image}
-              size={product.size + ' ' + [languageTag() === 'en' ? product.unitEn : product.unitRu]}
-              descript={languageTag() === 'en' ? product.nameEn : product.nameRu}
-              barcode={product.barcode}
-              nameRu={product.nameRu}
-              brand={product.brand}
-              price={product.price}
-            />
-          ))}
+      <div className={salestyle.product_container_l}>
+        {renderProductCards(products, false)}
       </div>
-
-      <div className={salestyle.product_conteiner_m}>
-        {products
-          .slice(0, 6)
-          .filter((product) => product.status.includes('popular'))
-          .map((product) => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              status={product.status}
-              image={product.image}
-              size={product.size + ' ' + [languageTag() === 'en' ? product.unitEn : product.unitRu]}
-              descript={languageTag() === 'en' ? product.nameEn : product.nameRu}
-              barcode={product.barcode}
-              nameRu={product.nameRu}
-              brand={product.brand}
-              price={product.price}
-            />
-          ))}
+      
+      <div className={salestyle.product_container_m}>
+        {renderProductCards(products, false)}
       </div>
-
-      <Swiper
-      slidesPerView={1}
-      spaceBetween={30}
-      navigation={true}
-      pagination={{ clickable: true }}
-      loop={true}
-      modules={[Navigation, Pagination]}
-      className={salestyle.product_conteiner_mobile}
-      >
-        <div>
-          {products
-          .slice(0, 8)
-          .filter((product) => product.status.includes('popular'))
-          .map((product, id) => (
-            <SwiperSlide key={id}>
-              <ProductCard
-                className={salestyle.product_card}
-                key={product.id}
-                id={product.id}
-                status={product.status}
-                image={product.image}
-                size={product.size + ' ' + [languageTag() === 'en' ? product.unitEn : product.unitRu]}
-                descript={languageTag() === 'en' ? product.nameEn : product.nameRu}
-                barcode={product.barcode}
-                nameRu={product.nameRu}
-                brand={product.brand}
-                price={product.price}
-              />
-            </SwiperSlide>
-          ))}
-        </div>
-      </Swiper> 
+      
+      <div className={salestyle.product_container_mobile}>
+        {renderProductCards(products, true)}
+      </div>
     </div>
   );
 };

@@ -1,15 +1,16 @@
-@import '../../app/variables.scss';
+@import '@/app/variables.scss';
 
-.conteiner {
+.container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-width: 326px;
+    max-width: 236px;
     width: 100%;
     max-height: 490px;
     height: 100%;
-    box-shadow: 0px 14px 39px -11px rgba(0, 0, 15, 0.2);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
     padding-top: 8px;
+    border-radius: 8px;
 
     .popular {
         padding-left: 8px;

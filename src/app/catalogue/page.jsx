@@ -1,10 +1,9 @@
-import ProductList from '@/components/ProductList';
+import Catalogue from '@/components/Catalogue';
 
 export default function CataloguePage() {
   return (
-    <div>
-      <h1>Каталог в разработке</h1>
-      <ProductList />
-    </div>
+    <>
+      <Catalogue />
+    </>
   );
 }

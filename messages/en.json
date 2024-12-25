@@ -55,5 +55,83 @@
     "title_categories": "Categories:",
     "title_menu": "Navigation menu:",
     "subscribe_text": "Subscribe for discounts and promotions",
-    "sultan_description": "The 'Sultan' company supplies retail stores with 'turnkey' products in Kokshetau and Akmolinsk region."
+    "sultan_description": "The 'Sultan' company supplies retail stores with 'turnkey' products in Kokshetau and Akmolinsk region.",
+    
+    "cosmetics_and_hygiene": "Cosmetics and hygiene",
+    "sorting": "Sorting:",
+
+    "selection_by_parameters": "SELECTION BY PARAMETERS", 
+    "price_t": "Price ₸",
+    "show_all": "Show all",
+    "name_ascending": "Name (Ascending)",
+    "name_descending": "Name (Descending)",
+    "price_ascending": "Price (Ascending)",
+    "price_descending": "Price (Descending)",
+    "sort_default": "Default",
+
+
+    "body_care": "Body Care",
+    "hair_removal": "Hair Removal",
+    "bath_products": "Bath and Shower Products",
+    "scrubs": "Scrubs, Peels, etc.",
+    "sponges": "Body Sponges and Loofahs",
+    "creams": "Creams, Lotions, Oils",
+    "intimate_care": "Intimate Care",
+    "deodorants": "Deodorants, Antiperspirants",
+    "shower_gels": "Shower Gels",
+
+    "hand_care": "Hand Care",
+    "moisturizing": "Moisturizing and Nourishing",
+    "nail_products": "Nail Products",
+    "solid_soap": "Bar Soap",
+    "liquid_soap": "Liquid Soap",
+    "hand_cream": "Hand Cream",
+    "hand_protection": "Hand Protection",
+    "nail_polish_remover": "Nail Polish Remover",
+
+    "foot_care": "Foot Care",
+    "foot_scrubs": "Foot Scrubs, Peels",
+    "foot_files": "Files, Rollers",
+    "foot_cream": "Foot Cream",
+    "foot_deodorants": "Foot Deodorants",
+
+    "face_care": "Face Care",
+    "foundations": "Foundations",
+    "makeup_removers": "Makeup Removers",
+    "cleansing_products": "Cleansing Products",
+    "masks": "Masks, Scrubs, Serums",
+    "face_cream": "Face Cream",
+    "eye_cream": "Eye Cream",
+    "makeup_remover_fluid": "Makeup Remover Fluid",
+    "lip_balm": "Lip Balm",
+
+    "hair_care": "Hair Care",
+    "shampoos": "Shampoos",
+    "styling_products": "Styling Products",
+    "hair_coloring": "Hair Coloring Products",
+    "masks_serums_oils": "Masks, Serums, Oils",
+    "conditioners_balms": "Conditioners, Balms",
+
+    "suncare": "Sun Care Products",
+    "after_sun_care": "After Sun Care Products",
+
+    "shaving": "Shaving Products",
+    "razors_and_cartridges": "Razors and Cartridges",
+    "after_shave": "After Shave",
+    "for_shaving": "For Shaving",
+
+    "gift_sets": "Gift Sets",
+    "for_men": "For Men",
+    "for_women": "For Women",
+
+    "hygiene_products": "Hygiene Products",
+    "oral_hygiene": "Oral Hygiene",
+    "paper_products": "Paper Products",
+    "brands": "Brands",
+    
+    "items_per_page": "Items per page",
+    "min_price": "Min",
+    "max_price": "Max",
+
+    "category_not_found": "Category not found"
 }

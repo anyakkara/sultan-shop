@@ -9,7 +9,7 @@ import WeightLogo from '@/assets/images/weight.svg';
 
 function ProductCard(props) {
   return (
-    <div className={salecard.conteiner}>
+    <div className={salecard.container}>
       <Image
         className={salecard.popular}
         src={popular_img}

@@ -134,11 +134,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin: 20px 0;
 }
 
 .subheader1 *,
 .subheader2 * {
-    margin: 0;
+    margin: 0 4px;
     flex-grow: 1;
 }
 

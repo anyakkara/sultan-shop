@@ -55,5 +55,85 @@
     "title_categories": "Категории:",
     "title_menu": "Меню сайта:",
     "subscribe_text": "Подпишись на скидки и акции",
-    "sultan_description": "Компания «Султан» — снабжаем розничные магазины товарами \"под ключ\" в Кокчетаве и Акмолинской области"
+    "sultan_description": "Компания «Султан» — снабжаем розничные магазины товарами \"под ключ\" в Кокчетаве и Акмолинской области",
+    
+    "cosmetics_and_hygiene": "Косметика и гигиена",
+    "sorting": "Сортировка:",
+    "selection_by_parameters": "ПОДБОР ПО ПАРАМЕТРАМ",
+    "price_t": "Цена ₸",
+    "show_all": "Показать все",
+    "name_ascending": "Название (возрастание)",
+    "name_descending": "Название (убывание)",
+    "price_ascending": "Цена (возрастание)",
+    "price_descending": "Цена (убывание)",
+    "sort_default": "По умолчанию",
+
+    "show_filters":"Показать",
+    
+    "body_care": "Уход за телом",
+    "hair_removal": "Эпиляция и депиляция",
+    "bath_products": "Средства для ванны и душа",
+    "scrubs": "Скрабы, пилинги и пр.",
+    "sponges": "Мочалки и губки для тела",
+    "creams": "Кремы, лосьоны, масла",
+    "intimate_care": "Интимный уход",
+    "deodorants": "Дезодоранты, антиперспиранты",
+    "shower_gels": "Гели для душа",
+  
+    "hand_care": "Уход за руками",
+    "moisturizing": "Увлажнение и питание",
+    "nail_products": "Средства для ногтей",
+    "solid_soap": "Мыло твердое",
+    "liquid_soap": "Мыло жидкое",
+    "hand_cream": "Крем для рук",
+    "hand_protection": "Защита рук",
+    "nail_polish_remover": "Жидкость для снятия лака",
+  
+    "foot_care": "Уход за ногами",
+    "foot_scrubs": "Скрабы, пилинги",
+    "foot_files": "Пилки, ролики",
+    "foot_cream": "Крем для ног",
+    "foot_deodorants": "Дезодоранты для ног",
+  
+    "face_care": "Уход за лицом",
+    "foundations": "Тональные средства",
+    "makeup_removers": "Средства для снятия макияжа",
+    "cleansing_products": "Средства для очищения",
+    "masks": "Маски, скрабы, сыворотки",
+    "face_cream": "Крем для лица",
+    "eye_cream": "Крем для век",
+    "makeup_remover_fluid": "Жидкость для снятия макияжа",
+    "lip_balm": "Гигиеническая помада",
+
+    
+    "hair_care": "Уход за волосами",
+    "shampoos": "Шампуни",
+    "styling_products": "Средства для укладки",
+    "hair_coloring": "Средства для окрашивания волос",
+    "masks_serums_oils": "Маски, сыворотки, масла",
+    "conditioners_balms": "Кондиционеры, бальзамы",
+
+    "suncare": "Средства для загара",
+    "after_sun_care": "Средства после загара",
+
+    "shaving": "Средства для бритья",
+    "razors_and_cartridges": "Станки и кассеты",
+    "after_shave": "После бритья",
+    "for_shaving": "Для бритья",
+
+    "gift_sets": "Подарочные наборы",
+    "for_men": "Для мужчин",
+    "for_women": "Для женщин",
+
+    "hygiene_products": "Гигиеническая продукция",
+    "oral_hygiene": "Гигиена полости рта",
+    "paper_products": "Бумажная продукция",
+    
+    "brands": "Бренды",
+
+    "items_per_page": "Товаров на странице",
+    "min_price": "Мин.",
+    "max_price": "Макс.",
+
+    "category_not_found": "Категория не найдена"
 }

@@ -1,30 +1,12 @@
-@import 'src/app/variables.scss';
+@import '@/app/variables.scss';
 
-$size_1: 712px;
-$size_2: 1118px;
-$size_3: 1272px;
-$size_4: 1436px;
-$size_5: 1500px;
+$size_1: 532px;
+$size_2: 848px;
+$size_3: 1104px;
+$size_4: 1272px;
+$size_5: 1424px;
 
-.sale{
-    font-family: 'Inter';
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 48px;
-    text-align: left;
-    color: $main-color;
-    padding-top: 100px;
-}
-
-.pr{
-    font-family: 'Inter';
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 48px;
-    color: $color-slider;
-}
-
-@mixin conteiner {
+@mixin container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -34,7 +16,7 @@ $size_5: 1500px;
     padding-bottom: 100px;
 }
 
-.product_conteiner {
+.product_container {
     @media (width <= $size_1) {
         &_mobile {
             display: block;
@@ -51,15 +33,14 @@ $size_5: 1500px;
     }
 }
 
-.product_conteiner {
+.product_container {
     @media ($size_1 < width <= $size_2) {
         &_mobile {
             display: none;
         }
         &_m {
             display: flex;
-            @include conteiner;
-            
+            @include container;
         }
         &_l {
             
@@ -68,14 +49,14 @@ $size_5: 1500px;
     }
 }
 
-.product_conteiner {
+.product_container {
     @media ($size_2 < width <= $size_3) {
         &_mobile {
             display: none;
         }
         &_m {
             display: flex;
-            @include conteiner;
+            @include container;
         }
         &_l {
             display: none;
@@ -83,7 +64,7 @@ $size_5: 1500px;
     }
 }
 
-.product_conteiner {
+.product_container {
     @media ($size_3 < width <= $size_4) {
         &_mobile {
             display: none;
@@ -93,19 +74,19 @@ $size_5: 1500px;
         }
         &_l {
             display: flex;
-            @include conteiner;
+            @include container;
         }
     }
 }
 
-.product_conteiner {
+.product_container {
     @media ($size_4 < width <= $size_5) {
         &_mobile {
             display: none;
         }
         &_m {
             display: flex;
-            @include conteiner;
+            @include container;
         }
         &_l {
             display: none;
@@ -113,7 +94,7 @@ $size_5: 1500px;
     }
 }
 
-.product_conteiner {
+.product_container {
     @media ($size_5 < width) {
         &_mobile {
             display: none;
@@ -123,7 +104,7 @@ $size_5: 1500px;
         }
         &_l {
             display: flex;
-            @include conteiner;
+            @include container;
         }
     }
 }

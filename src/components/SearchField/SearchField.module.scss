@@ -1,13 +1,8 @@
 @import 'src/app/variables.scss';
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
-
 .inputWrapper {
+    display: flex;
+    justify-content: space-between;
     position: relative;
     width: 100%;
     max-width: 200px;

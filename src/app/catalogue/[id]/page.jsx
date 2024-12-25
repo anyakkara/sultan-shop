@@ -1,22 +1,20 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-
+import styles from '@/app/catalogue/[id]/Product.module.scss';
+import DownloadLogoDark from '@/assets/images/download_dark.svg';
+import ShareLogo from '@/assets/images/share.svg';
+import CartLogo from '@/assets/images/small_cart.svg';
+import WeightLogo from '@/assets/images/weight.svg';
 import BigButton from '@/components/BigButton';
 import BreadCrumbs from '@/components/BreadCrumbs';
 import FoldingBlock from '@/components/FoldingBlock';
-
-import { downloadFile } from '@/utils/download';
+import categories from '@/data/categories.json';
+import products from '@/data/data.json';
 import * as m from '@/paraglide/messages.js';
 import { languageTag } from "@/paraglide/runtime";
-
-import CartLogo from '@/assets/images/small_cart.svg';
-import DownloadLogoDark from '@/assets/images/download_dark.svg';
-import ShareLogo from '@/assets/images/share.svg';
-import WeightLogo from '@/assets/images/weight.svg';
-import styles from '@/app/catalogue/[id]/Product.module.scss';
-import products from '@/data/data.json';
+import { downloadFile } from '@/utils/download';
+import Image from 'next/image';
+import React from 'react';
 
 const handleDownload = () => {
   downloadFile('Прайс-лист.pdf');
@@ -24,13 +22,9 @@ const handleDownload = () => {
 
 export default function ProductPage({ params }) {
   const { id } = React.use(params);
-  
-  const [product, setProduct] = useState(null);
-  
-  useEffect(() => {
-    setProduct(products.find((product) => product.id === parseInt(id)));
-  }, [id]);
-  
+
+  const product = products.find((product) => product.id === parseInt(id));
+
   const ProductDetailedInfo = () => {
     const productInfo = {
       [m.brand()]: product.brand,
@@ -39,7 +33,7 @@ export default function ProductPage({ params }) {
       [m.barcode()]: product.barcode,
       [m.weight()]: product.size + ' ' + [languageTag() === 'en' ? product.unitEn : product.unitRu],
     };
-    
+
     return (
       <ul className={styles.productDetailedInfo}>
         {Object.entries(productInfo).map(([key, value]) => (
@@ -50,7 +44,7 @@ export default function ProductPage({ params }) {
       </ul>
     );
   };
-  
+
   if (!product) {
     return (
       <div className={styles.container}>
@@ -68,16 +62,27 @@ export default function ProductPage({ params }) {
     );
   }
 
+  const getCategoryNameById = (categoryId) => {
+    const language = languageTag();
+    for (const categoryKey in categories) {
+      const category = categories[categoryKey];
+      if (category.id == categoryId) {
+        return language === 'en' ? category.name_en : category.name_ru;
+      }
+    }
+  };
+
   return (
     <div className={styles.container}>
       <BreadCrumbs
         paths={{
           [m.home()]: '/',
           [m.catalogue()]: '/catalogue',
+          [getCategoryNameById(product?.cat_id)]: `/catalogue?category=${product?.cat_id}`,
           [languageTag() === 'en' ? product.shortNameEn : product.shortNameRu]: `/catalogue/${parseInt(id)}`,
         }}
       />
-      
+
       <div className={styles.card}>
         <div className={styles.image}>
           <Image src={product.image} alt={'Product image'} width={500} height={500} />

@@ -1,7 +1,8 @@
 [
   {
     "id": 0,
-    "status": [
+    "cat_id": 2,
+    "status":  [
       "sale",
       "popular"
     ],
@@ -27,7 +28,8 @@
   },
   {
     "id": 1,
-    "status": [
+    "cat_id": 2,
+    "status":  [
       "sale",
       "popular"
     ],
@@ -53,7 +55,8 @@
   },
   {
     "id": 2,
-    "status": [
+    "cat_id": 2,
+    "status":  [
       "sale",
       "popular"
     ],
@@ -79,7 +82,8 @@
   },
   {
     "id": 3,
-    "status": [
+    "cat_id": 1,
+    "status":  [
       "sale",
       "popular"
     ],
@@ -105,7 +109,8 @@
   },
   {
     "id": 4,
-    "status": [
+    "cat_id": 1,
+    "status":  [
       "sale",
       "popular"
     ],
@@ -131,7 +136,8 @@
   },
   {
     "id": 5,
-    "status": [
+    "cat_id": 1,
+    "status":  [
       "sale",
       "popular"
     ],
@@ -157,7 +163,8 @@
   },
   {
     "id": 6,
-    "status": [
+    "cat_id": 1,
+    "status":  [
       "sale",
       "popular"
     ],
@@ -183,7 +190,8 @@
   },
   {
     "id": 7,
-    "status": [
+    "cat_id": 1,
+    "status":  [
       "sale",
       "popular"
     ],
@@ -209,7 +217,8 @@
   },
   {
     "id": 8,
-    "status": [
+    "cat_id": 1,
+    "status":  [
       "sale",
       "popular"
     ],
@@ -232,5 +241,221 @@
     "price": "400",
     "amount": 100,
     "article": "AOS-500"
+  },
+  {
+    "id": 9,
+    "cat_id": 1,
+    "status":  [
+      "sale",
+      "popular"
+    ],
+    "shortNameRu": "Моющее средство Ariel 3",
+    "shortNameEn": "Ariel Detergent 3",
+    "nameRu": "Концентрированное моющее средство для стирки Ariel 3",
+    "nameEn": "Concentrated Ariel Laundry Detergent 3",
+    "descriptionRu": "Моющее средство Ariel эффективно удаляет пятна и грязь с одежды, подходит для всех типов тканей и температур стирки. Концентрированная формула позволяет использовать меньше средства для достижения отличных результатов. Безопасно для ткани и цвета, оставляет приятный аромат.",
+    "descriptionEn": "Ariel Detergent effectively removes stains and dirt from clothes, suitable for all types of fabrics and washing temperatures. The concentrated formula allows using less detergent for excellent results. Safe for fabric and color, leaves a pleasant fragrance.",
+    "image": "/img/ariel.png",
+    "size": "750",
+    "unitRu": "мл",
+    "unitEn": "ml",
+    "category": [
+      "hygiene",
+      "laundry"
+    ],
+    "barcode": 1234567890123,
+    "brand": "Ariel",
+    "price": "500",
+    "amount": 100,
+    "article": "Ariel-750"
+  },
+  {
+    "id": 10,
+    "cat_id": 1,
+    "status":  [
+      "sale",
+      "popular"
+    ],
+    "shortNameRu": "Моющее средство BiMax 3",
+    "shortNameEn": "BiMax Detergent 3",
+    "nameRu": "Концентрированное моющее средство для стирки BiMax 3",
+    "nameEn": "Concentrated BiMax Laundry Detergent 3",
+    "descriptionRu": "Моющее средство BiMax помогает эффективно справляться с пятнами и загрязнениями, сохраняя яркость и мягкость тканей. Оно подходит для стирки как белого, так и цветного белья, оставляя приятный запах свежести.",
+    "descriptionEn": "BiMax Detergent helps to effectively tackle stains and dirt while keeping fabrics bright and soft. It is suitable for both white and colored laundry, leaving a pleasant fresh fragrance.",
+    "image": "/img/bimax.png",
+    "size": "750",
+    "unitRu": "мл",
+    "unitEn": "ml",
+    "category": [
+      "hygiene",
+      "laundry"
+    ],
+    "barcode": 2234567890123,
+    "brand": "BiMax",
+    "price": "450",
+    "amount": 100,
+    "article": "BiMax-750"
+  },
+  {
+    "id": 11,
+    "cat_id": 1,
+    "status":  [
+      "sale",
+      "popular"
+    ],
+    "shortNameRu": "Моющее средство Sorti 3",
+    "shortNameEn": "Sorti Detergent 3",
+    "nameRu": "Концентрированное моющее средство для стирки Sorti 3",
+    "nameEn": "Concentrated Sorti Laundry Detergent 3",
+    "descriptionRu": "Моющее средство Sorti предназначено для удаления сложных загрязнений и пятен с одежды. Концентрированная формула позволяет экономно использовать средство, при этом достигая отличных результатов при стирке всех типов тканей.",
+    "descriptionEn": "Sorti Detergent is designed to remove tough stains and dirt from clothes. The concentrated formula allows economical use of the product while achieving excellent results in washing all types of fabrics.",
+    "image": "/img/sorti.png",
+    "size": "750",
+    "unitRu": "мл",
+    "unitEn": "ml",
+    "category": [
+      "hygiene",
+      "laundry"
+    ],
+    "barcode": 3234567890123,
+    "brand": "Sorti",
+    "price": "420",
+    "amount": 100,
+    "article": "Sorti-750"
+  },
+  {
+    "id": 12,
+    "cat_id": 1,
+    "status":  [
+      "sale",
+      "popular"
+    ],
+    "shortNameRu": "Моющее средство AOS 4",
+    "shortNameEn": "AOS Detergent 4",
+    "nameRu": "Концентрированное средство для мытья посуды AOS 4",
+    "nameEn": "Concentrated AOS Dishwashing Detergent 4",
+    "descriptionRu": "Средство для мытья посуды AOS обладает высокой моющей способностью и прекрасно справляется с жиром и пищевыми загрязнениями. Средство не содержит фосфатов и абразивных частиц, что позволяет использовать его для мытья деликатной посуды. Средство для мытья посуды AOS обладает приятным ароматом и хорошо пенится. Средство для мытья посуды AOS экономично в использовании, так как для мытья посуды достаточно небольшого количества средства. Средство для мытья посуды AOS безопасно для здоровья и окружающей среды.",
+    "descriptionEn": "AOS Dishwashing Detergent has a high cleaning power and copes well with fat and food contamination. The product does not contain phosphates and abrasive particles, which allows it to be used for washing delicate dishes. AOS Dishwashing Detergent has a pleasant aroma and foams well. AOS Dishwashing Detergent is economical to use, as only a small amount of the product is required for washing dishes. AOS Dishwashing Detergent is safe for health and the environment.",
+    "image": "/img/aos.png",
+    "size": "500",
+    "unitRu": "мл",
+    "unitEn": "ml",
+    "category": [
+      "hygiene",
+      "dishwashing"
+    ],
+    "barcode": 4604049097548,
+    "brand": "AOS",
+    "price": "400",
+    "amount": 100,
+    "article": "AOS-500"
+  },
+  {
+    "id": 13,
+    "cat_id": 1,
+    "status":  [
+      "sale",
+      "popular"
+    ],
+    "shortNameRu": "Моющее средство Ariel 4",
+    "shortNameEn": "Ariel Detergent 4",
+    "nameRu": "Концентрированное моющее средство для стирки Ariel 4",
+    "nameEn": "Concentrated Ariel Laundry Detergent 4",
+    "descriptionRu": "Моющее средство Ariel эффективно удаляет пятна и грязь с одежды, подходит для всех типов тканей и температур стирки. Концентрированная формула позволяет использовать меньше средства для достижения отличных результатов. Безопасно для ткани и цвета, оставляет приятный аромат.",
+    "descriptionEn": "Ariel Detergent effectively removes stains and dirt from clothes, suitable for all types of fabrics and washing temperatures. The concentrated formula allows using less detergent for excellent results. Safe for fabric and color, leaves a pleasant fragrance.",
+    "image": "/img/ariel.png",
+    "size": "750",
+    "unitRu": "мл",
+    "unitEn": "ml",
+    "category": [
+      "hygiene",
+      "laundry"
+    ],
+    "barcode": 1234567890123,
+    "brand": "Ariel",
+    "price": "500",
+    "amount": 100,
+    "article": "Ariel-750"
+  },
+  {
+    "id": 14,
+    "cat_id": 1,
+    "status":  [
+      "sale",
+      "popular"
+    ],
+    "shortNameRu": "Моющее средство Ariel 5",
+    "shortNameEn": "Ariel Detergent 5",
+    "nameRu": "Концентрированное моющее средство для стирки Ariel 5",
+    "nameEn": "Concentrated Ariel Laundry Detergent 5",
+    "descriptionRu": "Моющее средство Ariel эффективно удаляет пятна и грязь с одежды, подходит для всех типов тканей и температур стирки. Концентрированная формула позволяет использовать меньше средства для достижения отличных результатов. Безопасно для ткани и цвета, оставляет приятный аромат.",
+    "descriptionEn": "Ariel Detergent effectively removes stains and dirt from clothes, suitable for all types of fabrics and washing temperatures. The concentrated formula allows using less detergent for excellent results. Safe for fabric and color, leaves a pleasant fragrance.",
+    "image": "/img/ariel.png",
+    "size": "750",
+    "unitRu": "мл",
+    "unitEn": "ml",
+    "category": [
+      "hygiene",
+      "laundry"
+    ],
+    "barcode": 1234567890123,
+    "brand": "Ariel",
+    "price": "500",
+    "amount": 100,
+    "article": "Ariel-750"
+  },
+  {
+    "id": 15,
+    "cat_id": 1,
+    "status":  [
+      "sale",
+      "popular"
+    ],
+    "shortNameRu": "Моющее средство Ariel 6",
+    "shortNameEn": "Ariel Detergent 6",
+    "nameRu": "Концентрированное моющее средство для стирки Ariel 6",
+    "nameEn": "Concentrated Ariel Laundry Detergent 6",
+    "descriptionRu": "Моющее средство Ariel эффективно удаляет пятна и грязь с одежды, подходит для всех типов тканей и температур стирки. Концентрированная формула позволяет использовать меньше средства для достижения отличных результатов. Безопасно для ткани и цвета, оставляет приятный аромат.",
+    "descriptionEn": "Ariel Detergent effectively removes stains and dirt from clothes, suitable for all types of fabrics and washing temperatures. The concentrated formula allows using less detergent for excellent results. Safe for fabric and color, leaves a pleasant fragrance.",
+    "image": "/img/ariel.png",
+    "size": "750",
+    "unitRu": "мл",
+    "unitEn": "ml",
+    "category": [
+      "hygiene",
+      "laundry"
+    ],
+    "barcode": 1234567890123,
+    "brand": "Ariel",
+    "price": "500",
+    "amount": 100,
+    "article": "Ariel-750"
+  },
+  {
+    "id": 16,
+    "cat_id": 1,
+    "status":  [
+      "sale",
+      "popular"
+    ],
+    "shortNameRu": "Моющее средство Ariel 7",
+    "shortNameEn": "Ariel Detergent 7",
+    "nameRu": "Концентрированное моющее средство для стирки Ariel 7",
+    "nameEn": "Concentrated Ariel Laundry Detergent 7",
+    "descriptionRu": "Моющее средство Ariel эффективно удаляет пятна и грязь с одежды, подходит для всех типов тканей и температур стирки. Концентрированная формула позволяет использовать меньше средства для достижения отличных результатов. Безопасно для ткани и цвета, оставляет приятный аромат.",
+    "descriptionEn": "Ariel Detergent effectively removes stains and dirt from clothes, suitable for all types of fabrics and washing temperatures. The concentrated formula allows using less detergent for excellent results. Safe for fabric and color, leaves a pleasant fragrance.",
+    "image": "/img/ariel.png",
+    "size": "750",
+    "unitRu": "мл",
+    "unitEn": "ml",
+    "category": [
+      "hygiene",
+      "laundry"
+    ],
+    "barcode": 1234567890123,
+    "brand": "Ariel",
+    "price": "500",
+    "amount": 100,
+    "article": "Ariel-750"
   }
 ]

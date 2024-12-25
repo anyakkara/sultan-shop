@@ -13,12 +13,15 @@ $size_5: 1424px;
     align-items: stretch;
     gap: 20px;
     padding-top: 10px;
+    padding-bottom: 100px;
 }
 
 .product_container {
     @media (width <= $size_1) {
         &_mobile {
             display: block;
+            max-width: 326px;
+            padding-bottom: 100px;
         }
 
         &_m {
@@ -40,6 +43,7 @@ $size_5: 1424px;
             @include container;
         }
         &_l {
+            
             display: none;
         }
     }
@@ -104,3 +108,4 @@ $size_5: 1424px;
         }
     }
 }
+

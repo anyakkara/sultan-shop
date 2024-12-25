@@ -1,3 +1,5 @@
+'use client';
+
 import styles from '@/components/FoldingBlock/FoldingBlock.module.scss';
 import Triangle from '@/assets/images/triangle.svg';
 import Image from 'next/image';

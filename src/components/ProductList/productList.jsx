@@ -26,10 +26,11 @@ const ProductList = ({ products = [], isSlider = false }) => {
               id={product.id}
               status={product.status}
               image={product.image}
-              size={product.size}
-              descript={product.descript}
+              size={product.size + ' ' + [languageTag() === 'en' ? product.unitEn : product.unitRu]}
+              descript={languageTag() === 'en' ? product.nameEn : product.nameRu}
               barcode={product.barcode}
               nameRu={product.nameRu}
+              brand={product.brand}
               brand={product.brand}
               price={product.price}
             />

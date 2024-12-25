@@ -253,8 +253,6 @@ const Footer = () => {
   );
 };
 
-
-
 const downloadPriceList = () => {
   const link = document.createElement('a');
   link.href = 'Прайс-лист.pdf';

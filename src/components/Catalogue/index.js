@@ -188,9 +188,6 @@ const Catalogue = () => {
         )}
       </div>
 
-
-
-
       <div className={styles.catalogueInnerContainer}>
         <div className={styles.filtercontainer}>
           <div className={styles.pricerange}>
